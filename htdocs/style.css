@@ -39,6 +39,10 @@ em {
 	font-style: italic;
 }
 
+strong {
+	font-weight: 700;
+}
+
 #cv {
 	width: 90%;
 	max-width: 800px;
