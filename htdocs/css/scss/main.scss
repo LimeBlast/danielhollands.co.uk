@@ -1,9 +1,10 @@
 /* variables */
 
 /* imports */
-@import '_normalize';
-@import '_h5bp';
-@import '_style';
-@import '_helpers';
-@import '_mediaqueries';
-@import '_print';
+@import 'bourbon/bourbon';
+@import 'normalize';
+@import 'h5bp';
+@import 'style';
+@import 'helpers';
+@import 'mediaqueries';
+@import 'print';
