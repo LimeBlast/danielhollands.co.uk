@@ -10,9 +10,9 @@ body
 
 }
 
-.wrap
+.container
 {
-	
+	@include outer-container;
 }
 
 /*	Menu
@@ -20,7 +20,7 @@ body
 
 .menu
 {
-
+	@include span-columns(3);
 }
 
 /*	Content
@@ -28,7 +28,7 @@ body
 
 .content
 {
-
+	@include span-columns(9);
 }
 
 /*	Home
@@ -84,5 +84,12 @@ body
 
 .contact
 {
-
+	form
+	{
+		@include span-columns(4.5 of 9);
+	}
+	dl
+	{
+		@include span-columns(4.5 of 9);
+	}
 }

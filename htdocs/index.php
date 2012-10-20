@@ -9,7 +9,6 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 
-		<link rel="stylesheet" href="/css/normalize.css">
 		<link rel="stylesheet" href="/css/main.css">
 		<script src="/js/vendor/modernizr-2.6.1.min.js"></script>
 	</head>
@@ -17,7 +16,7 @@
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 		<![endif]-->
-		<div id="wrap" class="wrap">
+		<div id="container" class="container">
 			<div id="menu" class="menu">
 				<header id="header" class="header" role="banner">
 					<hgroup>
@@ -175,7 +174,7 @@
 
 				</footer><!-- #footer -->
 			</div><!-- #content -->
-		</div><!-- #wrap -->
+		</div><!-- #container -->
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
