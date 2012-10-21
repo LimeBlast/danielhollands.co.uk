@@ -8,6 +8,10 @@ $breakpoint-width: 600; // (px) This is the width at which the site switches to 
 $desktop-max-width: 960; // (px) This is the maximum width of the site
 $gutter-width: 20; // (px)
 
+/* modern grid */
+$mg-gutter: 20; // (px) Gutter Width
+$mg-columns: 12; // Total Columns For Main Container
+
 /* colours */
 $body-bg: #195f88;
 
@@ -20,9 +24,38 @@ $content-fg: #ffffff;
 /*	Mixins and Functions
 ========================================================================== */
 
-// http://erskinelabs.com/calculating-ems-scss/
-@function em($target, $context: $basefont) {
+/* em: http://erskinelabs.com/calculating-ems-scss/ */
+@function em($target, $context: $basefont)
+{
     @return ($target / $context) * 1em;
+}
+
+/* modern grid - inspired by http://www.netmagazine.com/tutorials/building-modern-grid-system */
+@mixin mg-row()
+{
+	@include clearfix;
+	@include box-sizing(border-box);
+	width: 100%;
+	margin-right: -20px;
+}
+@mixin mg-columns($columns: $mg-columns)
+{
+	@include clearfix;
+	@include box-sizing(border-box);
+	width: percentage($columns / $mg-columns);
+	padding-right: em($mg-gutter);
+	float: left;
+	&:last-child
+	{
+		padding-right: 0;
+	}
+}
+
+/* section */
+@mixin section()
+{
+	@include mg-row;
+
 }
 
 /*	Imports
@@ -34,4 +67,5 @@ $content-fg: #ffffff;
 @import 'h5bp';
 @import 'style';
 @import 'helpers';
+@import 'slabtext';
 @import 'print';

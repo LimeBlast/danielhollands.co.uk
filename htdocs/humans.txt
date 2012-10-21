@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+	Daniel Hollands -- Developer -- @LimeBlast
 
 # THANKS
 
-    <name>
+	Jonathan Smiley (for his article on building a modern grid: http://www.netmagazine.com/tutorials/building-modern-grid-system)
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Modernizr
+	HTML5, CSS3, SASS
+	jQuery, Modernizr, slabText
+	NetBeans, Firebug

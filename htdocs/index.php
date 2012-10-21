@@ -39,7 +39,12 @@
 
 					<section id="intro" class="intro">
 
-						<p>My name is Daniel Hollands. I'm a Web Developer that has a passion for the World Wide Web, and this is my curriculum vitae (CV) and portfolio.</p>
+						<div class="left">
+							<p><span class="slabtext">My name is Daniel.</span> <span class="slabtext">I'm a Web Developer</span> <span class="slabtext">with a passion for the</span> <span class="slabtext">World Wide Web.</span> <span class="slabtext">Welcome to my</span> <span class="slabtext">curriculum vitae</span> <span class="slabtext">and portfolio.</span></p>
+						</div>
+						<div class="left">
+							<p><span class="slabtext">My name is Daniel.</span> <span class="slabtext">I'm a Web Developer</span> <span class="slabtext">with a passion for the</span> <span class="slabtext">World Wide Web.</span> <span class="slabtext">Welcome to my</span> <span class="slabtext">curriculum vitae</span> <span class="slabtext">and portfolio.</span></p>
+						</div>
 
 					</section><!-- #intro -->
 
