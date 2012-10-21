@@ -7,12 +7,21 @@
 
 body
 {
-
+	background: $body-bg;
 }
 
 .container
 {
+	/* layout */
 	@include outer-container;
+	max-width: em($mobile-max-width);
+    @include breakpoint(em($breakpoint-width))
+	{
+		max-width: em($desktop-max-width);
+    }
+
+	background: $menu-bg;
+	color: $menu-fg;
 }
 
 /*	Menu
@@ -20,7 +29,17 @@ body
 
 .menu
 {
-	@include span-columns(3);
+	/* layout */
+	@include span-columns(12);
+	padding: 0 $gutter;
+    @include breakpoint(em($breakpoint-width))
+	{
+		@include span-columns(3);
+		padding: 0 0 0 $gutter;
+    }
+
+	background: $menu-bg;
+	color: $menu-fg;
 }
 
 /*	Content
@@ -28,7 +47,16 @@ body
 
 .content
 {
-	@include span-columns(9);
+	/* layout */
+	@include span-columns(12);
+	padding: 0 $gutter;
+    @include breakpoint(em($breakpoint-width))
+	{
+		@include span-columns(9);
+    }
+
+	background: $content-bg;
+	color: $content-fg;
 }
 
 /*	Home
@@ -84,12 +112,5 @@ body
 
 .contact
 {
-	form
-	{
-		@include span-columns(4.5 of 9);
-	}
-	dl
-	{
-		@include span-columns(4.5 of 9);
-	}
+
 }

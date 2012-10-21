@@ -1,13 +1,27 @@
-/* variables */
+/*	Variables
+========================================================================== */
 
-/* imports */
+/* sizes (px) */
+$mobile-max-width: 400; // This is the maximum width of the mobile site
+$breakpoint-width: 600; // This is the width at which the site switches to the desktop layout
+$desktop-max-width: 960; // This is the maximum width of the site
+
+/* colours */
+$body-bg: #4B5B6E;
+$menu-bg: #343444;
+$menu-fg: #ffffff;
+$content-bg: #F1F2DF;
+$content-fg: #4B5B6E;
+
+
+/*	Imports
+========================================================================== */
+
 @import 'bourbon/bourbon';
-@import "variables";
 @import "neat/neat";
 
 @import 'normalize';
 @import 'h5bp';
 @import 'style';
 @import 'helpers';
-@import 'mediaqueries';
 @import 'print';
