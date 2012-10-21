@@ -31,11 +31,15 @@ body
 {
 	/* layout */
 	@include span-columns(12);
-	padding: 0 $gutter;
+	padding: 0 $gutter-width;
     @include breakpoint(em($breakpoint-width))
 	{
 		@include span-columns(3);
-		padding: 0 0 0 $gutter;
+		width: 25%;
+		max-width: em($menu-max-width);
+		position: fixed;
+		padding: 0;
+		margin-right: 0;
     }
 
 	background: $menu-bg;
@@ -49,20 +53,30 @@ body
 {
 	/* layout */
 	@include span-columns(12);
-	padding: 0 $gutter;
+	padding: 0 $gutter-width;
     @include breakpoint(em($breakpoint-width))
 	{
 		@include span-columns(9);
+		float: right;
+		width: 75%;
     }
 
 	background: $content-bg;
 	color: $content-fg;
 }
 
-/*	Home
+/*	Header
 ========================================================================== */
 
-.home
+.header
+{
+
+}
+
+/*	Intro
+========================================================================== */
+
+.intro
 {
 
 }

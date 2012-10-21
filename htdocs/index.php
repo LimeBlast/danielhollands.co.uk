@@ -19,32 +19,29 @@
 		<div id="container" class="container">
 			<div id="menu" class="menu">
 				<header id="header" class="header" role="banner">
-					<hgroup>
-						<h1>Daniel Hollands</h1>
-						<h2>Web developer's curriculum vitae (CV) and portfolio</h2>
-					</hgroup>
+					<h1>Daniel Hollands</h1>
+					<nav id="navigation" class="navigation" role="navigation">
+						<ul>
+							<li><a href="#intro">Introduction</a></li>
+							<li><a href="#about">About Me</a></li>
+							<li><a href="#skills">Key Skills</a></li>
+							<li><a href="#education">Education</a></li>
+							<li><a href="#employment">Employment</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav><!-- #navigation -->
 				</header><!-- #header -->
-				<nav id="nabigation" class="navigation" role="navigation">
-					<ul>
-						<li><a href="#home">Home</a></li>
-						<li><a href="#about">About Me</a></li>
-						<li><a href="#skills">Key Skills</a></li>
-						<li><a href="#education">Education</a></li>
-						<li><a href="#employment">Employment</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav><!-- #navigation -->
 			</div><!-- #menu -->
 
 			<div id="content" class="content">
 				<article id="main" class="main" role="main">
 
-					<section id="home" class="home">
+					<section id="intro" class="intro">
 
-						<p>I'm a Web Developer that has a passion for the World Wide Web.</p>
+						<p>My name is Daniel Hollands. I'm a Web Developer that has a passion for the World Wide Web, and this is my curriculum vitae (CV) and portfolio.</p>
 
-					</section><!-- #home -->
+					</section><!-- #intro -->
 
 					<section id="about" class="about">
 
