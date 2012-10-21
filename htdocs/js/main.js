@@ -1,4 +1,4 @@
 $(document).ready(function() {
 	/* slab text */
-//	$(".intro p").slabText();
+	$(".intro p").slabText();
 });

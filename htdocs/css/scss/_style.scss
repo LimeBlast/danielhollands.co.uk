@@ -20,6 +20,11 @@ body
 	font-family: 'PT Sans';
 }
 
+img
+{
+	max-width: 100%;
+}
+
 .container
 {
 	/* layout */
@@ -88,9 +93,8 @@ body
 .intro
 {
 	@include section;
-	.left
-	{
-		@include mg-columns(6);
+	@media (min-width: em($breakpoint-width)) {
+		
 	}
 }
 
