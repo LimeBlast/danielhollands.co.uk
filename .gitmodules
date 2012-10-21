@@ -1,3 +1,0 @@
-[submodule "htdocs/css/scss/neat"]
-	path = htdocs/css/scss/neat
-	url = git://github.com/thoughtbot/neat.git

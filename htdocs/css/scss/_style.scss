@@ -8,17 +8,21 @@
 body
 {
 	background: $body-bg;
+	font-size: $basefont * 1px;
 }
 
 .container
 {
 	/* layout */
-	@include outer-container;
-	max-width: em($mobile-max-width);
-    @include breakpoint(em($breakpoint-width))
-	{
+	@include clearfix;
+	@include box-sizing(border-box);
+	margin: 0 auto;
+	max-width: $mobile-max-width * 1px;
+	padding: 0 em(1) em(1) em(1);
+	@media (min-width: em($breakpoint-width)) {
 		max-width: em($desktop-max-width);
-    }
+		padding: 0 em(1) 0 0;
+	}
 
 	background: $menu-bg;
 	color: $menu-fg;
@@ -30,19 +34,16 @@ body
 .menu
 {
 	/* layout */
-	@include span-columns(12);
-	padding: 0 $gutter-width;
-    @include breakpoint(em($breakpoint-width))
-	{
-		@include span-columns(3);
+	@include clearfix;
+	@include box-sizing(border-box);
+	width: 100%;
+	@media (min-width: em($breakpoint-width)) {
+		float: left;
 		width: 25%;
-		max-width: em($menu-max-width);
+		max-width: em(239);
 		position: fixed;
-		padding: 0;
-		margin-right: 0;
-    }
+	}
 
-	background: $menu-bg;
 	color: $menu-fg;
 }
 
@@ -52,14 +53,14 @@ body
 .content
 {
 	/* layout */
-	@include span-columns(12);
-	padding: 0 $gutter-width;
-    @include breakpoint(em($breakpoint-width))
-	{
-		@include span-columns(9);
+	@include clearfix;
+	@include box-sizing(border-box);
+	width: 100%;
+	padding: 0 em($gutter-width);
+	@media (min-width: em($breakpoint-width)) {
 		float: right;
 		width: 75%;
-    }
+	}
 
 	background: $content-bg;
 	color: $content-fg;
