@@ -34,19 +34,18 @@ img
 
 .container
 {
-	/* layout */
 	@include clearfix;
 	@include box-sizing(border-box);
 	margin: 0 auto;
 	max-width: $mobile-max-width * 1px;
 	padding: 0 em(1) em(1) em(1);
+	background: $menu-bg;
+	color: $menu-fg;
+
 	@media (min-width: em($breakpoint-width)) {
 		max-width: em($desktop-max-width);
 		padding: 0 em(1) 0 0;
 	}
-
-	background: $menu-bg;
-	color: $menu-fg;
 }
 
 /*	Menu
@@ -54,11 +53,12 @@ img
 
 .menu
 {
-	/* layout */
 	@include clearfix;
 	@include box-sizing(border-box);
 	width: 100%;
 	background: $menu-bg;
+	color: $menu-fg;
+
 	@media (min-width: em($breakpoint-width)) {
 		float: left;
 		width: 25%;
@@ -67,8 +67,6 @@ img
 		position: fixed;
 		background: url('/img/menu_bg.png') no-repeat center bottom;
 	}
-
-	color: $menu-fg;
 }
 
 /*	Content
@@ -80,13 +78,13 @@ img
 	@include clearfix;
 	@include box-sizing(border-box);
 	width: 100%;
+	background: $content-bg;
+	color: $content-fg;
+
 	@media (min-width: em($breakpoint-width)) {
 		float: right;
 		width: 75%;
 	}
-
-	background: $content-bg;
-	color: $content-fg;
 }
 
 /*	Header
@@ -103,6 +101,7 @@ img
 .intro
 {
 	@include section;
+	
 	@media (min-width: em($breakpoint-width)) {
 
 	}
