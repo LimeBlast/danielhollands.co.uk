@@ -9,13 +9,19 @@ $desktop-max-width: 960; // (px) This is the maximum width of the site
 $gutter-width: 20; // (px)
 
 /* colours */
-$body-bg: #195f88;
+$black: #000000;
+$dark-blue: #195f88;
+$light-blue: #619EC2;
+$dark-grey: #2C2C2C;
+$white: #ffffff;
 
-$menu-bg: #2C2C2C;
-$menu-fg: #ffffff;
+$body-bg: $dark-blue;
 
-$content-bg: #619EC2;
-$content-fg: #ffffff;
+$menu-bg: $dark-grey;
+$menu-fg: $white;
+
+$content-bg: $light-blue;
+$content-fg: $white;
 
 /*	Mixins and Functions
 ========================================================================== */

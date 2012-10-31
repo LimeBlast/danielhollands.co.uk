@@ -20,6 +20,13 @@ body
 	font-family: 'PT Sans';
 }
 
+h2
+{
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+	padding-bottom: em($gutter-width / 3);
+	border-bottom: 1px solid $content-fg;
+}
+
 img
 {
 	max-width: 100%;
@@ -51,11 +58,14 @@ img
 	@include clearfix;
 	@include box-sizing(border-box);
 	width: 100%;
+	background: $menu-bg;
 	@media (min-width: em($breakpoint-width)) {
 		float: left;
 		width: 25%;
 		max-width: em(239);
+		height: 100%;
 		position: fixed;
+		background: url('/img/menu_bg.png') no-repeat center bottom;
 	}
 
 	color: $menu-fg;
@@ -94,7 +104,7 @@ img
 {
 	@include section;
 	@media (min-width: em($breakpoint-width)) {
-		
+
 	}
 }
 
@@ -112,6 +122,73 @@ img
 .skills
 {
 	@include section;
+
+	ul
+	{
+		@include clearfix;
+		list-style: none;
+		margin: em($gutter-width) -#{em($gutter-width / 2)} 0;
+		padding: 0;
+	}
+	li
+	{
+		@include box-sizing(border-box);
+		padding: 0 em($gutter-width / 2);
+		width: 100%;
+		h3
+		{
+			margin: 0;
+		}
+		p
+		{
+			margin-top: 0;
+			background-repeat: no-repeat;
+			padding: 0 54px 0 0;
+			background-position: right top;
+		}
+		&.coding p
+		{
+			background-image: url('/img/skills_coding.png');
+		}
+		&.cms-frameworks p
+		{
+			background-image: url('/img/skills_cms-frameworks.png');
+		}
+		&.accessibility p
+		{
+			background-image: url('/img/skills_accessibility.png');
+		}
+		&.usability p
+		{
+			background-image: url('/img/skills_usability.png');
+		}
+		&.server-management p
+		{
+			background-image: url('/img/skills_server-management.png');
+		}
+		&.version-control p
+		{
+			background-image: url('/img/skills_version-control.png');
+		}
+	}
+
+	@media (min-width: em($breakpoint-width))
+	{
+		li
+		{
+			width: 50%;
+			float: left;
+			&:nth-child(2n+1)
+			{
+				clear: both;
+			}
+			p
+			{
+				padding: 0 0 0 54px;
+				background-position: left top;
+			}
+		}
+	}
 }
 
 /*	Education

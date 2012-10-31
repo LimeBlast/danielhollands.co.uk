@@ -57,11 +57,30 @@
 						<h2>Key Skills</h2>
 
 						<ul>
-							<li>Professional experience of tools and technologies including <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> 5.3, <abbr title="My Structure Query Language">MySQL</abbr> 5, <abbr title="Hyper Text Markup Language">HTML</abbr> 5, <abbr title="Cascading Style Sheets">CSS</abbr> 3, and jQuery 1.7, which I use for the creation of dynamic Web sites.</li>
-							<li>Experience using the <abbr title="Model View Controller">MVC</abbr> frameworks <em>CakePHP</em> and <em>Fuel</em>, the content management systems <em>Wordpress</em>, <em>Perch CMS</em> and <em>CouchCMS</em>, and the e-commerce platform <em>Lemonstand</em>.</li>
-							<li>Knowledge of Web standards, allowing for the creation of sites that work across multiple browsers and devices, while ensuring they comply with accessibility legislation.</li>
-							<li>Experience with usability evaluation techniques, which are useful for testing a site's ease of use, and highlighting where improvements could be made.</li>
-							<li>Experience installing, configuring and running a Linux (Debian) Web server, and using Git version control software.</li>
+							<li class="coding">
+								<h3>Coding</h3>
+								<p>Professional experience of coding tools and technologies including <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> 5.3, <abbr title="My Structure Query Language">MySQL</abbr> 5, <abbr title="Hyper Text Markup Language">HTML</abbr> 5, <abbr title="Cascading Style Sheets">CSS</abbr> 3, and jQuery 1.7, all of which allow for the creation of dynamic Web sites.</p>
+							</li>
+							<li class="cms-frameworks">
+								<h3>CMS and Frameworks</h3>
+								<p>Experience using <abbr title="Model View Controller">MVC</abbr> frameworks <em>CakePHP</em> and <em>Fuel</em>, <abbr title="Content Management System">CMS</abbr> platforms <em>Wordpress</em>, <em>Perch CMS</em> and <em>CouchCMS</em>, and e-commerce platform <em>Lemonstand</em>.</p>
+							</li>
+							<li class="accessibility">
+								<h3>Accessibility</h3>
+								<p>Knowledge of Web standards, allowing for the creation of sites that work across multiple browsers and devices, while ensuring they comply with accessibility legislation.</p>
+							</li>
+							<li class="usability">
+								<h3>Usability</h3>
+								<p>Experience with usability evaluation techniques, which are useful for testing a site's ease of use, and highlighting where improvements could be made.</p>
+							</li>
+							<li class="server-management">
+								<h3>Server Management</h3>
+								<p>Experience installing, configuring and running a Linux (Debian 6) Web server environment for hosting Web sites.</p>
+							</li>
+							<li class="version-control">
+								<h3>Version Control</h3>
+								<p>Experience using Git distributed version control system, allowing for the tracking of changes throughout a project's history.</p>
+							</li>
 						</ul>
 
 					</section><!-- #skills -->
@@ -92,35 +111,35 @@
 
 						<h2>Employment</h2>
 
-						<h2>Web Developer</h2>
+						<h3>Web Developer</h3>
 						<ul>
 							<li>Ghost Design Consultants Ltd. (Leamington Spa)</li>
 							<li>Sep 2011 - Present</li>
 						</ul>
 						<p>I am responsible for the development of all the Web elements of projects taken on by the company. This includes writing project proposals and specifications, frontend coding of Photoshop designs, backend development using the tools best suited to the project, and leasing with clients.</p>
 
-						<h2>Backend PHP Developer</h2>
+						<h3>Backend PHP Developer</h3>
 						<ul>
 							<li>Propeller Communications (Rugby)</li>
 							<li>Oct 2010 - Sep 2011</li>
 						</ul>
 						<p>My role consisted of development with the company's MVC-based framework to build dynamic PHP-based CMS Web sites. This role included management of Mercurial repositories, which provides a safety-net during development, and allows multiple members of a team to work in the same project. The role has always allowed me to gain experience with jQuery and the use of AJAX, to provide a seamless end user experience.</p>
 
-						<h2>Graduate Intern Web Developer</h2>
+						<h3>Graduate Intern Web Developer</h3>
 						<ul>
 							<li>South Worcestershire College (Evesham)</li>
 							<li>Jan 2010 - Sep 2010</li>
 						</ul>
 						<p>I was solely responsible for the planning, development, testing, launch and maintenance of a new college Web site. The focus of the new site was that of making it easier to use, to improve compliance with the Disability Discrimination Act, and to improve search engine rankings. Upon completion it was greeted with positive feedback from both staff and students at the college, and an increased conversion rate.</p>
 
-						<h2>IT and Media Support Technician</h2>
+						<h3>IT and Media Support Technician</h3>
 						<ul>
 							<li>University of Worcester</li>
 							<li>Sep 2008 - Dec 2009</li>
 						</ul>
 						<p>I was part of a team responsible for providing media and technical support to students within the university's library. The role involved supporting the university's PCs, printers and software, as well as helping student's laptops to connect to the network. We needed good customer service skills, to ensure we dealt with customers with courtesy and respect, and as we were the most senior members of staff during our shifts, we had to uphold a professional image of the library and its ensure compliance of its code of conduct.</p>
 
-						<h2>Technical Support Technician</h2>
+						<h3>Technical Support Technician</h3>
 						<ul>
 							<li>Fujitsu / Tesco Broadband (Sidcup)</li>
 							<li>Aug 2005 - Mar 2006</li>
