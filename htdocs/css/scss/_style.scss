@@ -21,19 +21,37 @@ body
 	font-family: 'PT Sans';
 }
 
-h2, h3, h4
+h1, h2, h3, h4, h5, h6
 {
+	font-weight: normal;
 	text-shadow: $text-shadow;
+	font-family: Forque;
+	margin: em(4) 0;
 }
 
 h2
 {
-	font-family: Forque;
-	font-size: em(50);
+	font-size: em(60);
 	font-weight: normal;
 	text-align: right;
 	padding-bottom: em($gutter-width / 3);
 	border-bottom: 1px solid $content-fg;
+}
+h3
+{
+	font-size: em(34);
+}
+h4
+{
+	font-size: em(25);
+}
+h5
+{
+	font-size: em(20);
+}
+h6
+{
+	font-size: em(18);
 }
 
 img
@@ -146,15 +164,21 @@ img
 .header
 {
 	@include section;
-	text-shadow: $text-shadow;
-	font-family: Forque;
+	h1
+	{
+		margin: 1em 0;
+	}
+	p
+	{
+		font-family: Forque;
+		text-shadow: $text-shadow;
+	}
 
 	@media (min-width: em($breakpoint-width))
 	{
 		h1
 		{
 			margin-top: 0;
-			font-weight: none;
 		}
 		div
 		{
