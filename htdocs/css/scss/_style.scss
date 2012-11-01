@@ -21,12 +21,16 @@ body
 	font-family: 'PT Sans';
 }
 
+h2, h3, h4
+{
+	text-shadow: $text-shadow;
+}
+
 h2
 {
 	font-family: Forque;
 	font-size: em(50);
 	font-weight: normal;
-	text-shadow: $text-shadow;
 	text-align: right;
 	padding-bottom: em($gutter-width / 3);
 	border-bottom: 1px solid $content-fg;
@@ -231,7 +235,7 @@ img
 		}
 	}
 
-	@media (min-width: em($breakpoint-width))
+	@media (min-width: em($breakpoint-width + 160))
 	{
 		li
 		{
@@ -241,9 +245,13 @@ img
 			{
 				clear: both;
 			}
+			h3
+			{
+				margin-bottom: em(6);
+			}
 			p
 			{
-				padding: 0 0 0 54px;
+				padding: 0 0 0 60px;
 				background-position: left top;
 			}
 		}
