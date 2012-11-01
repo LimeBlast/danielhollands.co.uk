@@ -36,7 +36,7 @@
 
 					<header id="header" class="header" role="banner">
 
-						<h1><span class="slabtext">My name is Daniel.</span></h1>
+						<h1>My name is Daniel.</h1>
 						<div><img src="/img/header.png" alt="" /></div>
 						<p><span class="slabtext">I'm a Web Developer</span> <span class="slabtext">with a passion for the</span> <span class="slabtext">World Wide Web.</span></p>
 						<p><span class="slabtext">Welcome to my</span> <span class="slabtext">curriculum vitae</span> <span class="slabtext">and portfolio.</span></p>

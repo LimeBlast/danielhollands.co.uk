@@ -6,6 +6,7 @@
 ========================================================================== */
 
 @include font-face('Forque', '/fonts/Forque-webfont');
+@include font-face('OpenDyslexic', '/fonts/opendyslexic-regular-webfont');
 @include font-face('PT Sans', '/fonts/pt_sans-webfont');
 @include font-face('PT Sans', '/fonts/pt_sans_bold-webfont', bold);
 @include font-face('PT Sans', '/fonts/pt_sans_italic-webfont', normal, italic);
@@ -25,13 +26,12 @@ h1, h2, h3, h4, h5, h6
 {
 	font-weight: normal;
 	text-shadow: $text-shadow;
-	font-family: Forque;
-	margin: em(4) 0;
+	font-family: OpenDyslexic;
 }
 
 h2
 {
-	font-size: em(60);
+	font-size: em(30);
 	font-weight: normal;
 	text-align: right;
 	padding-bottom: em($gutter-width / 3);
@@ -39,19 +39,19 @@ h2
 }
 h3
 {
-	font-size: em(34);
+	font-size: em(21);
 }
 h4
 {
-	font-size: em(25);
+	font-size: em(16);
 }
 h5
 {
-	font-size: em(20);
+	font-size: em(14);
 }
 h6
 {
-	font-size: em(18);
+	font-size: em(12);
 }
 
 img
@@ -166,6 +166,7 @@ img
 	@include section;
 	h1
 	{
+		font-family: Forque;
 		margin: 1em 0;
 	}
 	p
