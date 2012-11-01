@@ -9,7 +9,10 @@ Modernizr.load({
 $(document).ready(function() {
 
 	/* slab text */
-	$(".intro p").slabText();
+	setTimeout(function(){
+		$("#header h1").slabText();
+		$("#header p").slabText();
+	}, 1000);
 
 	/* one page nav */
 	$('#navigation').onePageNav({

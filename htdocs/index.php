@@ -18,30 +18,30 @@
 		<![endif]-->
 		<div id="container" class="container">
 			<div id="menu" class="menu">
-				<header id="header" class="header" role="banner">
-					<h1>Daniel Hollands</h1>
-					<nav id="navigation" class="navigation" role="navigation">
-						<ul>
-							<li class="current"><a href="#intro">Introduction</a></li>
-							<li><a href="#about">About Me</a></li>
-							<li><a href="#skills">Key Skills</a></li>
-							<li><a href="#education">Education</a></li>
-							<li><a href="#employment">Employment</a></li>
-							<li><a href="#portfolio">Portfolio</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</nav><!-- #navigation -->
-				</header><!-- #header -->
+				<nav id="navigation" class="navigation" role="navigation">
+					<ul>
+						<li class="current"><a href="#header">Introduction</a></li>
+						<li><a href="#about">About Me</a></li>
+						<li><a href="#skills">Key Skills</a></li>
+						<li><a href="#education">Education</a></li>
+						<li><a href="#employment">Employment</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav><!-- #navigation -->
 			</div><!-- #menu -->
 
 			<div id="content" class="content">
 				<article id="main" class="main" role="main">
 
-					<section id="intro" class="intro">
+					<header id="header" class="header" role="banner">
 
-						<p><span class="slabtext">My name is Daniel.</span> <span class="slabtext">I'm a Web Developer</span> <span class="slabtext">with a passion for the</span> <span class="slabtext">World Wide Web.</span> <span class="slabtext">Welcome to my</span> <span class="slabtext">curriculum vitae</span> <span class="slabtext">and portfolio.</span></p>
+						<h1><span class="slabtext">My name is Daniel.</span></h1>
+						<div class="logo"><img src="/img/intro.png" alt="" /></div>
+						<p><span class="slabtext">I'm a Web Developer</span> <span class="slabtext">with a passion for the</span> <span class="slabtext">World Wide Web.</span></p>
+						<p><span class="slabtext">Welcome to my</span> <span class="slabtext">curriculum vitae</span> <span class="slabtext">and portfolio.</span></p>
 
-					</section><!-- #intro -->
+					</header><!-- #header -->
 
 					<section id="about" class="about">
 

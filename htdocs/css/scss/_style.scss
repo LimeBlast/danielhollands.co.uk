@@ -5,6 +5,7 @@
 /*	Fonts
 ========================================================================== */
 
+@include font-face('Forque', '/fonts/Forque-webfont');
 @include font-face('PT Sans', '/fonts/pt_sans-webfont');
 @include font-face('PT Sans', '/fonts/pt_sans_bold-webfont', bold);
 @include font-face('PT Sans', '/fonts/pt_sans_italic-webfont', normal, italic);
@@ -22,7 +23,11 @@ body
 
 h2
 {
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+	font-family: Forque;
+	font-size: em(50);
+	font-weight: normal;
+	text-shadow: $text-shadow;
+	text-align: right;
 	padding-bottom: em($gutter-width / 3);
 	border-bottom: 1px solid $content-fg;
 }
@@ -69,11 +74,6 @@ img
 	}
 }
 
-/*	Header
-========================================================================== */
-
-
-
 /*	Navigation
 ========================================================================== */
 
@@ -85,11 +85,16 @@ img
 		padding: 0;
 		margin: 0;
 	}
+	li
+	{
+		margin: em(1);
+	}
 	a
 	{
 		display: block;
 		padding: em($gutter-width / 4) em($gutter-width);
 		color: $menu-fg;
+		background: $menu-bg;
 		text-decoration: none;
 		font-weight: bold;
 		text-align: center;
@@ -101,6 +106,14 @@ img
 	li.current a
 	{
 		background-color: $black;
+	}
+
+	@media (min-width: em($breakpoint-width))
+	{
+		ul
+		{
+			margin-top: em($gutter-width);
+		}
 	}
 }
 
@@ -116,7 +129,8 @@ img
 	background: $content-bg;
 	color: $content-fg;
 
-	@media (min-width: em($breakpoint-width)) {
+	@media (min-width: em($breakpoint-width))
+	{
 		float: right;
 		width: 75%;
 	}
@@ -127,18 +141,29 @@ img
 
 .header
 {
-
-}
-
-/*	Intro
-========================================================================== */
-
-.intro
-{
 	@include section;
+	text-shadow: $text-shadow;
+	font-family: Forque;
 
-	@media (min-width: em($breakpoint-width)) {
-
+	@media (min-width: em($breakpoint-width))
+	{
+		h1
+		{
+			margin-top: 0;
+			font-weight: none;
+		}
+		div
+		{
+			width: 50%;
+			float: right;
+		}
+		p
+		{
+			margin-top: 0;
+			width: 50%;
+			float: left;
+			font-weight: none;
+		}
 	}
 }
 
