@@ -22,7 +22,7 @@
 					<h1>Daniel Hollands</h1>
 					<nav id="navigation" class="navigation" role="navigation">
 						<ul>
-							<li><a href="#intro">Introduction</a></li>
+							<li class="current"><a href="#intro">Introduction</a></li>
 							<li><a href="#about">About Me</a></li>
 							<li><a href="#skills">Key Skills</a></li>
 							<li><a href="#education">Education</a></li>

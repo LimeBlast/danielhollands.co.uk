@@ -69,6 +69,41 @@ img
 	}
 }
 
+/*	Header
+========================================================================== */
+
+
+
+/*	Navigation
+========================================================================== */
+
+.navigation
+{
+	ul
+	{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	a
+	{
+		display: block;
+		padding: em($gutter-width / 4) em($gutter-width);
+		color: $menu-fg;
+		text-decoration: none;
+		font-weight: bold;
+		text-align: center;
+		&:hover
+		{
+			background-color: lighten($black, 4%);
+		}
+	}
+	li.current a
+	{
+		background-color: $black;
+	}
+}
+
 /*	Content
 ========================================================================== */
 
@@ -101,7 +136,7 @@ img
 .intro
 {
 	@include section;
-	
+
 	@media (min-width: em($breakpoint-width)) {
 
 	}
