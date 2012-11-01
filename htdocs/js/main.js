@@ -1,4 +1,13 @@
+/* media-queries pollyfill */
+Modernizr.load({
+	test: Modernizr.mq(),
+	yep : '',
+	nope: '/js/vendor/respond.min.js'
+});
+
+/* lets get this show on the road */
 $(document).ready(function() {
+
 	/* slab text */
 	$(".intro p").slabText();
 
