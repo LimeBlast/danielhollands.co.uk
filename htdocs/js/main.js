@@ -17,6 +17,7 @@ $(document).ready(function() {
 	/* one page nav */
 	$('#navigation').onePageNav({
 		scrollSpeed: 2000,
+		changeHash: true,
 		begin: function() {
 			//Hack so you can click other menu items after the initial click
 			$('body').append('<div id="device-dummy" style="height: 1px;"></div>');

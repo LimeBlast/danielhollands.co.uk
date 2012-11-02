@@ -6,6 +6,7 @@
 ========================================================================== */
 
 @include font-face('Forque', '/fonts/Forque-webfont');
+@include font-face('OpenDyslexic', '/fonts/opendyslexic-regular-webfont');
 @include font-face('PT Sans', '/fonts/pt_sans-webfont');
 @include font-face('PT Sans', '/fonts/pt_sans_bold-webfont', bold);
 @include font-face('PT Sans', '/fonts/pt_sans_italic-webfont', normal, italic);
@@ -21,15 +22,36 @@ body
 	font-family: 'PT Sans';
 }
 
-h2
+h1, h2, h3, h4, h5, h6
 {
-	font-family: Forque;
-	font-size: em(50);
 	font-weight: normal;
 	text-shadow: $text-shadow;
+	font-family: OpenDyslexic;
+}
+
+h2
+{
+	font-size: em(30);
+	font-weight: normal;
 	text-align: right;
 	padding-bottom: em($gutter-width / 3);
 	border-bottom: 1px solid $content-fg;
+}
+h3
+{
+	font-size: em(21);
+}
+h4
+{
+	font-size: em(16);
+}
+h5
+{
+	font-size: em(14);
+}
+h6
+{
+	font-size: em(12);
 }
 
 img
@@ -142,15 +164,22 @@ img
 .header
 {
 	@include section;
-	text-shadow: $text-shadow;
-	font-family: Forque;
+	h1
+	{
+		font-family: Forque;
+		margin: 1em 0;
+	}
+	p
+	{
+		font-family: Forque;
+		text-shadow: $text-shadow;
+	}
 
 	@media (min-width: em($breakpoint-width))
 	{
 		h1
 		{
 			margin-top: 0;
-			font-weight: none;
 		}
 		div
 		{
@@ -231,7 +260,7 @@ img
 		}
 	}
 
-	@media (min-width: em($breakpoint-width))
+	@media (min-width: em($breakpoint-width + 160))
 	{
 		li
 		{
@@ -241,9 +270,13 @@ img
 			{
 				clear: both;
 			}
+			h3
+			{
+				margin-bottom: em(6);
+			}
 			p
 			{
-				padding: 0 0 0 54px;
+				padding: 0 0 0 60px;
 				background-position: left top;
 			}
 		}
