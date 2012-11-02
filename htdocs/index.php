@@ -116,14 +116,14 @@
 							<li>Ghost Design Consultants Ltd. (Leamington Spa)</li>
 							<li>Sep 2011 - Present</li>
 						</ul>
-						<p>I am responsible for the development of all the Web elements of projects taken on by the company. This includes writing project proposals and specifications, frontend coding of Photoshop designs, backend development using the tools best suited to the project, and leasing with clients.</p>
+						<p>I am responsible for the development of all the Web elements of projects taken on by the company. This includes writing project proposals and specifications, frontend coding of Photoshop designs, backend development using the tools best suited to the project, and liaising with clients.</p>
 
 						<h3>Backend PHP Developer</h3>
 						<ul>
 							<li>Propeller Communications (Rugby)</li>
 							<li>Oct 2010 - Sep 2011</li>
 						</ul>
-						<p>My role consisted of development with the company's MVC-based framework to build dynamic PHP-based CMS Web sites. This role included management of Mercurial repositories, which provides a safety-net during development, and allows multiple members of a team to work in the same project. The role has always allowed me to gain experience with jQuery and the use of AJAX, to provide a seamless end user experience.</p>
+						<p>My role consisted of development with the company's MVC-based framework to build dynamic PHP-based CMS Web sites. This role included management of Mercurial repositories, which provides a safety-net during development, and allows multiple members of a team to work on the same project. The role has also allowed me to gain experience with jQuery and the use of AJAX, to provide a seamless end user experience.</p>
 
 						<h3>Graduate Intern Web Developer</h3>
 						<ul>
@@ -137,7 +137,7 @@
 							<li>University of Worcester</li>
 							<li>Sep 2008 - Dec 2009</li>
 						</ul>
-						<p>I was part of a team responsible for providing media and technical support to students within the university's library. The role involved supporting the university's PCs, printers and software, as well as helping student's laptops to connect to the network. We needed good customer service skills, to ensure we dealt with customers with courtesy and respect, and as we were the most senior members of staff during our shifts, we had to uphold a professional image of the library and its ensure compliance of its code of conduct.</p>
+						<p>I was part of a team responsible for providing media and technical support to students within the university's library. The role involved supporting the university's PCs, printers and software, as well as helping student's laptops to connect to the network. We needed good customer service skills, to ensure we dealt with customers with courtesy and respect, and as we were the most senior members of staff during our shifts, we had to uphold a professional image of the library and ensure compliance of its code of conduct.</p>
 
 						<h3>Technical Support Technician</h3>
 						<ul>
