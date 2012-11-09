@@ -202,6 +202,13 @@ img
 .about
 {
 	@include section;
+	@media (min-width: em($breakpoint-width + 160))
+	{
+		div
+		{
+			@include columns(2);
+		}
+	}
 }
 
 /*	Skills

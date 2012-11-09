@@ -47,8 +47,10 @@
 
 						<h2>About Me</h2>
 
-						<p>I believe the Web is the greatest thing the human race has ever developed. As such, I'm proud to contribute towards its ongoing development by building quality Web sites.</p>
-						<p>I have a keen interest in learning and self development, and where possible, I like to employ the scientific method to everything that I do, making choices based on research and evidence.</p>
+						<div>
+							<p>I believe the Web is the greatest thing the human race has ever developed. As such, I'm proud to contribute towards its ongoing development by building quality Web sites.</p>
+							<p>I have a keen interest in learning and self development, and where possible, I like to employ the scientific method to everything that I do, making choices based on research and evidence.</p>
+						</div>
 
 					</section><!-- #home -->
 
