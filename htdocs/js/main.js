@@ -24,9 +24,6 @@ Modernizr.load({
 	test: Modernizr.mq('only all'),
 	yep: '',
 	nope: '/js/vendor/respond.min.js',
-	callback: function (url, result, key) {
-		alert(url);
-	}
 });
 
 /* lets get this show on the road */
