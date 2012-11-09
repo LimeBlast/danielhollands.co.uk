@@ -117,6 +117,7 @@
 						<ul>
 							<li>Ghost Design Consultants Ltd. (Leamington Spa)</li>
 							<li>Sep 2011 - Present</li>
+							<li>Wordpress, CouchCMS, PerchCMS, Lemonstand, CakePHP</li>
 						</ul>
 						<p>I am responsible for the development of all the Web elements of projects taken on by the company. This includes writing project proposals and specifications, frontend coding of Photoshop designs, backend development using the tools best suited to the project, and liaising with clients.</p>
 
@@ -124,6 +125,7 @@
 						<ul>
 							<li>Propeller Communications (Rugby)</li>
 							<li>Oct 2010 - Sep 2011</li>
+							<li>PHP, MySQL, Fuel, CodeIgniter</li>
 						</ul>
 						<p>My role consisted of development with the company's MVC-based framework to build dynamic PHP-based CMS Web sites. This role included management of Mercurial repositories, which provides a safety-net during development, and allows multiple members of a team to work on the same project. The role has also allowed me to gain experience with jQuery and the use of AJAX, to provide a seamless end user experience.</p>
 
@@ -131,6 +133,7 @@
 						<ul>
 							<li>South Worcestershire College (Evesham)</li>
 							<li>Jan 2010 - Sep 2010</li>
+							<li>CakePHP, XHTML, CSS</li>
 						</ul>
 						<p>I was solely responsible for the planning, development, testing, launch and maintenance of a new college Web site. The focus of the new site was that of making it easier to use, to improve compliance with the Disability Discrimination Act, and to improve search engine rankings. Upon completion it was greeted with positive feedback from both staff and students at the college, and an increased conversion rate.</p>
 
@@ -138,6 +141,7 @@
 						<ul>
 							<li>University of Worcester</li>
 							<li>Sep 2008 - Dec 2009</li>
+							<li>Windows, Networking</li>
 						</ul>
 						<p>I was part of a team responsible for providing media and technical support to students within the university's library. The role involved supporting the university's PCs, printers and software, as well as helping student's laptops to connect to the network. We needed good customer service skills, to ensure we dealt with customers with courtesy and respect, and as we were the most senior members of staff during our shifts, we had to uphold a professional image of the library and ensure compliance of its code of conduct.</p>
 
@@ -145,6 +149,7 @@
 						<ul>
 							<li>Fujitsu / Tesco Broadband (Sidcup)</li>
 							<li>Aug 2005 - Mar 2006</li>
+							<li>ADLS</li>
 						</ul>
 						<p>This call centre based role consisted of providing support to customers experiencing trouble using their broadband connection. It required a good telephone manner and the ability to explain complex instructions in an easy to understand way.</p>
 
