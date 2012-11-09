@@ -237,16 +237,18 @@ img
 		p
 		{
 			margin-top: 0;
-		}
-		p:before
-		{
-			content: "";
-			display: block;
-			width: 48px;
-			height: 48px;
-			margin: 0 0 em($gutter-width / 2) em($gutter-width / 2);
-			float: right;
-			background: url('/img/key-skills.png') no-repeat;
+			margin-right: 58px;
+			position: relative;
+			&:before
+			{
+				content: "";
+				display: block;
+				width: 48px;
+				height: 48px;
+				background: url('/img/key-skills.png') no-repeat;
+				position: absolute;
+				right: -58px;
+			}
 		}
 		&.coding p:before
 		{
@@ -287,6 +289,16 @@ img
 			h3
 			{
 				margin-bottom: em(6);
+			}
+			p
+			{
+				margin-right: 0;
+				margin-left: 58px;
+				&:before
+				{
+					left: -58px;
+					right: auto;
+				}
 			}
 		}
 	}
