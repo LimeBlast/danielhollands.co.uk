@@ -38,7 +38,7 @@
 
 						<h1>My name is Daniel.</h1>
 						<div><img src="/img/header.png" alt="" /></div>
-						<p><span class="slabtext">I'm a Web Developer</span> <span class="slabtext">with a passion for the</span> <span class="slabtext">World Wide Web.</span></p>
+						<p><span class="slabtext">I am a Web Developer</span> <span class="slabtext">with a passion for the</span> <span class="slabtext">World Wide Web.</span></p>
 						<p><span class="slabtext">Welcome to my</span> <span class="slabtext">curriculum vitae</span> <span class="slabtext">and portfolio.</span></p>
 
 					</header><!-- #header -->
