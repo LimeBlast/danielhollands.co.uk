@@ -182,6 +182,14 @@
 							<dd><a href="http://twitter.com/limeblast/">@LimeBlast</a></dd>
 							<dt>Facebook</dt>
 							<dd><a href="http://facebook.com/limeblast/">LimeBlast</a></dd>
+							<dt>LinkedIn</dt>
+							<dd><a href="http://uk.linkedin.com/in/limeblast">Daniel Hollands</a></dd>
+							<dt>Careers 2.0</dt>
+							<dd><a href="http://careers.stackoverflow.com/limeblast">Daniel Hollands</a></dd>
+							<dt>GitHub</dt>
+							<dd><a href="https://github.com/LimeBlast">LimeBlast</a></dd>
+							<dt>BitBucket</dt>
+							<dd><a href="https://bitbucket.org/LimeBlast">LimeBlast</a></dd>
 						</dl>
 
 					</section><!-- #contact -->
