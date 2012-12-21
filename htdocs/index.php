@@ -212,11 +212,27 @@
 		<script src="/js/plugins.js"></script>
 		<script src="/js/main.js"></script>
 
-		<script>
-			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)}(document,'script'));
+		<script type="text/javascript">
+			var _gas = _gas || [];
+			_gas.push(['_setAccount', 'UA-27778608-1']);
+			_gas.push(['_setDomainName', '.danielhollands.co.uk']);
+			_gas.push(['_trackPageview']);
+			_gas.push(['_gasTrackForms']);
+			_gas.push(['_gasTrackOutboundLinks']);
+			_gas.push(['_gasTrackMaxScroll']);
+			_gas.push(['_gasTrackDownloads']);
+			_gas.push(['_gasTrackYoutube', {force: true}]);
+			_gas.push(['_gasTrackVimeo', {force: true}]);
+			_gas.push(['_gasTrackMailto']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = '//cdnjs.cloudflare.com/ajax/libs/gas/1.10.1/gas.min.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
 		</script>
 	</body>
 </html>
