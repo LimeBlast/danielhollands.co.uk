@@ -305,6 +305,10 @@ img
 .education
 {
 	@include section;
+	img
+	{
+		float: right;
+	}
 }
 
 /*	Employment

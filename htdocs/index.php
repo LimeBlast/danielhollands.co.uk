@@ -104,7 +104,7 @@
 						<p>I've also been <a href="http://www.worcester.ac.uk/community/daniel-hollands.html">featured as a success story</a> on the University of Worcester's Web site.</p>
 
 						<h4>Worcester Ideas Network</h4>
-						<p>In my third year at university I was voted into the position of chairperson for the entrepreneurial society Worcester Ideas Network (WIN). The society helps students by organising workshops and participating in networking and competitions across Europe. One such competition was EPOCH, hosted by the London School of Economics in the style of The Apprentice TV show. My team won the marketing challenge which was judged by Orange, and continued to come second place in the competition overall.</p>
+						<p><img src="/img/worcester-ideas-network.png" alt="Worcester Ideas Network logo" />In my third year at university I was voted into the position of chairperson for the entrepreneurial society Worcester Ideas Network (WIN). The society helps students by organising workshops and participating in networking and competitions across Europe. One such competition was EPOCH, hosted by the London School of Economics in the style of The Apprentice TV show. My team won the marketing challenge which was judged by Orange, and continued to come second place in the competition overall.</p>
 						<p>My time as chairperson of the society provided me with valuable leadership and planning experience, as demonstrated in the planning of a trip to Germany to participate in an international conference, and the organisation of a series of seminars on idea generation, presented by lecturers from other universities.</p>
 
 					</section><!-- #education -->
