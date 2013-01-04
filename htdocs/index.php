@@ -61,7 +61,7 @@
 						<ul>
 							<li class="coding">
 								<h3>Coding</h3>
-								<p>Professional experience of coding tools and technologies including <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> 5.3, <abbr title="My Structure Query Language">MySQL</abbr> 5, <abbr title="Hyper Text Markup Language">HTML</abbr> 5, <abbr title="Cascading Style Sheets">CSS</abbr> 3, and jQuery 1.7, all of which allow for the creation of dynamic Web sites.</p>
+								<p>Professional experience of coding tools and technologies including <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, <abbr title="My Structure Query Language">MySQL</abbr>, <abbr title="Hyper Text Markup Language version 5">HTML 5</abbr>, <abbr title="Cascading Style Sheets level 3">CSS 3</abbr>, and jQuery, all of which allow for the creation of dynamic Web sites.</p>
 							</li>
 							<li class="cms-frameworks">
 								<h3>CMS and Frameworks</h3>
