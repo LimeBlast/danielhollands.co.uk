@@ -12,5 +12,6 @@
 # TECHNOLOGY COLOPHON
 
 	HTML5, CSS3, SASS
-	jQuery, Modernizr, slabText
+	jQuery, Modernizr, slabText (http://www.frequency-decoder.com/demo/slabText/)
 	NetBeans, Firebug
+	CSS Sprites Generator (http://css.spritegen.com/)
