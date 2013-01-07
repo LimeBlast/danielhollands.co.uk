@@ -47,6 +47,7 @@
 						<li><a href="#employment">Employment</a></li>
 <!--						<li><a href="#portfolio">Portfolio</a></li> -->
 						<li><a href="#contact">Contact</a></li>
+<!--						<li><a href="#social">Social Networking</a></li> -->
 					</ul>
 				</nav><!-- #navigation -->
 			</div><!-- #menu -->
@@ -231,22 +232,28 @@
 							var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
 						})(document, 'script');</script>
 
-						<dl>
-							<dt>Blog</dt>
-							<dd><a href="http://limeblast.co.uk/">Lime Blast</a></dd>
-							<dt>Twitter</dt>
-							<dd><a href="http://twitter.com/limeblast/">@LimeBlast</a></dd>
-							<dt>Facebook</dt>
-							<dd><a href="http://facebook.com/limeblast/">LimeBlast</a></dd>
-							<dt>LinkedIn</dt>
-							<dd><a href="http://uk.linkedin.com/in/limeblast">Daniel Hollands</a></dd>
-							<dt>Careers 2.0</dt>
-							<dd><a href="http://careers.stackoverflow.com/limeblast">Daniel Hollands</a></dd>
-							<dt>GitHub</dt>
-							<dd><a href="https://github.com/LimeBlast">LimeBlast</a></dd>
+					</section><!-- #contact -->
+
+<!--					<section id="social" class="social">
+
+						<h2>Social Networking</h2>
+
+						<dl class="social-networks">
+							<dt class="blog">Blog</dt>
+							<dd class="blog"><a href="http://limeblast.co.uk/">Lime Blast</a></dd>
+							<dt class="twitter">Twitter</dt>
+							<dd class="twitter"><a href="http://twitter.com/limeblast/">@LimeBlast</a></dd>
+							<dt class="facebook">Facebook</dt>
+							<dd class="facebook"><a href="http://facebook.com/limeblast/">LimeBlast</a></dd>
+							<dt class="linkedin">LinkedIn</dt>
+							<dd class="linkedin"><a href="http://uk.linkedin.com/in/limeblast">Daniel Hollands</a></dd>
+							<dt class="stackoverflow">Careers 2.0</dt>
+							<dd class="stackoverflow"><a href="http://careers.stackoverflow.com/limeblast">Daniel Hollands</a></dd>
+							<dt class="github">GitHub</dt>
+							<dd class="github"><a href="https://github.com/LimeBlast">LimeBlast</a></dd>
 						</dl>
 
-					</section><!-- #contact -->
+					</section><!-- #social -->
 
 				</article><!-- #main -->
 

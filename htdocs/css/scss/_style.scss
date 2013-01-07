@@ -441,6 +441,28 @@ img
 	@include section;
 }
 
+/*	Social Networking
+========================================================================== */
+
+.social
+{
+	@include section;
+}
+
+	.social-networks
+	{
+		dt
+		{
+			margin: 0;
+			padding: 0;
+		}
+		dd
+		{
+			margin: 0;
+			padding: 0;
+		}
+	}
+
 /*	Footer
 ========================================================================== */
 
