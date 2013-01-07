@@ -228,6 +228,7 @@ img
 .skills
 {
 	@include section;
+}
 
 	.skills-list
 	{
@@ -235,85 +236,84 @@ img
 		list-style: none;
 		margin: em($gutter-width) -#{em($gutter-width / 2)} 0;
 		padding: 0;
-	}
-	li
-	{
-		@include box-sizing(border-box);
-		padding: 0 em($gutter-width / 2);
-		width: 100%;
-		h3
-		{
-			margin: 0;
-		}
-		p
-		{
-			margin-top: 0;
-			margin-right: 58px;
-			position: relative;
-			&:before
-			{
-				content: "";
-				display: block;
-				width: 48px;
-				height: 48px;
-				background: url('/img/key-skills.png') no-repeat;
-				position: absolute;
-				right: -58px;
-			}
-		}
-		&.coding p:before
-		{
-			background-position: -48px -48px;
-		}
-		&.cms-frameworks p:before
-		{
-			background-position: -48px -0px;
-		}
-		&.accessibility p:before
-		{
-			background-position: -48px -96px;
-		}
-		&.usability p:before
-		{
-			background-position: -0px -0px;
-		}
-		&.server-management p:before
-		{
-			background-position: -0px -96px;
-		}
-		&.version-control p:before
-		{
-			background-position: -0px -48px;
-		}
-	}
-
-	@media (min-width: em($breakpoint-width + 160))
-	{
 		li
 		{
-			width: 50%;
-			float: left;
-			&:nth-child(2n+1)
-			{
-				clear: both;
-			}
+			@include box-sizing(border-box);
+			padding: 0 em($gutter-width / 2);
+			width: 100%;
 			h3
 			{
-				margin-bottom: em(6);
+				margin: 0;
 			}
 			p
 			{
-				margin-right: 0;
-				margin-left: 58px;
+				margin-top: 0;
+				margin-right: 58px;
+				position: relative;
 				&:before
 				{
-					left: -58px;
-					right: auto;
+					content: "";
+					display: block;
+					width: 48px;
+					height: 48px;
+					background: url('/img/key-skills.png') no-repeat;
+					position: absolute;
+					right: -58px;
+				}
+			}
+			&.coding p:before
+			{
+				background-position: -48px -48px;
+			}
+			&.cms-frameworks p:before
+			{
+				background-position: -48px -0px;
+			}
+			&.accessibility p:before
+			{
+				background-position: -48px -96px;
+			}
+			&.usability p:before
+			{
+				background-position: -0px -0px;
+			}
+			&.server-management p:before
+			{
+				background-position: -0px -96px;
+			}
+			&.version-control p:before
+			{
+				background-position: -0px -48px;
+			}
+		}
+
+		@media (min-width: em($breakpoint-width + 160))
+		{
+			li
+			{
+				width: 50%;
+				float: left;
+				&:nth-child(2n+1)
+				{
+					clear: both;
+				}
+				h3
+				{
+					margin-bottom: em(6);
+				}
+				p
+				{
+					margin-right: 0;
+					margin-left: 58px;
+					&:before
+					{
+						left: -58px;
+						right: auto;
+					}
 				}
 			}
 		}
 	}
-}
 
 /*	Education
 ========================================================================== */
@@ -373,7 +373,7 @@ img
 				background-position: -0px -0px;
 				float: left;
 				margin-right: 5px;
-				margin-top: 2px;
+				margin-top: 1px;
 			}
 		}
 		.employment-dates
@@ -388,7 +388,7 @@ img
 				background-position: -0px -31px;
 				float: left;
 				margin-right: 5px;
-				margin-top: 4px;
+				margin-top: 3px;
 			}
 		}
 	}
@@ -415,7 +415,7 @@ img
 				background-position: -0px -16px;
 				float: left;
 				margin-right: 5px;
-				margin-top: 2px;
+				margin-top: 1px;
 			}
 		}
 	}

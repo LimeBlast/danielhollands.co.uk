@@ -244,8 +244,6 @@
 							<dd><a href="http://careers.stackoverflow.com/limeblast">Daniel Hollands</a></dd>
 							<dt>GitHub</dt>
 							<dd><a href="https://github.com/LimeBlast">LimeBlast</a></dd>
-							<dt>BitBucket</dt>
-							<dd><a href="https://bitbucket.org/LimeBlast">LimeBlast</a></dd>
 						</dl>
 
 					</section><!-- #contact -->
