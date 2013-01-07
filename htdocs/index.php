@@ -212,22 +212,26 @@
 					<section id="contact" class="contact">
 
 						<h2>Contact</h2>
-						<form method="post">
-							<fieldset>
-								<label for="name">Name</label>
-								<input type="text" id="name" name="name" />
-								<label for="email">Email</label>
-								<input type="text" id="email" name="email" />
-								<label for="message">Message</label>
-								<textarea id="message" name="message"></textarea>
-								<button type="submit">Send</button>
-							</fieldset>
-						</form>
+
+						<div id="wufoo-q7x2x3">
+							Fill out my <a href="http://limeblast.wufoo.com/forms/q7x2x3">online form</a>.
+						</div>
+						<script type="text/javascript">var q7x2x3;(function(d, t) {
+							var s = d.createElement(t), options = {
+								'userName':'limeblast',
+								'formHash':'q7x2x3',
+								'autoResize':true,
+								'height':'517',
+								'async':true,
+								'header':'show'};
+							s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+							s.onload = s.onreadystatechange = function() {
+								var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+								try { q7x2x3 = new WufooForm();q7x2x3.initialize(options);q7x2x3.display(); } catch (e) {}};
+							var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+						})(document, 'script');</script>
+
 						<dl>
-							<dt>Mobile</dt>
-							<dd>07887 521 229</dd>
-							<dt>Email</dt>
-							<dd>daniel@limeblast.co.uk</dd>
 							<dt>Blog</dt>
 							<dd><a href="http://limeblast.co.uk/">Lime Blast</a></dd>
 							<dt>Twitter</dt>
