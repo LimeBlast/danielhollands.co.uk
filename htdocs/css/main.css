@@ -519,9 +519,17 @@ abbr[title] {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000365}}
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; }
+  @media (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000365}}
+    img {
+      display: inline;
+      margin: auto; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000377}}
 .container {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -540,14 +548,14 @@ img {
   .container:after {
     clear: both; }
   @media (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000377}}
     .container {
       max-width: 60em;
       padding: 0 0.0625em 0 0; } }
 
 /*	Menu
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000396}}
 .menu {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -564,7 +572,7 @@ img {
   .menu:after {
     clear: both; }
   @media (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\0000396}}
     .menu {
       float: left;
       width: 25%;
@@ -575,15 +583,15 @@ img {
 
 /*	Navigation
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003119}}
 .navigation ul {
   list-style: none;
   padding: 0;
   margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003125}}
 .navigation li {
   margin: 0.0625em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003129}}
 .navigation a {
   display: block;
   padding: 0.3125em 1.25em;
@@ -592,20 +600,20 @@ img {
   text-decoration: none;
   font-weight: bold;
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003138}}
   .navigation a:hover {
     background-color: #252525; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003143}}
 .navigation li.current a {
   background-color: #1b1b1b; }
 @media (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003150}}
   .navigation ul {
     margin-top: 1.25em; } }
 
 /*	Content
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003160}}
 .content {
   /* layout */
   *zoom: 1;
@@ -623,14 +631,14 @@ img {
   .content:after {
     clear: both; }
   @media (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003160}}
     .content {
       float: right;
       width: 75%; } }
 
 /*	Header
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003172}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003179}}
 .header {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -650,23 +658,23 @@ img {
     position: relative;
     padding: .5em;
     margin: -.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003182}}
   .header h1 {
     font-family: Forque;
     margin: 1em 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003187}}
   .header p {
     font-family: Forque;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); }
   @media (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003188}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003195}}
     .header h1 {
       margin-top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003199}}
     .header .hero-shot {
       width: 50%;
       float: right; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003197}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003204}}
     .header p {
       margin-top: 0;
       width: 50%;
@@ -675,7 +683,7 @@ img {
 
 /*	About
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003217}}
 .about {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -696,18 +704,18 @@ img {
     padding: .5em;
     margin: -.5em; }
   @media (min-width: 47.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003222}}
     .about .text {
       -webkit-columns: 2;
       -moz-columns: 2;
       columns: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003225}}
       .about .text p:first-child {
         margin-top: 0; } }
 
 /*	Skills
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003236}}
 .skills {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -728,7 +736,7 @@ img {
     padding: .5em;
     margin: -.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003241}}
 .skills-list {
   *zoom: 1;
   list-style: none;
@@ -741,22 +749,22 @@ img {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
   .skills-list:after {
     clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003240}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003247}}
   .skills-list li {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 0.625em;
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003245}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003252}}
     .skills-list li h3 {
       margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003249}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003256}}
     .skills-list li p {
       margin-top: 0;
       margin-right: 58px;
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003254}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003261}}
       .skills-list li p:before {
         content: "";
         display: block;
@@ -765,47 +773,47 @@ img {
         background: url("/img/key-skills.png") no-repeat;
         position: absolute;
         right: -58px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003272}}
     .skills-list li.coding p:before {
       background-position: -48px -48px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003269}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003276}}
     .skills-list li.cms-frameworks p:before {
       background-position: -48px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003273}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003280}}
     .skills-list li.accessibility p:before {
       background-position: -48px -96px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003277}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003284}}
     .skills-list li.usability p:before {
       background-position: 0px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003281}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003288}}
     .skills-list li.server-management p:before {
       background-position: 0px -96px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003292}}
     .skills-list li.version-control p:before {
       background-position: 0px -48px; }
   @media (min-width: 47.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003293}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003300}}
     .skills-list li {
       width: 50%;
       float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003304}}
       .skills-list li:nth-child(2n+1) {
         clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003301}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003308}}
       .skills-list li h3 {
         margin-bottom: 0.375em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003305}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003312}}
       .skills-list li p {
         margin-right: 0;
         margin-left: 58px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003309}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003316}}
         .skills-list li p:before {
           left: -58px;
           right: auto; } }
 
 /*	Education
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003329}}
 .education {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -825,17 +833,18 @@ img {
     position: relative;
     padding: .5em;
     margin: -.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003325}}
-  .education .win-logo {
-    float: right; }
+  @media (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003335}}
+    .education .win-logo {
+      float: right; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003344}}
 .education-modules li {
   margin-bottom: 1em; }
 
 /*	Employment
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003353}}
 .employment {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -856,11 +865,11 @@ img {
     padding: .5em;
     margin: -.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003363}}
 .employment-details {
   *zoom: 1;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0.4em 0;
   padding: 0;
   font-weight: bold;
   font-size: 0.9375em; }
@@ -871,13 +880,13 @@ img {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
   .employment-details:after {
     clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003371}}
   .employment-details li {
     float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003375}}
   .employment-details .employment-company {
     margin-right: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003378}}
     .employment-details .employment-company:before {
       content: "";
       display: block;
@@ -888,7 +897,7 @@ img {
       float: left;
       margin-right: 5px;
       margin-top: 1px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003393}}
   .employment-details .employment-dates:before {
     content: "";
     display: block;
@@ -900,7 +909,7 @@ img {
     margin-right: 5px;
     margin-top: 3px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003408}}
 .employment-tags {
   *zoom: 1;
   list-style: none;
@@ -915,11 +924,11 @@ img {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
   .employment-tags:after {
     clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003405}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003416}}
   .employment-tags li {
     float: left;
     margin-right: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003409}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003420}}
     .employment-tags li:before {
       content: "";
       display: block;
@@ -933,7 +942,7 @@ img {
 
 /*	Portfolio
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003432}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003443}}
 .portfolio {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -956,7 +965,7 @@ img {
 
 /*	Contact
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003440}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003451}}
 .contact {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -979,7 +988,7 @@ img {
 
 /*	Social Networking
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003448}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003459}}
 .social {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -1000,18 +1009,18 @@ img {
     padding: .5em;
     margin: -.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003455}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003466}}
 .social-networks dt {
   margin: 0;
   padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003460}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003471}}
 .social-networks dd {
   margin: 0;
   padding: 0; }
 
 /*	Footer
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003470}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003481}}
 .footer {
   *zoom: 1;
   -webkit-box-sizing: border-box;
@@ -1031,7 +1040,7 @@ img {
     position: relative;
     padding: .5em;
     margin: -.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003473}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/htdocs\/css\/scss\/_style\.scss}line{font-family:\00003484}}
   .footer p {
     font-size: 0.875em; }
 
