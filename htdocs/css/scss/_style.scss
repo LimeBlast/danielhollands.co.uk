@@ -153,6 +153,26 @@ img
 	}
 }
 
+/*	Social links
+========================================================================== */
+
+.social-links
+{
+	ul
+	{
+		list-style: none;
+		list-image: none;
+		margin: em($gutter-width /2) auto;
+		padding: 0;
+		text-align: center;
+		max-width: 80%;
+		li
+		{
+			display: inline-block;
+		}
+	}
+}
+
 /*	Content
 ========================================================================== */
 
