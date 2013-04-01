@@ -191,7 +191,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -347,7 +347,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -651,15 +651,15 @@ img {
 .skills-list li.coding p:before {
   background-position: -48px -48px; }
 .skills-list li.cms-frameworks p:before {
-  background-position: -48px 0px; }
+  background-position: -48px -0px; }
 .skills-list li.accessibility p:before {
   background-position: -48px -96px; }
 .skills-list li.usability p:before {
-  background-position: 0px 0px; }
+  background-position: -0px -0px; }
 .skills-list li.server-management p:before {
-  background-position: 0px -96px; }
+  background-position: -0px -96px; }
 .skills-list li.version-control p:before {
-  background-position: 0px -48px; }
+  background-position: -0px -48px; }
 @media (min-width: 47.5em) {
   .skills-list li {
     width: 50%;
@@ -722,7 +722,7 @@ img {
 .employment-details {
   *zoom: 1;
   list-style: none;
-  margin: 0 0 0.4em 0;
+  margin: 0 0 .4em 0;
   padding: 0;
   font-weight: bold;
   font-size: 0.9375em; }
@@ -741,7 +741,7 @@ img {
   width: 17px;
   height: 16px;
   background: url("/img/employment-tags.png") no-repeat;
-  background-position: 0px 0px;
+  background-position: -0px -0px;
   float: left;
   margin-right: 5px;
   margin-top: 1px; }
@@ -751,7 +751,7 @@ img {
   width: 17px;
   height: 14px;
   background: url("/img/employment-tags.png") no-repeat;
-  background-position: 0px -31px;
+  background-position: -0px -31px;
   float: left;
   margin-right: 5px;
   margin-top: 3px; }
@@ -777,7 +777,7 @@ img {
   width: 17px;
   height: 15px;
   background: url("/img/employment-tags.png") no-repeat;
-  background-position: 0px -16px;
+  background-position: -0px -16px;
   float: left;
   margin-right: 5px;
   margin-top: 1px; }
@@ -1727,7 +1727,7 @@ img {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -1748,7 +1748,7 @@ img {
     content: ""; }
 
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {
