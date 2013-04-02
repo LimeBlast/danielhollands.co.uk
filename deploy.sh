@@ -1,3 +1,4 @@
+#!/bin/sh
 git co master
 bash compile.sh
 git addr
