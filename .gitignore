@@ -1,5 +1,26 @@
+## Windows: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
 Thumbs.db
-/logs/*
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+## Linux: https://github.com/github/gitignore/blob/master/Global/Linux.gitignore
+.*
+!.gitignore
+!.gitkeep
+!.htaccess
+!.gitkeep
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+## Netbeans
 /nbproject/*
-/.sass-cache/
-/.idea/
+
+## PhpStorm
+/.idea/*
+
+## SASS
+*.sass-cache

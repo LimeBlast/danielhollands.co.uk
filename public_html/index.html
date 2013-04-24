@@ -35,16 +35,18 @@
 		<meta name="msapplication-TileColor" content="#619EC2"/>
 		<meta name="msapplication-TileImage" content="/img/windows-tile-icon.png"/>
 
-		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/application.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" />
 		<script src="/js/vendor/modernizr-2.6.1.min.js"></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 		<![endif]-->
-		<div id="container" class="container">
-			<div id="menu" class="menu">
-				<nav id="navigation" class="navigation" role="navigation">
+		<div class="wrap">
+			<div class="menu">
+				<div class="fixed">
+				<nav class="navigation" role="navigation">
 					<ul>
 						<li class="current"><a href="#header">Introduction</a></li>
 						<li><a href="#about">About Me</a></li>
@@ -52,33 +54,34 @@
 						<li><a href="#education">Education</a></li>
 						<li><a href="#employment">Employment</a></li>
 					</ul>
-				</nav><!-- #navigation -->
+				</nav><!-- .navigation -->
 				<div class="social-links">
 					<ul>
-						<li><a href="http://twitter.com/limeblast/" class="fc-webicon twitter">@LimeBlast on Twitter</a></li>
-						<li><a href="http://facebook.com/limeblast/" class="fc-webicon facebook">LimeBlast on Facebook</a></li>
-						<li><a href="https://plus.google.com/112741180856524338972?rel=author" class="fc-webicon googleplus">Daniel Hollands Google+</a></li>
-						<li><a href="http://uk.linkedin.com/in/limeblast" class="fc-webicon linkedin">Daniel Hollands on LinkedIn</a></li>
-						<li><a href="http://stackoverflow.com/users/1049688/daniel-hollands" class="fc-webicon stackoverflow">Daniel Hollands on Stack Overflow</a></li>
-						<!--li><a href="http://careers.stackoverflow.com/limeblast" class="fc-webicon twitter">Daniel Hollands on Careers 2.0</a></li-->
-						<li><a href="https://github.com/LimeBlast" class="fc-webicon github">LimeBlast on GitHub</a></li>
-						<li><a href="https://bitbucket.org/LimeBlast" class="fc-webicon bitbucket">LimeBlast on BitBucket</a></li>
-						<li><a href="http://limeblast.co.uk/" class="fc-webicon wordpress">Lime Blast Blog</a></li>
+						<li><a href="http://twitter.com/limeblast/" class="twitter">@LimeBlast on Twitter</a></li>
+						<li><a href="http://facebook.com/limeblast/" class="facebook">LimeBlast on Facebook</a></li>
+						<li><a href="https://plus.google.com/112741180856524338972?rel=author" class="googleplus">Daniel Hollands Google+</a></li>
+						<li><a href="http://uk.linkedin.com/in/limeblast" class="linkedin">Daniel Hollands on LinkedIn</a></li>
+						<li><a href="http://stackoverflow.com/users/1049688/daniel-hollands" class="stackoverflow">Daniel Hollands on Stack Overflow</a></li>
+						<li><a href="http://careers.stackoverflow.com/limeblast" class="careers2">Daniel Hollands on Careers 2.0</a></li>
+						<li><a href="https://github.com/LimeBlast" class="github">LimeBlast on GitHub</a></li>
+						<li><a href="https://bitbucket.org/LimeBlast" class="bitbucket">LimeBlast on BitBucket</a></li>
+						<li><a href="http://limeblast.co.uk/" class="wordpress">Lime Blast Blog</a></li>
 					</ul>
-				</div><!-- #social-links -->
+				</div><!-- .social-links -->
+				</div>
 			</div><!-- #menu -->
 
-			<div id="content" class="content">
-				<article id="main" class="main" role="main">
+			<div class="content">
+				<article class="main" role="main">
 
-					<header id="header" class="header" role="banner">
+					<header class="header" role="banner">
 
 						<h1>My name is Daniel.</h1>
 						<div class="hero-shot"><img src="/img/header.png" alt="" /></div>
 						<p><span class="slabtext">I am a Web Developer</span> <span class="slabtext">with a passion for the</span> <span class="slabtext">World Wide Web.</span></p>
 						<p><span class="slabtext">Welcome to my</span> <span class="slabtext">curriculum vitae</span> <span class="slabtext">and portfolio.</span></p>
 
-					</header><!-- #header -->
+					</header><!-- .header -->
 
 					<section id="about" class="about">
 
@@ -91,7 +94,7 @@
 							<p>In my spare time I enjoy experimenting with new technology, playing trading card and computer games, and exploring the outside world, either by bicycle or on foot.</p>
 						</div>
 
-					</section><!-- #home -->
+					</section><!-- #about -->
 
 					<section id="skills" class="skills">
 
@@ -219,18 +222,21 @@
 						</ul>
 						<p class="employment-description">This call centre based role consisted of providing support to customers experiencing trouble using their broadband connection. It required a good telephone manner and the ability to explain complex instructions in an easy to understand way.</p>
 
-					</section><!-- #employment -->
+					</section><!-- .employment -->
 
-				</article><!-- #main -->
+				</article><!-- .main -->
 
-				<footer id="footer" class="footer" role="contentinfo">
+				<footer class="footer" role="contentinfo">
 					<p>Site content Copyright &copy; 2013 Daniel Hollands. <a href="https://bitbucket.org/LimeBlast/danielhollands.co.uk">View source on Bitbucket</a>.</p>
 				</footer><!-- #footer -->
-			</div><!-- #content -->
-		</div><!-- #container -->
+			</div><!-- .content -->
+		</div><!-- .wrap -->
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="/js/vendor/selectivizr-1.0.2.min.js"></script>
+		<![endif]-->
 		<script src="/js/plugins.js"></script>
 		<script src="/js/main.js"></script>
 

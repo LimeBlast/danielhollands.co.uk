@@ -1,0 +1,291 @@
+	/* __     _    ___    __      ____    __     _    _
+		/    | |  |   |  | (_    _)  /  __) \   | )  /
+	   (     | |  |   |  |   |  |   |  /     |  |/  /            Created by:
+		\__  | |  |   |  |   |  |   | |      |     (             Daniel Hollands
+		   | | |   \_/   |  _|  |_  |  \__   |  |\  \            http://danielhollands.co.uk/
+	   ____| |__\       /__(      )__\    )_/   |_)  \_
+	   _       ___        ______  _____     ____        __
+		)  ____) (__    __)    /  \    |    \  (__    __)
+	   (  (___      |  |      /    \   |     )    |  |           For:
+		\___  \     |  |     /  ()  \  |    /     |  |           Lime Blast
+		____)  )    |  |    |   __   | | |\ \     |  |           http://limeblast.co.uk/
+	   (      (_____|  |____|  (__)  |_| |_\ \____|  |____ */
+
+/* ==========================================================================
+   Initial imports
+   ========================================================================== */
+@import 'base';
+
+
+/* Compass
+   ========================================================================== */
+@import 'compass/typography/lists/inline-block-list';
+@import 'compass/utilities/general/clearfix';
+@import 'compass/typography/links/link-colors';
+@import 'compass/css3/transition';
+
+/* Third party
+   ========================================================================== */
+@import 'susy';
+
+/* My stuff
+   ========================================================================== */
+@import 'normalize';
+@import 'mixins';
+@import 'shame';
+
+/* ==========================================================================
+   Globals (Based on recommendations by H5BP)
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+	// set main foreground colour
+	color: $main-fg-color;
+}
+
+a {
+	@include transition(all 0.3s ease-out 0s);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	// set title font
+	font-family: $title-font-family;
+	font-weight: 700;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: $qs-feature-color;
+	text-shadow: none;
+}
+
+::selection {
+	background: $qs-feature-color;
+	text-shadow: none;
+}
+
+fieldset {
+	// Remove default fieldset styles.
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	// Allow only vertical resizing of textareas.
+	resize: vertical;
+}
+
+img {
+	// Responsive images
+	max-width: 100%;
+	height: auto;
+	// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+	vertical-align: middle;
+}
+
+ol,
+ul {
+	ul,
+	ol {
+		// remove the margin from inside multi-level lists
+		@include rhythm(0);
+	}
+}
+
+/* Body
+   ========================================================================== */
+body {
+	// full credit to http://basehold.it/ for this code
+	@if ($qs-debug) {
+		position: relative;
+
+		&:after {
+			position: absolute;
+			width: auto;
+			height: auto;
+			z-index: 9999;
+			content: '';
+			display: block;
+			pointer-events: none;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url("http://basehold.it/i/" + $qs-base-line-height) repeat top left;
+		}
+
+		&:active:after {
+			display: none;
+		}
+	}
+
+	background: $body-bg-color;
+}
+
+/* Page wrapper
+   ========================================================================== */
+.wrap {
+	// http://stackoverflow.com/a/13522469/1049688
+	@include container($total-columns, $media-layout);
+	@extend .clearfix;
+
+	@include at-breakpoint($media-layout) {
+		$experimental-support-for-svg: true;
+		// Doug Neiner Method: http://css-tricks.com/fluid-width-equal-height-columns/
+		@include background-image(linear-gradient(left center, $menu-bg-color columns(4), $content-bg-color columns(4)));
+	}
+}
+
+/* Chrome Frame Prompt
+   ========================================================================== */
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+	@extend .wrap;
+}
+
+/* ==========================================================================
+   Author's custom styles (Here be dragons)
+   ========================================================================== */
+
+/* Menu
+   ========================================================================== */
+.menu {
+
+	background: $menu-bg-color;
+
+	a {
+		@include link-colors($menu-link-color);
+	}
+
+	@include at-breakpoint($media-layout) {
+		// a bit of magic to allow for the menu to remain fixed: http://stackoverflow.com/a/12658866/1049688
+		@include container;
+		background: none;
+		position: fixed;
+		left: 0;
+		right: 0;
+		// the sidebar itself only spans 4 columns.
+		.fixed { @include span-columns(4); }
+	}
+}
+
+/* Navigation
+   ========================================================================== */
+.navigation {
+	ul {
+		@include no-bullets;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	a {
+		display: block;
+		padding: $gutter-width/4 0;
+		margin: $gutter-width/2 0;
+		font-weight: 700;
+		text-decoration: none;
+		&:hover {
+			background: darken($menu-bg-color, 5%);
+		}
+		&:active,
+		.current
+		{
+			background: darken($menu-bg-color, 10%);
+		}
+	}
+}
+
+/* Social links
+   ========================================================================== */
+.social-links {
+	ul {
+		@include no-bullets;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+/* Content
+   ========================================================================== */
+.content {
+	background: $content-bg-color;
+
+	a {
+		@include link-colors($content-link-color, $content-link-hover-color);
+		margin: -0.5em;
+		padding: 0.5em;
+		position: relative;
+	}
+
+	@include at-breakpoint($media-layout) {
+		@include pre(4);
+		@include span-columns(8 omega, $desktop-columns, 0px $gutter-width);
+	}
+}
+
+/* ==========================================================================
+   Final imports
+   ========================================================================== */
+@import "helpers";
+@import "print";
+
+/*                      /\
+                        ||
+                        ||
+                        ||
+                        ||                                               ~-----~
+                        ||                                            /===--  ---~~~
+                        ||                   ;'                 /==~- --   -    ---~~~
+                        ||                (/ ('              /=----         ~~_  --(  '
+                        ||             ' / ;'             /=----               \__~
+     '                ~==_=~          '('             ~-~~      ~~~~        ~~~--\~'
+     \\                (c_\_        .i.             /~--    ~~~--   -~     (     '
+      `\               (}| /       / : \           / ~~------~     ~~\   (
+      \ '               ||/ \      |===|          /~/             ~~~ \ \(
+      ``~\              ~~\  )~.~_ >._.< _~-~     |`_          ~~-~     )\
+       '-~                 {  /  ) \___/ (   \   |` ` _       ~~         '
+       \ -~\                -<__/  -   -  L~ -;   \\    \ _ _/
+       `` ~~=\                  {    :    }\ ,\    ||   _ :(
+        \  ~~=\__                \ _/ \_ /  )  } _//   ( `|'
+        ``    , ~\--~=\           \     /  / _/ / '    (   '
+         \`    } ~ ~~ -~=\   _~_  / \ / \ )^ ( // :_  / '
+         |    ,          _~-'   '~~__-_  / - |/     \ (
+          \  ,_--_     _/              \_'---', -~ .   \
+           )/      /\ / /\   ,~,         \__ _}     \_  "~_
+           ,      { ( _ )'} ~ - \_    ~\  (-:-)       "\   ~
+                  /'' ''  )~ \~_ ~\   )->  \ :|    _,       "
+                 (\  _/)''} | \~_ ~  /~(   | :)   /          }
+                <``  >;,,/  )= \~__ {{{ '  \ =(  ,   ,       ;
+               {o_o }_/     |v  '~__  _    )-v|  "  :       ,"
+               {/"\_)       {_/'  \~__ ~\_ \\_} '  {        /~\
+               ,/!          '_/    '~__ _-~ \_' :  '      ,"  ~
+              (''`                  /,'~___~    | /     ,"  \ ~'
+             '/, )                 (-)  '~____~";     ,"     , }
+           /,')                    / \         /  ,~-"       '~'
+       (  ''/                     / ( '       /  /          '~'
+    ~ ~  ,, /) ,                 (/( \)      ( -)          /~'
+  (  ~~ )`  ~}                   '  \)'     _/ /           ~'
+ { |) /`,--.(  }'                    '     (  /          /~'
+(` ~ ( c|~~| `}   )                        '/:\         ,'
+ ~ )/``) )) '|),                          (/ | \)                 -sjm
+  (` (-~(( `~`'  )                        ' (/ '
+   `~'    )'`')                              '
+     ` ``*/
