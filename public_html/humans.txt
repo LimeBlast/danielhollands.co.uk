@@ -7,13 +7,8 @@
 
 # THANKS
 
-	Jonathan Smiley (for his article on building a modern grid: http://www.netmagazine.com/tutorials/building-modern-grid-system).
-
 # TECHNOLOGY COLOPHON
 
-	HTML5, CSS3, SASS.
-	jQuery, Modernizr, slabText (http://www.frequency-decoder.com/demo/slabText/).
-	NetBeans, Firebug, FireSASS.
-	Wufoo.
-	CSS Sprites Generator (http://css.spritegen.com/).
-	Fairhead Creative Webicons (https://github.com/adamfairhead/webicons).
+	HTML5, CSS3, SASS
+	jQuery, Modernizr, slabText
+	NetBeans, Firebug, FireSASS
