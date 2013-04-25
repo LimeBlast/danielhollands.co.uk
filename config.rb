@@ -8,6 +8,7 @@ sass_dir = 'public_html/compass'
 css_dir = 'public_html/css'
 images_dir = 'public_html/img'
 javascripts_dir = 'public_html/js'
+relative_assets = true
 
 # sass settings
 sass_options = {:debug_info => true}

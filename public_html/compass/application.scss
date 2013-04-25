@@ -23,11 +23,13 @@
 @import 'compass/typography/links/link-colors';
 @import 'compass/css3/transition';
 @import 'compass/css3/columns';
+@import 'compass/typography/lists/inline-block-list';
 
 /* Third party
    ========================================================================== */
 @import 'susy';
 @import 'slabtext';
+@import 'retina-sprites';
 
 /* My stuff
    ========================================================================== */
@@ -115,6 +117,10 @@ ul {
 	}
 }
 
+abbr[title] {
+	cursor: help;
+}
+
 /* Body
    ========================================================================== */
 body {
@@ -175,6 +181,7 @@ body {
 /* Menu
    ========================================================================== */
 .menu {
+	@extend .clearfix;
 	background: $menu-bg-color;
 
 	a {
@@ -234,8 +241,45 @@ body {
 .social-links {
 	ul {
 		@include no-bullets;
-		padding: 0;
-		margin: 0;
+		@include inline-block-list();
+		@include trailer(1);
+		margin-left: $gutter-width;
+		margin-right: $gutter-width;
+		text-align: center;
+		line-height: 40px;
+	}
+
+	a {
+		@extend .ir;
+		display: block;
+	}
+
+	.twitter {
+		@include retina-sprite(social-twitter);
+	}
+	.facebook {
+		@include retina-sprite(social-facebook);
+	}
+	.google-plus {
+		@include retina-sprite(social-google-plus);
+	}
+	.linkedin {
+		@include retina-sprite(social-linkedin);
+	}
+	.stack-overflow {
+		@include retina-sprite(social-stack-overflow);
+	}
+	.careers-20 {
+		@include retina-sprite(social-careers-20);
+	}
+	.github {
+		@include retina-sprite(social-github);
+	}
+	.bitbucket {
+		@include retina-sprite(social-bitbucket);
+	}
+	.lime-blast {
+		@include retina-sprite(social-lime-blast);
 	}
 }
 
@@ -256,7 +300,7 @@ body {
 
 	@include at-breakpoint($media-layout) {
 		@include pre(4);
-		@include span-columns(8 omega, $desktop-columns, 0px $gutter-width);
+		@include span-columns(12 omega, $desktop-columns, 0px $gutter-width);
 	}
 }
 
@@ -265,6 +309,12 @@ body {
    ========================================================================== */
 .header {
 	@extend .clearfix;
+
+	.header-title {
+		@include at-breakpoint($media-layout) {
+			margin-top: 0;
+		}
+	}
 
 	.header-title,
 	.header-copy
@@ -277,13 +327,13 @@ body {
 
 	.header-copy {
 		@include at-breakpoint($media-layout) {
-			@include span-columns(4, 8);
+			@include span-columns(6, 12);
 		}
 	}
 	.header-image {
 		text-align: center;
 		@include at-breakpoint($media-layout) {
-			@include span-columns(4 omega, 8);
+			@include span-columns(6 omega, 12);
 		}
 	}
 
@@ -310,7 +360,7 @@ body {
 }
 
 	.skills-list {
-		@include tile-list($total-columns, $total-columns, 4, 8);
+		@include tile-list($total-columns, $total-columns, 6, 12);
 
 		h3 {
 			@include leader(0);

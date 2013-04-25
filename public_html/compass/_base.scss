@@ -2,14 +2,14 @@
    Susy grid: http://susy.oddbird.net/
    ========================================================================== */
 // mobile first
-$total-columns:		6;
-$column-width:		60px;
+$total-columns:		8;
+$column-width:		40px;
 $gutter-width:		20px;
 $grid-padding:		0;
 
 // desktop breakpoint
 $desktop-size:		40em;
-$desktop-columns:	12;
+$desktop-columns:	16;
 
 // set the default breakpoint (and include a modernizr compatible fall back for IE8 and under)
 $media-layout:		$desktop-size $desktop-columns lt-ie9;
@@ -59,6 +59,12 @@ $h5-font-size: 0.83 * $base-font-size;
 $h6-font-size: 0.67 * $base-font-size;
 
 /* ==========================================================================
+   Retina Sprites: https://github.com/AdamBrodzinski/Retina-Sprites-for-Compass
+   ========================================================================== */
+$sprites: sprite-map("sprites/*.png");        // import 1x sprites
+$sprites2x: sprite-map("sprites@2x/*.png");   // import 2x sprites
+
+/* ==========================================================================
    Cross-Browser Support: http://compass-style.org/reference/compass/support/
    ========================================================================== */
 $legacy-support-for-mozilla:	false;
@@ -69,4 +75,4 @@ $legacy-support-for-ie8:		true;
 /* ==========================================================================
    Debug - set this to false to remove the grid overlay.
    ========================================================================== */
-$qs-debug:	true;
+$qs-debug:	false;
