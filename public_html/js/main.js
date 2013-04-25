@@ -8,4 +8,7 @@ jQuery(window).bind("load", function() {
 
 $(document).ready(function() {
 
+	// one page nav
+	$('#navigation').onePageNav();
+
 });
