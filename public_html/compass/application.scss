@@ -16,7 +16,6 @@
    ========================================================================== */
 @import 'base';
 
-
 /* Compass
    ========================================================================== */
 @import 'compass/typography/lists/inline-block-list';
@@ -27,12 +26,14 @@
 /* Third party
    ========================================================================== */
 @import 'susy';
+@import 'slabtext';
 
 /* My stuff
    ========================================================================== */
 @import 'normalize';
 @import 'mixins';
 @import 'shame';
+@import 'fonts';
 
 /* ==========================================================================
    Globals (Based on recommendations by H5BP)
@@ -55,10 +56,11 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 {
-	// set title font
+h6, .h6
+{
 	font-family: $title-font-family;
 	font-weight: 700;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 /*
@@ -139,7 +141,6 @@ body {
 /* Page wrapper
    ========================================================================== */
 .wrap {
-	// http://stackoverflow.com/a/13522469/1049688
 	@include container($total-columns, $media-layout);
 	@extend .clearfix;
 
@@ -179,10 +180,13 @@ body {
 		@include container;
 		background: none;
 		position: fixed;
+		height: 0;
 		left: 0;
 		right: 0;
 		// the sidebar itself only spans 4 columns.
-		.fixed { @include span-columns(4); }
+		.fixed {
+			@include span-columns(4);
+		}
 	}
 }
 
@@ -190,6 +194,7 @@ body {
    ========================================================================== */
 .navigation {
 	ul {
+		@extend .clearfix;
 		@include no-bullets;
 		padding: 0;
 		margin: 0;
@@ -223,9 +228,12 @@ body {
 	}
 }
 
-/* Content
+/* Main
    ========================================================================== */
-.content {
+.main {
+	@extend .clearfix;
+	padding: 0 $gutter-width;
+
 	background: $content-bg-color;
 
 	a {
@@ -240,6 +248,32 @@ body {
 		@include span-columns(8 omega, $desktop-columns, 0px $gutter-width);
 	}
 }
+
+
+/* Header
+   ========================================================================== */
+.header {
+	@extend .clearfix;
+
+	.header-title,
+	.header-copy
+	{
+		font-family: $standout-font-family;
+		font-weight: 400;
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+	}
+}
+
+	.header-copy {
+		@include at-breakpoint($media-layout) {
+			@include span-columns(4, 8);
+		}
+	}
+	.header-image {
+		@include at-breakpoint($media-layout) {
+			@include span-columns(4 omega, 8);
+		}
+	}
 
 /* ==========================================================================
    Final imports
