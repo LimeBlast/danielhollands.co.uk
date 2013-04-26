@@ -36,6 +36,16 @@ $body-bg-color:			#195F88;
 $main-fg-color:			$white;
 
 /* ==========================================================================
+   Text shadow
+   ========================================================================== */
+
+$default-text-shadow-color:		rgba(0,0,0,.4);
+$default-text-shadow-h-offset:	1px;
+$default-text-shadow-v-offset:	1px;
+$default-text-shadow-blur:		1px;
+$default-text-shadow-spread:	false;
+
+/* ==========================================================================
    Vertical rhythm: http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
    * image heights should be multiples of the base-line-height
@@ -52,8 +62,8 @@ $title-font-family:		'PT Sans', sans-serif;
 $standout-font-family:	'Forque', 'PT Sans', sans-serif;
 
 $h1-font-size: 2    * $base-font-size;
-$h2-font-size: 2    * $base-font-size;
-$h3-font-size: 1.5 * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
 $h4-font-size: 1    * $base-font-size;
 $h5-font-size: 0.83 * $base-font-size;
 $h6-font-size: 0.67 * $base-font-size;

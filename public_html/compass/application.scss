@@ -64,7 +64,7 @@ h6, .h6
 {
 	font-family: $title-font-family;
 	font-weight: 700;
-	@include single-text-shadow(1px, 1px, 1px, false, rgba(0,0,0,0.4));
+	@include single-text-shadow;
 }
 
 h2, .h2 {
@@ -325,7 +325,7 @@ body {
 	{
 		font-family: $standout-font-family;
 		font-weight: 400;
-		@include single-text-shadow(1px, 1px, 1px, false, rgba(0,0,0,0.4));
+		@include single-text-shadow;
 	}
 }
 
@@ -421,6 +421,34 @@ body {
 			p:before {
 				@include retina-sprite(skills-version-control);
 			}
+		}
+	}
+
+/* Education
+========================================================================== */
+.education {
+
+}
+
+	.education-modules {
+		li {
+			@include leader(1);
+			@include trailer(1);
+		}
+
+		strong {
+			@include single-text-shadow;
+		}
+	}
+
+	.education-win {
+		@include retina-sprite(worcester-ideas-network);
+		@extend .ir;
+		margin: 0 auto $gutter-width auto;
+
+		@include at-breakpoint($media-layout) {
+			float: right;
+			margin: 0 0 0 $gutter-width/2;
 		}
 	}
 
