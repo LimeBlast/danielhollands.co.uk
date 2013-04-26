@@ -452,6 +452,53 @@ body {
 		}
 	}
 
+
+/* Employment
+========================================================================== */
+.employment {
+
+}
+
+	.employment-details {
+		@include inline-block-list;
+
+		li {
+			margin-right: $gutter-width/4;
+			&:before {
+				margin-right: $gutter-width/4;
+				content: '';
+				display: inline-block;
+			}
+		}
+	}
+
+	.employment-location {
+		&:before {
+			@include retina-sprite(employment-location);
+		}
+	}
+	.employment-dates {
+		&:before {
+			@include retina-sprite(employment-dates);
+		}
+	}
+
+
+	.employment-tags {
+		@include inline-block-list;
+
+		li {
+			margin-right: $gutter-width/4;
+			&:before {
+				content: '';
+				display: inline-block;
+				@include retina-sprite(employment-tag);
+				margin-right: $gutter-width/4;
+			}
+		}
+	}
+
+
 /* ==========================================================================
    Final imports
    ========================================================================== */
