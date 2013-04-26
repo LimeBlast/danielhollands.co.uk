@@ -24,6 +24,7 @@
 @import 'compass/css3/transition';
 @import 'compass/css3/columns';
 @import 'compass/typography/lists/inline-block-list';
+@import 'compass/css3/text-shadow';
 
 /* Third party
    ========================================================================== */
@@ -63,7 +64,7 @@ h6, .h6
 {
 	font-family: $title-font-family;
 	font-weight: 700;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+	@include single-text-shadow(1px, 1px, 1px, false, rgba(0,0,0,0.4));
 }
 
 h2, .h2 {
@@ -149,6 +150,9 @@ body {
 	}
 
 	background: $body-bg-color;
+
+	// make text slightly easier to read: http://boldperspective.com/2011/improve-web-typography-with-1-line-of-code/
+	@include single-text-shadow(0, 0, 1px, false, rgba(0,0,0,0.1));
 }
 
 /* Page wrapper
@@ -321,7 +325,7 @@ body {
 	{
 		font-family: $standout-font-family;
 		font-weight: 400;
-		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+		@include single-text-shadow(1px, 1px, 1px, false, rgba(0,0,0,0.4));
 	}
 }
 
@@ -364,6 +368,59 @@ body {
 
 		h3 {
 			@include leader(0);
+		}
+
+		p {
+			@include at-breakpoint($media-layout) {
+				position: relative;
+				padding-left: em(58px); // is this a magic number? I'm not sure, I don't think so, it's the image size plus half a gutter-width
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				float: right;
+				margin-left: $gutter-width/2;
+
+				@include at-breakpoint($media-layout) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					float: none;
+					margin-left: 0;
+				}
+			}
+		}
+
+		.coding {
+			p:before {
+				@include retina-sprite(skills-coding);
+			}
+		}
+		.cms-frameworks {
+			p:before {
+				@include retina-sprite(skills-cms-frameworks);
+			}
+		}
+		.accessibility {
+			p:before {
+				@include retina-sprite(skills-accessibility);
+			}
+		}
+		.usability {
+			p:before {
+				@include retina-sprite(skills-usability);
+			}
+		}
+		.server-management {
+			p:before {
+				@include retina-sprite(skills-server-management);
+			}
+		}
+		.version-control {
+			p:before {
+				@include retina-sprite(skills-version-control);
+			}
 		}
 	}
 
