@@ -901,7 +901,43 @@ body {
   list-style-type: none;
   margin-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003222}}
+.navigation:hover li {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003227}}
+.navigation li {
+  display: none;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003227}}
+  .navigation li {
+    display: block;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/\.rvm\/gems\/ruby-1\.9\.3-p194\/gems\/susy-1\.0\.8\/sass\/susy\/_media\.scss}line{font-family:\0000391}}
+.lt-ie9 .navigation li {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003235}}
+.navigation .current a {
+  background: #121212;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003240}}
+.navigation .shownav {
+  display: block;
+}
+@media (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003240}}
+  .navigation .shownav {
+    display: none !important;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/\.rvm\/gems\/ruby-1\.9\.3-p194\/gems\/susy-1\.0\.8\/sass\/susy\/_media\.scss}line{font-family:\0000391}}
+.lt-ie9 .navigation .shownav {
+  display: none !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003248}}
 .navigation a {
   display: block;
   padding: 6px 0;
@@ -909,22 +945,18 @@ body {
   font-weight: 700;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003254}}
 .navigation a:hover {
   background: #1f1f1f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003231}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003258}}
 .navigation a:active {
-  background: #121212;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003237}}
-.navigation .current a {
   background: #121212;
 }
 
 /* Social links
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003267}}
 .social-links ul {
   list-style: none;
   margin: 0;
@@ -956,11 +988,11 @@ body {
   *display: inline;
   white-space: nowrap;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003256}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003277}}
 .social-links a {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003261}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003282}}
 .social-links .twitter {
   height: 32px;
   width: 32px;
@@ -979,7 +1011,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003285}}
 .social-links .facebook {
   height: 32px;
   width: 32px;
@@ -998,7 +1030,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003267}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003288}}
 .social-links .google-plus {
   height: 32px;
   width: 32px;
@@ -1017,7 +1049,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003291}}
 .social-links .linkedin {
   height: 32px;
   width: 32px;
@@ -1036,7 +1068,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003273}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003294}}
 .social-links .stack-overflow {
   height: 32px;
   width: 32px;
@@ -1055,7 +1087,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003276}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003297}}
 .social-links .careers-20 {
   height: 32px;
   width: 32px;
@@ -1074,7 +1106,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003279}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003300}}
 .social-links .github {
   height: 32px;
   width: 32px;
@@ -1093,7 +1125,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003282}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003303}}
 .social-links .bitbucket {
   height: 32px;
   width: 32px;
@@ -1112,7 +1144,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003306}}
 .social-links .lime-blast {
   height: 32px;
   width: 32px;
@@ -1134,12 +1166,12 @@ body {
 
 /* Main
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003313}}
 .main {
   padding: 0 24px;
   background: #619ec2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003298}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003319}}
 .main a {
   color: #cfe2ec;
   margin: -0.5em;
@@ -1151,7 +1183,7 @@ body {
   color: #274d64;
 }
 @media (min-width: 40em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003313}}
   .main {
     margin-left: 25.6%;
     padding-left: 0%;
@@ -1174,7 +1206,7 @@ body {
 /* Header
    ========================================================================== */
 @media (min-width: 40em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003338}}
   .header .header-title {
     margin-top: 0;
   }
@@ -1183,7 +1215,7 @@ body {
 .lt-ie9 .header .header-title {
   margin-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003346}}
 .header .header-title,
 .header .header-copy {
   font-family: "Forque", "PT Sans", sans-serif;
@@ -1192,7 +1224,7 @@ body {
 }
 
 @media (min-width: 40em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003353}}
   .header-copy {
     width: 48.3871%;
     float: left;
@@ -1206,12 +1238,12 @@ body {
   margin-right: 3.22581%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003358}}
 .header-image {
   text-align: center;
 }
 @media (min-width: 40em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003358}}
   .header-image {
     width: 48.3871%;
     float: right;
@@ -1228,7 +1260,7 @@ body {
 /* About me
    ========================================================================== */
 @media (min-width: 40em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003371}}
   .about-copy {
     -webkit-columns: 2 24px;
     -moz-columns: 2 24px;
@@ -1242,14 +1274,14 @@ body {
   -ms-columns: 2 24px;
   columns: 2 24px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003376}}
 .about-copy p:first-child {
   margin-top: 0;
 }
 
 /* Key skills
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003387}}
 .skills-list {
   list-style: none;
   clear: both;
@@ -1326,12 +1358,12 @@ body {
 .lt-ie9 .skills-list li:nth-child(2n+1) {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003390}}
 .skills-list h3 {
   margin-top: 0em;
 }
 @media (min-width: 40em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003394}}
   .skills-list p {
     position: relative;
     padding-left: 3.625em;
@@ -1342,7 +1374,7 @@ body {
   position: relative;
   padding-left: 3.625em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003400}}
 .skills-list p:before {
   content: '';
   display: block;
@@ -1350,7 +1382,7 @@ body {
   margin-left: 12px;
 }
 @media (min-width: 40em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003400}}
   .skills-list p:before {
     position: absolute;
     top: 0;
@@ -1367,7 +1399,7 @@ body {
   float: none;
   margin-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003417}}
 .skills-list .coding p:before {
   height: 48px;
   width: 48px;
@@ -1386,7 +1418,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003401}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003422}}
 .skills-list .cms-frameworks p:before {
   height: 48px;
   width: 48px;
@@ -1405,7 +1437,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003406}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003427}}
 .skills-list .accessibility p:before {
   height: 48px;
   width: 48px;
@@ -1424,7 +1456,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003411}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003432}}
 .skills-list .usability p:before {
   height: 48px;
   width: 48px;
@@ -1443,7 +1475,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003416}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003437}}
 .skills-list .server-management p:before {
   height: 48px;
   width: 48px;
@@ -1462,7 +1494,7 @@ body {
     background-size: 248px auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003421}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003442}}
 .skills-list .version-control p:before {
   height: 48px;
   width: 48px;
@@ -1484,17 +1516,17 @@ body {
 
 /* Education
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003434}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003455}}
 .education-modules li {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003439}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003460}}
 .education-modules strong {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003444}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003465}}
 .education-win {
   height: 179px;
   width: 248px;
@@ -1515,7 +1547,7 @@ body {
   }
 }
 @media (min-width: 40em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003444}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003465}}
   .education-win {
     float: right;
     margin: 0 0 0 12px;
@@ -1529,7 +1561,7 @@ body {
 
 /* Employment
 ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003462}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003483}}
 .employment-details {
   margin: 0;
   padding: 0;
@@ -1549,18 +1581,18 @@ body {
   *display: inline;
   white-space: nowrap;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003465}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003486}}
 .employment-details li {
   margin-right: 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003467}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003488}}
 .employment-details li:before {
   margin-right: 6px;
   content: '';
   display: inline-block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003476}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003497}}
 .employment-location:before {
   height: 18px;
   width: 13px;
@@ -1580,7 +1612,7 @@ body {
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003481}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003502}}
 .employment-dates:before {
   height: 18px;
   width: 17px;
@@ -1600,7 +1632,7 @@ body {
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003487}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003508}}
 .employment-tags {
   margin: 0;
   padding: 0;
@@ -1620,11 +1652,11 @@ body {
   *display: inline;
   white-space: nowrap;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003490}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003511}}
 .employment-tags li {
   margin-right: 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003492}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/danielhollands\.co\.uk\/public_html\/compass\/application\.scss}line{font-family:\00003513}}
 .employment-tags li:before {
   content: '';
   display: inline-block;

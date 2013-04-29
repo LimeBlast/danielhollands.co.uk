@@ -218,6 +218,33 @@ body {
 		text-align: center;
 	}
 
+	&:hover {
+		li {
+			display: block;
+		}
+	}
+
+	li {
+		display: none;
+		@include at-breakpoint($media-layout) {
+			display: block;
+		}
+	}
+
+	.current {
+		a {
+			background: darken($menu-bg-color, 10%);
+		}
+	}
+
+	.shownav {
+		display: block;
+
+		@include at-breakpoint($media-layout) {
+			display: none !important;
+		}
+	}
+
 	a {
 		display: block;
 		padding: $gutter-width/4 0;
@@ -229,12 +256,6 @@ body {
 		}
 		&:active
 		{
-			background: darken($menu-bg-color, 10%);
-		}
-	}
-
-	.current {
-		a {
 			background: darken($menu-bg-color, 10%);
 		}
 	}
