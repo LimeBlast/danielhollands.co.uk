@@ -73,6 +73,11 @@ h2, .h2 {
 	font-style: italic;
 }
 
+h3, .h3 {
+	color: $body-bg-color;
+	@include single-text-shadow(1px, 1px, 1px, false, rgba(255,255,255,0.5));
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
@@ -80,11 +85,13 @@ h2, .h2 {
  */
 
 ::-moz-selection {
+	color: $white;
 	background: $qs-feature-color;
 	text-shadow: none;
 }
 
 ::selection {
+	color: $white;
 	background: $qs-feature-color;
 	text-shadow: none;
 }
@@ -339,9 +346,10 @@ body {
 
 	a {
 		@include link-colors($content-link-color, $content-link-hover-color);
-		margin: -0.5em;
-		padding: 0.5em;
-		position: relative;
+		@include single-text-shadow(1px, 1px, 1px, false, rgba(255,255,255,0.1));
+		//margin: -0.5em;
+		//padding: 0.5em;
+		//position: relative;
 	}
 }
 
@@ -497,6 +505,10 @@ body {
 
 }
 
+	.employment-role {
+		@include trailer(.5, $h3-font-size);
+	}
+
 	.employment-details {
 		@include inline-block-list;
 
@@ -534,6 +546,21 @@ body {
 			}
 		}
 	}
+
+	.employment-description {
+		@include leader(.5, $h3-font-size);
+		@include trailer(2, $h3-font-size);
+	}
+
+/* Employment
+========================================================================== */
+.footer {
+	p {
+		text-align: center;
+		@include adjust-font-size-to($h5-font-size);
+		font-weight: 700;
+	}
+}
 
 
 /* ==========================================================================

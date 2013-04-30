@@ -27,8 +27,8 @@ $menu-link-color:		$white;
 
 
 $content-bg-color:		#619EC2;
-$content-link-color:	#CFE2EC;
-$content-link-hover-color:	#274D64;
+$content-link-color:	#274D64;
+$content-link-hover-color:	lighten($content-link-color, 5%);
 
 
 $body-bg-color:			#195F88;
