@@ -9,6 +9,25 @@ jQuery(window).bind("load", function() {
 $(document).ready(function() {
 
 	// one page nav
-	$('#navigation').onePageNav();
+	$('#navigation').onePageNav({
+		scrollOffset: 50,
+		begin: function() {
+			//Hack so you can click other menu items after the initial click
+			$('body').append('<div id="device-dummy" style="height: 1px;"></div>');
+		},
+		end: function() {
+			$('#device-dummy').remove();
+		}
+	});
+
+	// show navigation
+	$('#shownavbutton').on('click', function(){
+		$('#shownav').slideToggle();
+	});
+
+	// hide navigation when a link is clicked on
+	$('#navigation a').on('click', function(){
+		$('#shownav').slideToggle();
+	});
 
 });

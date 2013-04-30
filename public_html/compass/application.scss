@@ -185,24 +185,32 @@ body {
 /* Menu
    ========================================================================== */
 .menu {
-	@extend .clearfix;
-	background: $menu-bg-color;
-
 	a {
 		@include link-colors($menu-link-color);
 	}
 
+	background: none;
+	position: fixed;
+	height: 0;
+	left: 0;
+	right: 0;
+
+	// lots of magic, required to get the navigation to be fixed at the top of the page
+	@include container;
 	@include at-breakpoint($media-layout) {
 		// a bit of magic to allow for the menu to remain fixed: http://stackoverflow.com/a/12658866/1049688
 		@include container;
-		background: none;
-		position: fixed;
-		height: 0;
-		left: 0;
-		right: 0;
-		// the sidebar itself only spans 4 columns.
-		.fixed {
+	}
+
+	.fixed {
+		@include span-columns($total-columns);
+
+		background: $menu-bg-color;
+
+		@include at-breakpoint($media-layout) {
 			@include span-columns(4);
+
+			background: none;
 		}
 	}
 }
@@ -246,11 +254,12 @@ body {
 	ul {
 		@include no-bullets;
 		@include inline-block-list();
-		@include trailer(1);
-		margin-left: $gutter-width;
-		margin-right: $gutter-width;
+		@include leader(.5);
+		@include trailer(.5);
+		margin-left: em($gutter-width);
+		margin-right: em($gutter-width);
 		text-align: center;
-		line-height: 40px;
+		line-height: em(40px);
 	}
 
 	a {
@@ -287,24 +296,52 @@ body {
 	}
 }
 
+/* Show Navigation
+   ========================================================================== */
+.shownav {
+	display: none;
+	@include at-breakpoint($media-layout) {
+		display: block !important;
+	}
+}
+
+.shownavbutton {
+	@include padding-leader(.5);
+	@include padding-trailer(.5);
+	padding-left: em($gutter-width);
+	padding-right: em($gutter-width);
+
+	cursor: hand;
+	cursor: pointer;
+
+	&:after {
+		content: '☰';
+		float: right;
+		display: block;
+	}
+
+	@include at-breakpoint($media-layout) {
+		display: none; // this forces the navigation to show when on desktop view
+	}
+}
+
 /* Main
    ========================================================================== */
 .main {
 	@extend .clearfix;
-	padding: 0 $gutter-width;
-
+	padding: 0 em($gutter-width);
 	background: $content-bg-color;
+
+	@include at-breakpoint($media-layout) {
+		@include pre(4);
+		@include span-columns(12 omega, $desktop-columns, 0px $gutter-width);
+	}
 
 	a {
 		@include link-colors($content-link-color, $content-link-hover-color);
 		margin: -0.5em;
 		padding: 0.5em;
 		position: relative;
-	}
-
-	@include at-breakpoint($media-layout) {
-		@include pre(4);
-		@include span-columns(12 omega, $desktop-columns, 0px $gutter-width);
 	}
 }
 
@@ -315,6 +352,7 @@ body {
 	@extend .clearfix;
 
 	.header-title {
+		@include leader(2, $h1-font-size);
 		@include at-breakpoint($media-layout) {
 			margin-top: 0;
 		}
@@ -349,7 +387,7 @@ body {
 
 	.about-copy {
 		@include at-breakpoint($media-layout) {
-			@include columns(2 $gutter-width);
+			@include columns(2 em($gutter-width));
 		}
 
 		p:first-child {
@@ -380,7 +418,7 @@ body {
 				content: '';
 				display: block;
 				float: right;
-				margin-left: $gutter-width/2;
+				margin-left: em($gutter-width/2);
 
 				@include at-breakpoint($media-layout) {
 					position: absolute;
@@ -444,11 +482,11 @@ body {
 	.education-win {
 		@include retina-sprite(worcester-ideas-network);
 		@extend .ir;
-		margin: 0 auto $gutter-width auto;
+		margin: 0 auto em($gutter-width) auto;
 
 		@include at-breakpoint($media-layout) {
 			float: right;
-			margin: 0 0 0 $gutter-width/2;
+			margin: 0 0 0 em($gutter-width/2);
 		}
 	}
 
@@ -463,9 +501,9 @@ body {
 		@include inline-block-list;
 
 		li {
-			margin-right: $gutter-width/4;
+			margin-right: em($gutter-width/4);
 			&:before {
-				margin-right: $gutter-width/4;
+				margin-right: em($gutter-width/4);
 				content: '';
 				display: inline-block;
 			}
@@ -483,17 +521,16 @@ body {
 		}
 	}
 
-
 	.employment-tags {
 		@include inline-block-list;
 
 		li {
-			margin-right: $gutter-width/4;
+			margin-right: em($gutter-width/4);
 			&:before {
 				content: '';
 				display: inline-block;
 				@include retina-sprite(employment-tag);
-				margin-right: $gutter-width/4;
+				margin-right: em($gutter-width/4);
 			}
 		}
 	}
