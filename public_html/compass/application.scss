@@ -309,7 +309,13 @@ body {
 .shownav {
 	display: none;
 	@include at-breakpoint($media-layout) {
-		display: block !important;
+		display: block;
+	}
+	&.show {
+		display: block;
+		@include at-breakpoint($media-layout) {
+			display: block;
+		}
 	}
 }
 
