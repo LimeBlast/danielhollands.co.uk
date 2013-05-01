@@ -329,10 +329,14 @@ body {
 	cursor: hand;
 	cursor: pointer;
 
+	font-weight: 700;
+
 	&:after {
-		content: '☰';
+		content: '';
 		float: right;
 		display: block;
+		@include retina-sprite(shownav);
+		margin-top: -3px; // magic number? I'm not sure
 	}
 
 	@include at-breakpoint($media-layout) {
