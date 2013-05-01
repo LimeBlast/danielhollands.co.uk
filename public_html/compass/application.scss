@@ -74,8 +74,8 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	color: $body-bg-color;
-	@include single-text-shadow(1px, 1px, 1px, false, rgba(255,255,255,0.5));
+	color: $orange;
+	@include single-text-shadow;
 }
 
 /*
@@ -237,6 +237,7 @@ body {
 	.current {
 		a {
 			background: darken($menu-bg-color, 10%);
+			color: darken($orange, 10%);
 		}
 	}
 
@@ -251,7 +252,7 @@ body {
 		}
 		&:active
 		{
-			background: darken($menu-bg-color, 10%);
+			background: $orange;
 		}
 	}
 }
@@ -353,7 +354,7 @@ body {
 
 	a {
 		@include link-colors($content-link-color, $content-link-hover-color);
-		@include single-text-shadow(1px, 1px, 1px, false, rgba(255,255,255,0.1));
+		@include single-text-shadow;
 		//margin: -0.5em;
 		//padding: 0.5em;
 		//position: relative;
@@ -392,6 +393,10 @@ body {
 		@include at-breakpoint($media-layout) {
 			@include span-columns(6 omega, 12);
 		}
+	}
+
+	.highlight {
+		color: $orange;
 	}
 
 /* About me
