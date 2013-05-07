@@ -200,8 +200,7 @@ body {
 	background: none;
 	position: fixed;
 	height: 0;
-	left: 0;
-	right: 0;
+	width: 100%;
 
 	// lots of magic, required to get the navigation to be fixed at the top of the page
 	@include container;
