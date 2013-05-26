@@ -299,10 +299,14 @@ body {
 	.bitbucket {
 		@include retina-sprite(social-bitbucket);
 	}
+	.code-school {
+		@include retina-sprite(social-code-school);
+	}
 	.lime-blast {
 		@include retina-sprite(social-lime-blast);
 	}
 }
+
 
 /* Show Navigation
    ========================================================================== */
