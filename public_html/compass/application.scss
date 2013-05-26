@@ -275,35 +275,12 @@ body {
 		display: block;
 	}
 
-	.twitter {
-		@include retina-sprite(social-twitter);
-	}
-	.facebook {
-		@include retina-sprite(social-facebook);
-	}
-	.google-plus {
-		@include retina-sprite(social-google-plus);
-	}
-	.linkedin {
-		@include retina-sprite(social-linkedin);
-	}
-	.stack-overflow {
-		@include retina-sprite(social-stack-overflow);
-	}
-	.careers-20 {
-		@include retina-sprite(social-careers-20);
-	}
-	.github {
-		@include retina-sprite(social-github);
-	}
-	.bitbucket {
-		@include retina-sprite(social-bitbucket);
-	}
-	.code-school {
-		@include retina-sprite(social-code-school);
-	}
-	.lime-blast {
-		@include retina-sprite(social-lime-blast);
+	// thank you code school
+	$social-icons: twitter, facebook, google-plus, linkedin, stack-overflow, careers-20, github, bitbucket, code-school, lime-blast;
+	@each $social-icon in $social-icons {
+		.#{$social-icon} {
+			@include retina-sprite(social-#{$social-icon});
+		}
 	}
 }
 
@@ -457,34 +434,12 @@ body {
 			}
 		}
 
-		.coding {
-			p:before {
-				@include retina-sprite(skills-coding);
-			}
-		}
-		.cms-frameworks {
-			p:before {
-				@include retina-sprite(skills-cms-frameworks);
-			}
-		}
-		.accessibility {
-			p:before {
-				@include retina-sprite(skills-accessibility);
-			}
-		}
-		.usability {
-			p:before {
-				@include retina-sprite(skills-usability);
-			}
-		}
-		.server-management {
-			p:before {
-				@include retina-sprite(skills-server-management);
-			}
-		}
-		.version-control {
-			p:before {
-				@include retina-sprite(skills-version-control);
+		$skill-icons: coding, cms-frameworks, accessibility, usability, server-management, version-control;
+		@each $skill-icon in $skill-icons {
+			.#{$skill-icon} {
+				p:before {
+					@include retina-sprite(skills-#{$skill-icon});
+				}
 			}
 		}
 	}
