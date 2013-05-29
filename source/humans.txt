@@ -13,6 +13,6 @@
 
 # TECHNOLOGY COLOPHON
 
-	HTML5, CSS3, Compass
+	HTML5, CSS3, Compass, Middleman
 	jQuery, Modernizr, slabText
-	NetBeans, Firebug, FireSASS
+	Sublime Text, Firebug, FireSASS
