@@ -1,19 +1,78 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title || "The Middleman" %></title>
-    
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag  "all" %>
-  </head>
-  
-  <body class="<%= page_classes %>">
-    <%= yield %>
-  </body>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# profile: http://ogp.me/ns/profile#">
+	<meta charset="utf-8">
+	<title><%= data.page.title || "My Name is Daniel - a Web developer's curriculum vitae (CV)" %></title>
+	<meta name="description"
+		  content="I am a Web Developer with a passion for the World Wide Web and this is my curriculum vitae."/>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="author" href="humans.txt"/>
+
+	<!-- Open Graph: http://ogp.me/ -->
+	<meta property="og:title" content="My Name is Daniel"/>
+	<meta property="og:description"
+		  content="I am a Web Developer with a passion for the World Wide Web and this is my curriculum vitae."/>
+	<meta property="og:url" content="http://danielhollands.co.uk/"/>
+	<meta property="og:image" content="http://danielhollands.co.uk/open-graph.png"/>
+	<meta property="og:locale" content="en_GB"/>
+	<meta property="og:type" content="profile"/>
+	<meta property="profile:first_name" content="Daniel"/>
+	<meta property="profile:last_name" content="Hollands"/>
+	<meta property="profile:username" content="LimeBlast"/>
+	<meta property="profile:gender" content="male"/>
+
+	<!-- Twitter Card: https://dev.twitter.com/docs/cards -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@limeblast">
+	<meta name="twitter:url" content="http://danielhollands.co.uk/">
+	<meta name="twitter:title" content="My Name is Daniel">
+	<meta name="twitter:description"
+		  content="I am a Web Developer with a passion for the World Wide Web and this is my curriculum vitae.">
+	<meta name="twitter:image" content="http://danielhollands.co.uk/open-graph.png">
+
+	<!-- Windows Tile Icon: http://www.buildmypinnedsite.com/ -->
+	<meta name="application-name" content="My Name is Daniel"/>
+	<meta name="msapplication-TileColor" content="#619EC2"/>
+	<meta name="msapplication-TileImage" content="/windows-tile-icon.png"/>
+
+	<%= stylesheet_link_tag "application" %>
+	<%= javascript_include_tag  "vendor/modernizr-2.6.1" %>
+</head>
+<body>
+
+	<%= yield %>
+
+<script src="//code.jquery.com/jquery-1.10.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.0.js"><\/script>')</script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+	<%= javascript_include_tag  "vendor/selectivizr-1.0.2" %>
+<![endif]-->
+<%= javascript_include_tag  "main" %>
+
+<script type="text/javascript">
+	var _gas = _gas || [];
+	_gas.push(['_setAccount', 'UA-27778608-1']); // REPLACE WITH YOUR GA NUMBER
+	_gas.push(['_setDomainName', '.danielhollands.co.uk']); // REPLACE WITH YOUR DOMAIN
+	_gas.push(['_trackPageview']);
+	_gas.push(['_gasTrackForms']);
+	_gas.push(['_gasTrackOutboundLinks']);
+	_gas.push(['_gasTrackMaxScroll']);
+	_gas.push(['_gasTrackDownloads']);
+	_gas.push(['_gasTrackYoutube', {force: true}]);
+	_gas.push(['_gasTrackVimeo', {force: true}]);
+	_gas.push(['_gasTrackMailto']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = '//cdnjs.cloudflare.com/ajax/libs/gas/1.10.1/gas.min.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</body>
 </html>

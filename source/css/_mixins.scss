@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* Responsive tile-list (This requires susy to work)
+   ========================================================================== */
+@mixin tile-list(
+	$mobile-span-cols: 3, // number of columns the element is meant to span on the mobile breakpoint
+	$mobile-total-cols: $total-columns, // total number of columns available on mobile breakpoint
+	$desktop-span-cols: 3, // number of columns the element is meant to span on the desktop breakpoint
+	$desktop-total-cols: $desktop-columns // total number of columns available on desktop breakpoint
+) {
+	// calculate how many items per row
+	$mobile-nth-child: $mobile-total-cols / $mobile-span-cols;
+	$desktop-nth-child: $desktop-total-cols / $desktop-span-cols;
+
+	@extend .clearfix;
+	@include no-bullets;
+	clear: both;
+	padding: 0;
+
+	li {
+		@include span-columns($mobile-span-cols, $mobile-total-cols);
+		@include nth-omega(#{$mobile-nth-child}n);
+
+		&:nth-child(#{$mobile-nth-child}n+1) {
+			clear: both;
+		}
+
+		@include at-breakpoint($media-layout) {
+			@include span-columns($desktop-span-cols, $desktop-total-cols);
+
+			@include remove-nth-omega(#{$mobile-nth-child}n, child, $desktop-total-cols);
+			&:nth-child(#{$mobile-nth-child}n+1) {
+				clear: none;
+			}
+
+			@include nth-omega(#{$desktop-nth-child}n);
+			&:nth-child(#{$desktop-nth-child}n+1) {
+				clear: both;
+			}
+		}
+	}
+}
+
+/* Bleed (This requires susy to work) - lets the background colour break out the container
+   https://gist.github.com/ericam/4973348
+   ========================================================================== */
+@mixin bleed(
+$width: $grid-padding,
+$sides: left right,
+$style: $container-style
+) {
+	@if $border-box-sizing {
+		@include box-sizing(content-box)
+	}
+
+	@if type-of($width) == 'list' {
+		$width: filter($width, of);
+		$width: space(nth($width, 1), nth($width, 2), $style);
+	} @else if unitless($width) {
+		$width: space($width, $style: $style);
+	}
+
+	@if $sides == 'all' {
+		margin: - $width;
+		padding: $width;
+	} @else {
+		@each $side in $sides {
+			margin-#{$side}: - $width;
+			padding-#{$side}: $width;
+		}
+	}
+}
+
+/* Convert PX to EM (based on the $base-font-size)
+   https://gist.github.com/ijy/1441967
+   ========================================================================== */
+@function em($target, $context: $base-font-size) {
+	@if $target == 0 {
+		@return 0
+	}
+	@return $target / $context + 0em;
+}
+
+/* Convert PX to REM (based on the $base-font-size)
+   http://pastie.org/2977423#
+   ========================================================================== */
+@function rem($target) {
+	@if $target == 0 {
+		@return 0
+	}
+	@return $target / $base-font-size + 0rem;
+}
+
+@mixin rem($target) {
+	font-size: $target; // Pixel size for older browsers (declared first)
+	font-size: rem($target);
+}

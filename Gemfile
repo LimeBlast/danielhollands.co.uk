@@ -3,3 +3,13 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.0.14"
+gem 'rb-inotify', '~> 0.9'
+
+gem 'middleman-sprockets'
+gem "middleman-livereload", "~> 3.1.0"
+
+gem 'susy'
+
+gem 'execjs'
+gem 'therubyracer'
+gem 'json', '~> 1.7.7'
