@@ -10,6 +10,7 @@ gem "middleman-livereload", "~> 3.1.0"
 
 gem 'susy'
 gem 'middleman-smusher'
+gem "middleman-favicon-maker", "~> 3.2"
 
 gem 'execjs'
 gem 'therubyracer'

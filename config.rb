@@ -96,4 +96,7 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+
+  # https://github.com/follmann/middleman-favicon-maker
+  activate :favicon_maker
 end
