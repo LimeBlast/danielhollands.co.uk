@@ -9,6 +9,7 @@ gem 'middleman-sprockets'
 gem "middleman-livereload", "~> 3.1.0"
 
 gem 'susy'
+gem 'middleman-smusher'
 
 gem 'execjs'
 gem 'therubyracer'
