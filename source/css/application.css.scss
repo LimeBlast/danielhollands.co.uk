@@ -14,21 +14,21 @@
 /* ==========================================================================
    Initial imports
    ========================================================================== */
-@import 'base';
-@import 'compass';
+@import "base";
+@import "compass";
 
 /* Third party
    ========================================================================== */
-@import 'susy';
-@import 'vendor/slabtext';
-@import 'vendor/retina-sprites';
+@import "susy";
+@import "vendor/slabtext";
+@import "vendor/retina-sprites";
 
 /* My stuff
    ========================================================================== */
-@import 'normalize';
-@import 'mixins';
-@import 'shame';
-@import 'fonts';
+@import "normalize";
+@import "mixins";
+@import "shame";
+@import "fonts";
 
 /* ==========================================================================
    Globals (Based on recommendations by H5BP)
@@ -172,8 +172,13 @@ body {
 	margin: 0.2em 0;
 	background: #ccc;
 	color: #000;
-	padding: 0.2em 0;
+	padding: 0.2em;
 	@extend .wrap;
+
+	a {
+		color: #000000  !important;
+		text-shadow: none !important;
+	}
 }
 
 
