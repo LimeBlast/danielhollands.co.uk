@@ -23,7 +23,8 @@ $(document).ready(function () {
 		},
 		end: function () {
 			$('#device-dummy').remove();
-		}
+		},
+		filter: ':not(.external)'
 	});
 
 	// show navigation

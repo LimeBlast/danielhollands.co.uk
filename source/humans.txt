@@ -10,6 +10,7 @@
 	Eric Meyer (@meyerweb) for being a pioneer on the Web (http://meyerweb.com/)
 	Adam Whitecroft (@adamwhitcroft) for his Batch icon set (http://adamwhitcroft.com/batch/)
 	WPZoom (@wpzoom) for their free vector icons (http://all-silhouettes.com/free-vector-icons/)
+	MailBigFile for their pdf vector icon (http://medialoot.com/item/free-vector-filetype-icons/)
 
 # TECHNOLOGY COLOPHON
 

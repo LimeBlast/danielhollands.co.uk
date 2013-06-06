@@ -250,6 +250,17 @@ body {
 			background: $orange;
 		}
 	}
+
+	.pdf {
+		a {
+			&:after {
+				content: '';
+				display: inline-block;
+				margin-left: 4px;
+				@include retina-sprite(navigation-pdf);
+			}
+		}
+	}
 }
 
 /* Social links
