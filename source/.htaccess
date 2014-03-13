@@ -261,7 +261,7 @@ AddDefaultCharset utf-8
 # Redirect theworldfdan.co.uk to danielhollands.co.uk
 
 <IfModule mod_rewrite.c>
-    RewriteCond %{HTTP_HOST} ^(www\.)?theworldofdan\.co\.ukm [NC]
+    RewriteCond %{HTTP_HOST} ^(www\.)?theworldofdan\.co\.uk [NC]
     RewriteRule ^(.*)$ http://danielhollands.co.uk/$1 [R=301,L]
 </IfModule>
 
