@@ -56,7 +56,8 @@ set :images_dir, 'img'
 set :build_dir, 'public_html'
 
 #activate :livereload, :host => '192.168.0.100' # work
-activate :livereload, :host => '192.168.1.99' # home
+#activate :livereload, :host => '192.168.1.99' # home
+activate :livereload # linux
 #config[:file_watcher_ignore] += [ /.idea\// ]
 
 # Chrome needs a precision of 7 to round properly
