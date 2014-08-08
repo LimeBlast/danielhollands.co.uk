@@ -16,3 +16,5 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem "susy"
 gem 'middleman-smusher'
 gem "middleman-favicon-maker", "~> 3.2"
+
+gem "middleman-deploy"
