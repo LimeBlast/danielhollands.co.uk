@@ -11,6 +11,7 @@
 /.sass-cache
 
 # Ignore build directory
+/build
 
 ## Windows: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
 Thumbs.db
