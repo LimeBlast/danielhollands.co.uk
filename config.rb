@@ -75,16 +75,16 @@ configure :build do
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  require "middleman-smusher"
+  require 'middleman-smusher'
   activate :smusher
 
   # https://github.com/follmann/middleman-favicon-maker
   activate :favicon_maker, :icons => {
-      "_favicon_template.png" => [
-          { icon: "apple-touch-icon-152x152-precomposed.png" },
-          { icon: "apple-touch-icon-144x144-precomposed.png" },
-          { icon: "apple-touch-icon-114x114-precomposed.png" },
-          { icon: "apple-touch-icon-72x72-precomposed.png" },
+      '_favicon_template.png' => [
+          { icon: 'apple-touch-icon-152x152-precomposed.png' },
+          { icon: 'apple-touch-icon-144x144-precomposed.png' },
+          { icon: 'apple-touch-icon-114x114-precomposed.png' },
+          { icon: 'apple-touch-icon-72x72-precomposed.png' },
       ]
   }
 
@@ -98,14 +98,14 @@ end
 activate :deploy do |deploy|
 
   # https://github.com/karlfreeman/middleman-deploy/wiki/How-to-store-passwords-some-place-other-than-in-config.rb
-  file     = File.open(".ftp_password", "r")
+  file     = File.open('.ftp_password', 'r')
   password = file.read
   file.close
 
   deploy.method   = :ftp
-  deploy.host     = "91.208.99.4"
-  deploy.path     = "/public_html/"
-  deploy.user     = "limeblast@danielhollands.co.uk"
+  deploy.host     = '91.208.99.4'
+  deploy.path     = '/public_html/'
+  deploy.user     = 'limeblast@danielhollands.co.uk'
   deploy.password = password
 
   deploy.build_before = true # default: false
