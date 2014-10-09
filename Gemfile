@@ -17,6 +17,6 @@ gem "compass", "0.12.4"
 
 gem "susy", "1.0.5"
 gem 'middleman-smusher'
-gem "middleman-favicon-maker", "~> 3.2"
+gem "middleman-favicon-maker", "~> 3.7"
 
 gem "middleman-deploy"

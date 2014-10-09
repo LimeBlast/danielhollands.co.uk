@@ -38,7 +38,7 @@
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
-  config[:file_watcher_ignore] += [ /.idea\// ]
+  config[:file_watcher_ignore] += [/.idea\//]
 end
 
 # Methods defined in the helpers block are available in templates
@@ -53,7 +53,7 @@ Sass::Script::Number.precision = 7
 
 # firesass support http://stackoverflow.com/a/10695532/1049688
 compass_config do |compass|
-  compass.sass_options = {:debug_info => true}
+  compass.sass_options = { :debug_info => true }
 end
 
 set :css_dir, 'css'
@@ -71,7 +71,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, ignore: %w(open-graph.png windows-tile-icon.png)
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
@@ -79,7 +79,14 @@ configure :build do
   activate :smusher
 
   # https://github.com/follmann/middleman-favicon-maker
-  activate :favicon_maker
+  activate :favicon_maker, :icons => {
+      "_favicon_template.png" => [
+          { icon: "apple-touch-icon-152x152-precomposed.png" },
+          { icon: "apple-touch-icon-144x144-precomposed.png" },
+          { icon: "apple-touch-icon-114x114-precomposed.png" },
+          { icon: "apple-touch-icon-72x72-precomposed.png" },
+      ]
+  }
 
   # Use relative URLs
   # activate :relative_assets
@@ -91,7 +98,7 @@ end
 activate :deploy do |deploy|
 
   # https://github.com/karlfreeman/middleman-deploy/wiki/How-to-store-passwords-some-place-other-than-in-config.rb
-  file = File.open(".ftp_password", "r")
+  file     = File.open(".ftp_password", "r")
   password = file.read
   file.close
 
