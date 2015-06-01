@@ -16,7 +16,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 gem 'compass', '0.12.4'
 
 gem 'susy', '1.0.5'
-gem 'middleman-smusher'
+gem 'middleman-smusher', '~> 3.0.0'
 gem 'middleman-favicon-maker', '~> 3.7'
 
-gem 'middleman-deploy'
+gem 'middleman-deploy', '~> 1.0.0'
