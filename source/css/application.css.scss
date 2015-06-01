@@ -479,6 +479,22 @@ body {
 		}
 	}
 
+/* Projects
+========================================================================== */
+.projects {
+
+}
+
+	.projects-birminghamio {
+	  @include retina-sprite(birminghamio);
+	  @extend .ir;
+	  margin: 0 auto em($gutter-width) auto;
+
+	  @include at-breakpoint($media-layout) {
+		float: right;
+		margin: 0 0 0 em($gutter-width/2);
+	  }
+	}
 
 /* Employment
 ========================================================================== */
