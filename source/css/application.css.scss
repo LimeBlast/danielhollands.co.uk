@@ -441,7 +441,7 @@ body {
 			}
 		}
 
-		$skill-icons: coding, cms-frameworks, accessibility, usability, server-management, version-control;
+		$skill-icons: coding, cms-frameworks, accessibility-usability, test-driven-development, server-management, version-control;
 		@each $skill-icon in $skill-icons {
 			.#{$skill-icon} {
 				p:before {
