@@ -1,28 +1,25 @@
-	/* __     _    ___    __      ____    __     _    _
-		/    | |  |   |  | (_    _)  /  __) \   | )  /
-	   (     | |  |   |  |   |  |   |  /     |  |/  /            Created by:
-		\__  | |  |   |  |   |  |   | |      |     (             Daniel Hollands
-		   | | |   \_/   |  _|  |_  |  \__   |  |\  \            http://danielhollands.co.uk/
-	   ____| |__\       /__(      )__\    )_/   |_)  \_
-	   _       ___        ______  _____     ____        __
-		)  ____) (__    __)    /  \    |    \  (__    __)
-	   (  (___      |  |      /    \   |     )    |  |           For:
-		\___  \     |  |     /  ()  \  |    /     |  |           Lime Blast
-		____)  )    |  |    |   __   | | |\ \     |  |           http://limeblast.co.uk/
-	   (      (_____|  |____|  (__)  |_| |_\ \____|  |____ */
-
+/* __     _    ___    __      ____    __     _    _
+    /    | |  |   |  | (_    _)  /  __) \   | )  /
+   (     | |  |   |  |   |  |   |  /     |  |/  /            Created by:
+    \__  | |  |   |  |   |  |   | |      |     (             Daniel Hollands
+       | | |   \_/   |  _|  |_  |  \__   |  |\  \            http://danielhollands.co.uk/
+   ____| |__\       /__(      )__\    )_/   |_)  \_
+   _       ___        ______  _____     ____        __
+    )  ____) (__    __)    /  \    |    \  (__    __)
+   (  (___      |  |      /    \   |     )    |  |           For:
+    \___  \     |  |     /  ()  \  |    /     |  |           Lime Blast
+    ____)  )    |  |    |   __   | | |\ \     |  |           http://limeblast.co.uk/
+   (      (_____|  |____|  (__)  |_| |_\ \____|  |____ */
 /* ==========================================================================
    Initial imports
    ========================================================================== */
 @import "base";
 @import "compass";
-
 /* Third party
    ========================================================================== */
 @import "susy";
 @import "vendor/slabtext";
 @import "vendor/retina-sprites";
-
 /* My stuff
    ========================================================================== */
 @import "normalize";
@@ -38,12 +35,12 @@ button,
 input,
 select,
 textarea {
-	// set main foreground colour
-	color: $main-fg-color;
+  // set main foreground colour
+  color: $main-fg-color;
 }
 
 a {
-	@include transition(all 0.3s ease-out 0s);
+  @include transition(all 0.3s ease-out 0s);
 }
 
 h1, .h1,
@@ -51,22 +48,21 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6
-{
-	font-family: $title-font-family;
-	font-weight: 700;
-	@include single-text-shadow;
+h6, .h6 {
+  font-family: $title-font-family;
+  font-weight: 700;
+  @include single-text-shadow;
 }
 
 h2, .h2 {
-	text-align: right;
-	border-bottom: 1px solid $main-fg-color;
-	font-style: italic;
+  text-align: right;
+  border-bottom: 1px solid $main-fg-color;
+  font-style: italic;
 }
 
 h3, .h3 {
-	color: $orange;
-	@include single-text-shadow;
+  color: $orange;
+  @include single-text-shadow;
 }
 
 /*
@@ -76,111 +72,110 @@ h3, .h3 {
  */
 
 ::-moz-selection {
-	color: $white;
-	background: $qs-feature-color;
-	text-shadow: none;
+  color: $white;
+  background: $qs-feature-color;
+  text-shadow: none;
 }
 
 ::selection {
-	color: $white;
-	background: $qs-feature-color;
-	text-shadow: none;
+  color: $white;
+  background: $qs-feature-color;
+  text-shadow: none;
 }
 
 fieldset {
-	// Remove default fieldset styles.
-	border: 0;
-	margin: 0;
-	padding: 0;
+  // Remove default fieldset styles.
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 textarea {
-	// Allow only vertical resizing of textareas.
-	resize: vertical;
+  // Allow only vertical resizing of textareas.
+  resize: vertical;
 }
 
 img {
-	// Responsive images
-	max-width: 100%;
-	height: auto;
-	// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
-	vertical-align: middle;
+  // Responsive images
+  max-width: 100%;
+  height: auto;
+  // Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+  vertical-align: middle;
 }
 
 li {
-	ul,
-	ol {
-		// remove the margin from inside multi-level lists
-		@include rhythm(0);
-	}
+  ul,
+  ol {
+    // remove the margin from inside multi-level lists
+    @include rhythm(0);
+  }
 }
 
 abbr[title] {
-	cursor: help;
+  cursor: help;
 }
 
 /* Body
    ========================================================================== */
 body {
-	// full credit to http://basehold.it/ for this code
-	@if ($qs-debug) {
-		position: relative;
+  // full credit to http://basehold.it/ for this code
+  @if ($qs-debug) {
+    position: relative;
 
-		&:after {
-			position: absolute;
-			width: auto;
-			height: auto;
-			z-index: 9999;
-			content: '';
-			display: block;
-			pointer-events: none;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			background: url("http://basehold.it/i/" + $qs-base-line-height) repeat top left;
-		}
+    &:after {
+      position: absolute;
+      width: auto;
+      height: auto;
+      z-index: 9999;
+      content: '';
+      display: block;
+      pointer-events: none;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url("http://basehold.it/i/" + $qs-base-line-height) repeat top left;
+    }
 
-		&:active:after {
-			display: none;
-		}
-	}
+    &:active:after {
+      display: none;
+    }
+  }
 
-	background: $body-bg-color;
+  background: $body-bg-color;
 
-	// make text slightly easier to read: http://boldperspective.com/2011/improve-web-typography-with-1-line-of-code/
-	@include single-text-shadow(0, 0, 1px, false, rgba(0,0,0,0.1));
+  // make text slightly easier to read: http://boldperspective.com/2011/improve-web-typography-with-1-line-of-code/
+  @include single-text-shadow(0, 0, 1px, false, rgba(0, 0, 0, 0.1));
 }
 
 /* Page wrapper
    ========================================================================== */
 .wrap {
-	@include container($total-columns, $media-layout);
-	@extend .clearfix;
+  @include container($total-columns, $media-layout);
+  @extend .clearfix;
 
-	@include at-breakpoint($media-layout) {
-		$experimental-support-for-svg: true;
-		// Doug Neiner Method: http://css-tricks.com/fluid-width-equal-height-columns/
-		@include background-image(linear-gradient(left center, $menu-bg-color columns(4), $content-bg-color columns(4)));
-	}
+  @include at-breakpoint($media-layout) {
+    $experimental-support-for-svg: true;
+    // Doug Neiner Method: http://css-tricks.com/fluid-width-equal-height-columns/
+    @include background-image(linear-gradient(left center, $menu-bg-color columns(4), $content-bg-color columns(4)));
+  }
 }
 
 /* Chrome Frame Prompt
    ========================================================================== */
 .chromeframe {
-	clear: both;
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
-	padding: 0.2em;
-	@extend .wrap;
+  clear: both;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em;
+  @extend .wrap;
 
-	a {
-		color: #000000  !important;
-		text-shadow: none !important;
-	}
+  a {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
 }
-
 
 /* ==========================================================================
    Author's custom styles (Here be dragons)
@@ -189,206 +184,203 @@ body {
 /* Menu
    ========================================================================== */
 .menu {
-	a {
-		@include link-colors($menu-link-color);
-	}
+  a {
+    @include link-colors($menu-link-color);
+  }
 
-	background: none;
-	position: fixed;
-	height: 0;
-	width: 100%;
+  background: none;
+  position: fixed;
+  height: 0;
+  width: 100%;
 
-	// lots of magic, required to get the navigation to be fixed at the top of the page
-	@include container;
-	@include at-breakpoint($media-layout) {
-		// a bit of magic to allow for the menu to remain fixed: http://stackoverflow.com/a/12658866/1049688
-		@include container;
-	}
+  // lots of magic, required to get the navigation to be fixed at the top of the page
+  @include container;
+  @include at-breakpoint($media-layout) {
+    // a bit of magic to allow for the menu to remain fixed: http://stackoverflow.com/a/12658866/1049688
+    @include container;
+  }
 
-	.fixed {
-		@include span-columns($total-columns);
+  .fixed {
+    @include span-columns($total-columns);
 
-		background: $menu-bg-color;
+    background: $menu-bg-color;
 
-		@include at-breakpoint($media-layout) {
-			@include span-columns(4);
+    @include at-breakpoint($media-layout) {
+      @include span-columns(4);
 
-			background: none;
-		}
-	}
+      background: none;
+    }
+  }
 }
 
 /* Navigation
    ========================================================================== */
 .navigation {
-	ul {
-		@extend .clearfix;
-		@include no-bullets;
-		padding: 0;
-		margin: 0;
-		text-align: center;
-	}
+  ul {
+    @extend .clearfix;
+    @include no-bullets;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
 
-	.current {
-		a {
-			background: darken($menu-bg-color, 10%);
-			color: darken($orange, 10%);
-		}
-	}
+  .current {
+    a {
+      background: darken($menu-bg-color, 10%);
+      color: darken($orange, 10%);
+    }
+  }
 
-	a {
-		display: block;
-		padding: $gutter-width/4 0;
-		margin: 0;
-		font-weight: 700;
-		text-decoration: none;
-		&:hover {
-			background: darken($menu-bg-color, 5%);
-		}
-		&:active
-		{
-			background: $orange;
-		}
-	}
+  a {
+    display: block;
+    padding: $gutter-width/4 0;
+    margin: 0;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      background: darken($menu-bg-color, 5%);
+    }
+    &:active {
+      background: $orange;
+    }
+  }
 
-	.pdf {
-		a {
-			&:after {
-				content: '';
-				display: inline-block;
-				margin-left: 4px;
-				@include retina-sprite(navigation-pdf);
-			}
-		}
-	}
+  .pdf {
+    a {
+      &:after {
+        content: '';
+        display: inline-block;
+        margin-left: 4px;
+        @include retina-sprite(navigation-pdf);
+      }
+    }
+  }
 }
 
 /* Social links
    ========================================================================== */
 .social-links {
-	ul {
-		@include no-bullets;
-		@include inline-block-list();
-		@include leader(.5);
-		@include trailer(.5);
-		margin-left: em($gutter-width);
-		margin-right: em($gutter-width);
-		text-align: center;
-		line-height: em(40px);
-	}
+  ul {
+    @include no-bullets;
+    @include inline-block-list();
+    @include leader(.5);
+    @include trailer(.5);
+    margin-left: em($gutter-width);
+    margin-right: em($gutter-width);
+    text-align: center;
+    line-height: em(40px);
+  }
 
-	a {
-		@extend .ir;
-		display: block;
-	}
+  a {
+    @extend .ir;
+    display: block;
+  }
 
-	// thank you code school
-	$social-icons: twitter, facebook, google-plus, linkedin, stack-overflow, careers-20, github, bitbucket, code-school, lime-blast;
-	@each $social-icon in $social-icons {
-		.#{$social-icon} {
-			@include retina-sprite(social-#{$social-icon});
-		}
-	}
+  // thank you code school
+  $social-icons: twitter, facebook, google-plus, linkedin, stack-overflow, careers-20, github, bitbucket, code-school, lime-blast;
+  @each $social-icon in $social-icons {
+    .#{$social-icon} {
+      @include retina-sprite(social-#{$social-icon});
+    }
+  }
 }
-
 
 /* Show Navigation
    ========================================================================== */
 .shownav {
-	display: none;
-	@include at-breakpoint($media-layout) {
-		display: block;
-	}
-	&.show {
-		display: block;
-		@include at-breakpoint($media-layout) {
-			display: block;
-		}
-	}
+  display: none;
+  @include at-breakpoint($media-layout) {
+    display: block;
+  }
+  &.show {
+    display: block;
+    @include at-breakpoint($media-layout) {
+      display: block;
+    }
+  }
 }
 
 .shownavbutton {
-	@include padding-leader(.5);
-	@include padding-trailer(.5);
-	padding-left: em($gutter-width);
-	padding-right: em($gutter-width);
+  @include padding-leader(.5);
+  @include padding-trailer(.5);
+  padding-left: em($gutter-width);
+  padding-right: em($gutter-width);
 
-	cursor: hand;
-	cursor: pointer;
+  cursor: hand;
+  cursor: pointer;
 
-	font-weight: 700;
+  font-weight: 700;
 
-	&:after {
-		content: '';
-		float: right;
-		display: block;
-		@include retina-sprite(shownav);
-		margin-top: -3px; // magic number? I'm not sure
-	}
+  &:after {
+    content: '';
+    float: right;
+    display: block;
+    @include retina-sprite(shownav);
+    margin-top: -3px; // magic number? I'm not sure
+  }
 
-	@include at-breakpoint($media-layout) {
-		display: none; // this forces the navigation to show when on desktop view
-	}
+  @include at-breakpoint($media-layout) {
+    display: none; // this forces the navigation to show when on desktop view
+  }
 }
 
 /* Main
    ========================================================================== */
 .main {
-	@extend .clearfix;
-	padding: 0 em($gutter-width);
-	background: $content-bg-color;
+  @extend .clearfix;
+  padding: 0 em($gutter-width);
+  background: $content-bg-color;
 
-	@include at-breakpoint($media-layout) {
-		@include pre(4);
-		@include span-columns(12 omega, $desktop-columns, 0px $gutter-width);
-	}
+  @include at-breakpoint($media-layout) {
+    @include pre(4);
+    @include span-columns(12 omega, $desktop-columns, 0px $gutter-width);
+  }
 
-	a {
-		@include link-colors($content-link-color, $content-link-hover-color);
-		@include single-text-shadow;
-		//margin: -0.5em;
-		//padding: 0.5em;
-		//position: relative;
-	}
+  a {
+    @include link-colors($content-link-color, $content-link-hover-color);
+    @include single-text-shadow;
+    //margin: -0.5em;
+    //padding: 0.5em;
+    //position: relative;
+  }
 }
-
 
 /* Header
    ========================================================================== */
 .header {
-	@extend .clearfix;
+  @extend .clearfix;
 
-	.header-title {
-		@include leader(2, $h1-font-size);
-		@include at-breakpoint($media-layout) {
-			margin-top: 0;
-		}
-	}
+  .header-title {
+    @include leader(2, $h1-font-size);
+    @include at-breakpoint($media-layout) {
+      margin-top: 0;
+    }
+  }
 
-	.header-title,
-	.header-copy
-	{
-		font-family: $standout-font-family;
-		font-weight: 400;
-		@include single-text-shadow;
-	}
+  .header-title,
+  .header-copy {
+    font-family: $standout-font-family;
+    font-weight: 400;
+    @include single-text-shadow;
+  }
 }
 
-	.header-copy {
-		@include at-breakpoint($media-layout) {
-			@include span-columns(6, 12);
-		}
-	}
-	.header-image {
-		text-align: center;
-		@include at-breakpoint($media-layout) {
-			@include span-columns(6 omega, 12);
-		}
-	}
+.header-copy {
+  @include at-breakpoint($media-layout) {
+    @include span-columns(6, 12);
+  }
+}
 
-	.highlight {
-		color: $orange;
-	}
+.header-image {
+  text-align: center;
+  @include at-breakpoint($media-layout) {
+    @include span-columns(6 omega, 12);
+  }
+}
+
+.highlight {
+  color: $orange;
+}
 
 /* About me
    ========================================================================== */
@@ -396,15 +388,15 @@ body {
 
 }
 
-	.about-copy {
-		@include at-breakpoint($media-layout) {
-			@include columns(2 em($gutter-width));
-		}
+.about-copy {
+  @include at-breakpoint($media-layout) {
+    @include columns(2 em($gutter-width));
+  }
 
-		p:first-child {
-			margin-top: 0;
-		}
-	}
+  p:first-child {
+    margin-top: 0;
+  }
+}
 
 /* Key skills
 ========================================================================== */
@@ -412,44 +404,44 @@ body {
 
 }
 
-	.skills-list {
-		@include tile-list($total-columns, $total-columns, 6, 12);
+.skills-list {
+  @include tile-list($total-columns, $total-columns, 6, 12);
 
-		h3 {
-			@include leader(0);
-		}
+  h3 {
+    @include leader(0);
+  }
 
-		p {
-			@include at-breakpoint($media-layout) {
-				position: relative;
-				padding-left: em(58px); // is this a magic number? I'm not sure, I don't think so, it's the image size plus half a gutter-width
-			}
+  p {
+    @include at-breakpoint($media-layout) {
+      position: relative;
+      padding-left: em(58px); // is this a magic number? I'm not sure, I don't think so, it's the image size plus half a gutter-width
+    }
 
-			&:before {
-				content: '';
-				display: block;
-				float: right;
-				margin-left: em($gutter-width/2);
+    &:before {
+      content: '';
+      display: block;
+      float: right;
+      margin-left: em($gutter-width/2);
 
-				@include at-breakpoint($media-layout) {
-					position: absolute;
-					top: 0;
-					left: 0;
-					float: none;
-					margin-left: 0;
-				}
-			}
-		}
+      @include at-breakpoint($media-layout) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
 
-		$skill-icons: coding, cms-frameworks, accessibility-usability, test-driven-development, server-management, version-control;
-		@each $skill-icon in $skill-icons {
-			.#{$skill-icon} {
-				p:before {
-					@include retina-sprite(skills-#{$skill-icon});
-				}
-			}
-		}
-	}
+  $skill-icons: coding, cms-frameworks, accessibility-usability, test-driven-development, server-management, version-control;
+  @each $skill-icon in $skill-icons {
+    .#{$skill-icon} {
+      p:before {
+        @include retina-sprite(skills-#{$skill-icon});
+      }
+    }
+  }
+}
 
 /* Education
 ========================================================================== */
@@ -457,27 +449,27 @@ body {
 
 }
 
-	.education-modules {
-		li {
-			@include leader(1);
-			@include trailer(1);
-		}
+.education-modules {
+  li {
+    @include leader(1);
+    @include trailer(1);
+  }
 
-		strong {
-			@include single-text-shadow;
-		}
-	}
+  strong {
+    @include single-text-shadow;
+  }
+}
 
-	.education-win {
-		@include retina-sprite(worcester-ideas-network);
-		@extend .ir;
-		margin: 0 auto em($gutter-width) auto;
+.education-win {
+  @include retina-sprite(worcester-ideas-network);
+  @extend .ir;
+  margin: 0 auto em($gutter-width) auto;
 
-		@include at-breakpoint($media-layout) {
-			float: right;
-			margin: 0 0 0 em($gutter-width/2);
-		}
-	}
+  @include at-breakpoint($media-layout) {
+    float: right;
+    margin: 0 0 0 em($gutter-width/2);
+  }
+}
 
 /* Projects
 ========================================================================== */
@@ -485,16 +477,16 @@ body {
 
 }
 
-	.projects-birminghamio {
-	  @include retina-sprite(birminghamio);
-	  @extend .ir;
-	  margin: 0 auto em($gutter-width) auto;
+.projects-birminghamio {
+  @include retina-sprite(birminghamio);
+  @extend .ir;
+  margin: 0 auto em($gutter-width) auto;
 
-	  @include at-breakpoint($media-layout) {
-		float: right;
-		margin: 0 0 0 em($gutter-width/2);
-	  }
-	}
+  @include at-breakpoint($media-layout) {
+    float: right;
+    margin: 0 0 0 em($gutter-width/2);
+  }
+}
 
 /* Employment
 ========================================================================== */
@@ -502,63 +494,63 @@ body {
 
 }
 
-	.employment-role {
-		@include trailer(.5, $h3-font-size);
-	}
+.employment-role {
+  @include trailer(.5, $h3-font-size);
+}
 
-	.employment-details {
-		@include inline-block-list;
+.employment-details {
+  @include inline-block-list;
 
-		li {
-			margin-right: em($gutter-width/4);
-			&:before {
-				margin-right: em($gutter-width/4);
-				content: '';
-				display: inline-block;
-			}
-		}
-	}
+  li {
+    margin-right: em($gutter-width/4);
+    &:before {
+      margin-right: em($gutter-width/4);
+      content: '';
+      display: inline-block;
+    }
+  }
+}
 
-	.employment-location {
-		&:before {
-			@include retina-sprite(employment-location);
-		}
-	}
-	.employment-dates {
-		&:before {
-			@include retina-sprite(employment-dates);
-		}
-	}
+.employment-location {
+  &:before {
+    @include retina-sprite(employment-location);
+  }
+}
 
-	.employment-tags {
-		@include inline-block-list;
+.employment-dates {
+  &:before {
+    @include retina-sprite(employment-dates);
+  }
+}
 
-		li {
-			margin-right: em($gutter-width/4);
-			&:before {
-				content: '';
-				display: inline-block;
-				@include retina-sprite(employment-tag);
-				margin-right: em($gutter-width/4);
-			}
-		}
-	}
+.employment-tags {
+  @include inline-block-list;
 
-	.employment-description {
-		@include leader(.5, $h3-font-size);
-		@include trailer(2, $h3-font-size);
-	}
+  li {
+    margin-right: em($gutter-width/4);
+    &:before {
+      content: '';
+      display: inline-block;
+      @include retina-sprite(employment-tag);
+      margin-right: em($gutter-width/4);
+    }
+  }
+}
+
+.employment-description {
+  @include leader(.5, $h3-font-size);
+  @include trailer(2, $h3-font-size);
+}
 
 /* Employment
 ========================================================================== */
 .footer {
-	p {
-		text-align: center;
-		@include adjust-font-size-to($h5-font-size);
-		font-weight: 700;
-	}
+  p {
+    text-align: center;
+    @include adjust-font-size-to($h5-font-size);
+    font-weight: 700;
+  }
 }
-
 
 /* ==========================================================================
    Final imports
