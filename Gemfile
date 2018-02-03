@@ -13,4 +13,4 @@ gem 'susy', '1.0.5'
 gem 'middleman-smusher', '~> 3.0.0'
 gem 'middleman-favicon-maker', '~> 3.7'
 
-gem 'middleman-deploy', '~> 1.0.0'
+gem 'middleman-gh-pages', '~> 0.3.1'

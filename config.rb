@@ -98,18 +98,3 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
-
-activate :deploy do |deploy|
-  # https://github.com/karlfreeman/middleman-deploy/wiki/How-to-store-passwords-some-place-other-than-in-config.rb
-  file     = File.open('.ftp_password', 'r')
-  password = file.read
-  file.close
-
-  deploy.method   = :ftp
-  deploy.host     = '91.208.99.4'
-  deploy.path     = '/public_html/'
-  deploy.user     = 'limeblast@danielhollands.co.uk'
-  deploy.password = password
-
-  deploy.build_before = true # default: false
-end
