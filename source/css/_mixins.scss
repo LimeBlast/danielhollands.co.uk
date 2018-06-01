@@ -80,7 +80,7 @@
   @if $target == 0 {
     @return 0
   }
-  @return $target / $context + 0em;
+  @return $target / $context + 00;
 }
 
 /* Convert PX to REM (based on the $base-font-size)
@@ -90,7 +90,7 @@
   @if $target == 0 {
     @return 0
   }
-  @return $target / $base-font-size + 0rem;
+  @return $target / $base-font-size + 00;
 }
 
 @mixin rem($target) {

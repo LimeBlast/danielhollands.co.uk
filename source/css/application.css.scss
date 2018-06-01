@@ -333,7 +333,7 @@ body {
 
   @include at-breakpoint($media-layout) {
     @include pre(4);
-    @include span-columns(12 omega, $desktop-columns, 0px $gutter-width);
+    @include span-columns(12 omega, $desktop-columns, 00$gutter-width);
   }
 
   a {
