@@ -162,7 +162,7 @@
                             };
 
                             // HTML-escape the text
-                            finalText = $('<div/>').text(finalText).html()
+                            finalText = $('<div/>').text(finalText).html();
 
                             // Wrap ampersands in spans with class `amp` for specific styling
                             if(settings.wrapAmpersand) {

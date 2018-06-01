@@ -154,7 +154,7 @@ References:
 		}
 		
 		// bracket contents are irrelevant - remove them
-		var bracketIndex = pseudo.indexOf("(")
+		var bracketIndex = pseudo.indexOf("(");
 		if (bracketIndex > -1) {
 			pseudo = pseudo.substring(0, bracketIndex);
 		}		
@@ -166,7 +166,7 @@ References:
 				case "root":
 					applyClass = function(e) {
 						return isNegated ? e != root : e == root;
-					}
+					};
 					break;
 
 				case "target":
@@ -180,9 +180,9 @@ References:
 							};
 							addEvent( win, "hashchange", function() {
 								toggleElementClass(e, className, handler());
-							})
+							});
 							return handler();
-						}
+						};
 						break;
 					}
 					return false;
@@ -194,10 +194,10 @@ References:
 								if (event.propertyName == "checked") {
 									toggleElementClass( e, className, e.checked !== isNegated );
 								} 							
-							})
+							});
 						}
 						return e.checked !== isNegated;
-					}
+					};
 					break;
 					
 				case "disabled":
@@ -216,7 +216,7 @@ References:
 							return e.disabled === isNegated;
 						}
 						return pseudo == ":enabled" ? isNegated : !isNegated;
-					}
+					};
 					break;
 					
 				case "focus":
@@ -231,12 +231,12 @@ References:
 					applyClass = function(e) {
 						addEvent( e, isNegated ? deactivateEventName : activateEventName, function() {
 							toggleElementClass( e, className, true );
-						})
+						});
 						addEvent( e, isNegated ? activateEventName : deactivateEventName, function() {
 							toggleElementClass( e, className, false );
-						})
+						});
 						return isNegated;
-					}
+					};
 					break;
 					
 				// everything else
@@ -309,7 +309,7 @@ References:
 		return namespace + "-" + ((ieVersion == 6 && patchIE6MultipleClasses) ?
 			ie6PatchID++
 		:
-			className.replace(RE_PATCH_CLASS_NAME_REPLACE, function(a) { return a.charCodeAt(0) }));
+			className.replace(RE_PATCH_CLASS_NAME_REPLACE, function(a) { return a.charCodeAt(0); }));
 	};
 
 	// --[ log() ]----------------------------------------------------------
@@ -470,7 +470,7 @@ References:
 		*/
 		
 		for (var c = 0; c < doc.styleSheets.length; c++) {
-			stylesheet = doc.styleSheets[c]
+			stylesheet = doc.styleSheets[c];
 			if (stylesheet.href != EMPTY_STRING) {
 				url = resolveUrl(stylesheet.href, baseUrl);
 				if (url) {
@@ -496,7 +496,7 @@ References:
 						}
 					}
 				}
-			},250)
+			},250);
 		}
 	};
 	
