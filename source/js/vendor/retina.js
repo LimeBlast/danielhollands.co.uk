@@ -25,7 +25,7 @@
     var existing_onload = context.onload || new Function;
 
     context.onload = function() {
-      var images = document.getElementsByTagName("img"), retinaImages = [], i, image;
+      var images = document.getElementsByTagName('img'), retinaImages = [], i, image;
       for (i = 0; i < images.length; i++) {
         image = images[i];
         retinaImages.push(new RetinaImage(image));
@@ -35,10 +35,10 @@
   };
 
   Retina.isRetina = function(){
-    var mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
+    var mediaQuery = '(-webkit-min-device-pixel-ratio: 1.5),\
                       (min--moz-device-pixel-ratio: 1.5),\
                       (-o-min-device-pixel-ratio: 3/2),\
-                      (min-resolution: 1.5dppx)";
+                      (min-resolution: 1.5dppx)';
 
     if (root.devicePixelRatio > 1)
       return true;
@@ -54,11 +54,11 @@
 
   function RetinaImagePath(path, at_2x_path) {
     this.path = path;
-    if (typeof at_2x_path !== "undefined" && at_2x_path !== null) {
+    if (typeof at_2x_path !== 'undefined' && at_2x_path !== null) {
       this.at_2x_path = at_2x_path;
       this.perform_check = false;
     } else {
-      this.at_2x_path = path.replace(/\.\w+$/, function(match) { return "@2x" + match; });
+      this.at_2x_path = path.replace(/\.\w+$/, function(match) { return '@2x' + match; });
       this.perform_check = true;
     }
   }
@@ -73,7 +73,7 @@
     var http, that = this;
     if (this.is_external()) {
       return callback(false);
-    } else if (!this.perform_check && typeof this.at_2x_path !== "undefined" && this.at_2x_path !== null) {
+    } else if (!this.perform_check && typeof this.at_2x_path !== 'undefined' && this.at_2x_path !== null) {
       return callback(true);
     } else if (this.at_2x_path in RetinaImagePath.confirmed_paths) {
       return callback(true);
