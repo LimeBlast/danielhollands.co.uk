@@ -22,6 +22,7 @@ $RECYCLE.BIN/
 ## Linux: https://github.com/github/gitignore/blob/master/Global/Linux.gitignore
 .*
 !.gitignore
+!.ruby-version
 !.gitkeep
 !.htaccess
 !.gitkeep
