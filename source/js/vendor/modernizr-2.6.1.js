@@ -126,7 +126,7 @@ window.Modernizr = (function( window, document, undefined ) {
       fakeBody.appendChild(div);
       if ( !body ) {
           //avoid crashing IE8, if background image is used
-          fakeBody.style.background = "";
+          fakeBody.style.background = '';
           docElement.appendChild(fakeBody);
       }
 
@@ -237,7 +237,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
         var target = this;
 
-        if (typeof target != "function") {
+        if (typeof target != 'function') {
             throw new TypeError();
         }
 
@@ -325,7 +325,7 @@ window.Modernizr = (function( window, document, undefined ) {
     function testProps( props, prefixed ) {
         for ( var i in props ) {
             var prop = props[i];
-            if ( !contains(prop, "-") && mStyle[prop] !== undefined ) {
+            if ( !contains(prop, '-') && mStyle[prop] !== undefined ) {
                 return prefixed == 'pfx' ? prop : true;
             }
         }
@@ -372,7 +372,7 @@ window.Modernizr = (function( window, document, undefined ) {
             props   = (prop + ' ' + cssomPrefixes.join(ucProp + ' ') + ucProp).split(' ');
 
         // did they call .prefixed('boxSizing') or are we just testing a prop?
-        if(is(prefixed, "string") || is(prefixed, "undefined")) {
+        if(is(prefixed, 'string') || is(prefixed, 'undefined')) {
           return testProps(props, prefixed);
 
         // otherwise, they called .prefixed('requestAnimationFrame', window[, elem])
@@ -485,7 +485,7 @@ window.Modernizr = (function( window, document, undefined ) {
     // - Firefox shipped moz_indexedDB before FF4b9, but since then has been mozIndexedDB
     // For speed, we don't test the legacy (and beta-only) indexedDB
     tests['indexedDB'] = function() {
-      return !!testPropsAll("indexedDB", window);
+      return !!testPropsAll('indexedDB', window);
     };
 
     // documentMode logic from YUI to filter out IE8 Compat Mode

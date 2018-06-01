@@ -5,7 +5,7 @@
 //= require vendor/retina
 
 // http://stackoverflow.com/a/8414666/1049688 (only use for after-font effects)
-jQuery(window).bind("load", function () {
+jQuery(window).bind('load', function () {
   // slab text
   jQuery('.header-title').slabText();
   jQuery('.header-copy').slabText();
@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   // set-up slide toggle function
   function toggleNav() {
-    $("#shownav").toggleClass("show");
+    $('#shownav').toggleClass('show');
   }
 
 });

@@ -6,32 +6,32 @@
         var settings = {
             // The ratio used when calculating the characters per line
             // (parent width / (font-size * fontRatio)).
-            "fontRatio"             : 0.78,
+            'fontRatio'             : 0.78,
             // Always recalculate the characters per line, not just when the
             // font-size changes? Defaults to true (CPU intensive)
-            "forceNewCharCount"     : true,
+            'forceNewCharCount'     : true,
             // Do we wrap ampersands in <span class="amp">
-            "wrapAmpersand"         : true,
+            'wrapAmpersand'         : true,
             // Under what pixel width do we remove the slabtext styling?
-            "headerBreakpoint"      : null,
-            "viewportBreakpoint"    : null,
+            'headerBreakpoint'      : null,
+            'viewportBreakpoint'    : null,
             // Don't attach a resize event
-            "noResizeEvent"         : false,
+            'noResizeEvent'         : false,
             // By many milliseconds do we throttle the resize event
-            "resizeThrottleTime"    : 300,
+            'resizeThrottleTime'    : 300,
             // The maximum pixel font size the script can set
-            "maxFontSize"           : 999,
+            'maxFontSize'           : 999,
             // Do we try to tweak the letter-spacing or word-spacing?
-            "postTweak"             : true,
+            'postTweak'             : true,
             // Decimal precision to use when setting CSS values
-            "precision"             : 3,
+            'precision'             : 3,
             // The min num of chars a line has to contain
-            "minCharsPerLine"       : 0
+            'minCharsPerLine'       : 0
             };
 
         // Add the slabtexted classname to the body to initiate the styling of
         // the injected spans
-        $("body").addClass("slabtexted");
+        $('body').addClass('slabtexted');
 
         return this.each(function(){
 
@@ -40,8 +40,8 @@
             };
 
             var $this               = $(this),
-                keepSpans           = $("span.slabtext", $this).length,
-                words               = keepSpans ? [] : String($.trim($this.text())).replace(/\s{2,}/g, " ").split(" "),
+                keepSpans           = $('span.slabtext', $this).length,
+                words               = keepSpans ? [] : String($.trim($this.text())).replace(/\s{2,}/g, ' ').split(' '),
                 origFontSize        = null,
                 idealCharPerLine    = null,
                 fontRatio           = settings.fontRatio,
@@ -54,10 +54,10 @@
                 minCharsPerLine     = settings.minCharsPerLine,
                 resizeThrottle      = null,
                 viewportWidth       = $(window).width(),
-                headLink            = $this.find("a:first").attr("href") || $this.attr("href"),
-                linkTitle           = headLink ? $this.find("a:first").attr("title") : "";
+                headLink            = $this.find('a:first').attr('href') || $this.attr('href'),
+                linkTitle           = headLink ? $this.find('a:first').attr('title') : '';
 
-            if(!keepSpans && minCharsPerLine && words.join(" ").length < minCharsPerLine) {
+            if(!keepSpans && minCharsPerLine && words.join(' ').length < minCharsPerLine) {
                 return;
             };
 
@@ -85,14 +85,14 @@
                 };
 
                 // Remove the slabtextdone and slabtextinactive classnames to enable the inline-block shrink-wrap effect
-                $this.removeClass("slabtextdone slabtextinactive");
+                $this.removeClass('slabtextdone slabtextinactive');
 
                 if(viewportBreakpoint && viewportBreakpoint > viewportWidth
                    ||
                    headerBreakpoint && headerBreakpoint > parentWidth) {
                     // Add the slabtextinactive classname to set the spans as inline
                     // and to reset the font-size to 1em (inherit won't work in IE6/7)
-                    $this.addClass("slabtextinactive");
+                    $this.addClass('slabtextinactive');
                     return;
                 };
 
@@ -108,9 +108,9 @@
                         wordIndex           = 0,
                         lineText            = [],
                         counter             = 0,
-                        preText             = "",
-                        postText            = "",
-                        finalText           = "",
+                        preText             = '',
+                        postText            = '',
+                        finalText           = '',
                         slice,
                         preDiff,
                         postDiff;
@@ -120,7 +120,7 @@
 
                         while (wordIndex < words.length) {
 
-                            postText = "";
+                            postText = '';
 
                             // build two strings (preText and postText) word by word, with one
                             // string always one word behind the other, until
@@ -128,7 +128,7 @@
                             // per line, while the length of the other is greater than that ideal
                             while (postText.length < idealCharPerLine) {
                                 preText   = postText;
-                                postText += words[wordIndex] + " ";
+                                postText += words[wordIndex] + ' ';
                                 if(++wordIndex >= words.length) {
                                     break;
                                 };
@@ -137,7 +137,7 @@
                             // This bit hacks in a minimum characters per line test
                             // on the last line
                             if(minCharsPerLine) {
-                                slice = words.slice(wordIndex).join(" ");
+                                slice = words.slice(wordIndex).join(' ');
                                 if(slice.length < minCharsPerLine) {
                                     postText += slice;
                                     preText = postText;
@@ -171,10 +171,10 @@
 
                             finalText = $.trim(finalText);
 
-                            lineText.push('<span class="slabtext">' + finalText + "</span>");
+                            lineText.push('<span class="slabtext">' + finalText + '</span>');
                         };
 
-                        $this.html(lineText.join(" "));
+                        $this.html(lineText.join(' '));
                         // If we have a headLink, add it back just inside our target, around all the slabText spans
                         if(headLink) {
                             $this.wrapInner('<a href="' + headLink + '" ' + (linkTitle ? 'title="' + linkTitle + '" ' : '') + '/>');
@@ -186,26 +186,26 @@
                     origFontSize = fs;
                 };
 
-                $("span.slabtext", $this).each(function() {
+                $('span.slabtext', $this).each(function() {
                     var $span       = $(this),
                         // the .text method appears as fast as using custom -data attributes in this case
                         innerText   = $span.text(),
-                        wordSpacing = innerText.split(" ").length > 1,
+                        wordSpacing = innerText.split(' ').length > 1,
                         diff,
                         ratio,
                         fontSize;
 
                     if(postTweak) {
                         $span.css({
-                            "word-spacing":0,
-                            "letter-spacing":0
+                            'word-spacing':0,
+                            'letter-spacing':0
                             });
                     };
 
                     ratio    = parentWidth / $span.width();
                     fontSize = parseFloat(this.style.fontSize) || origFontSize;
 
-                    $span.css("font-size", Math.min((fontSize * ratio).toFixed(precision), settings.maxFontSize) + "px");
+                    $span.css('font-size', Math.min((fontSize * ratio).toFixed(precision), settings.maxFontSize) + 'px');
 
                     // Do we still have space to try to fill or crop
                     diff = !!postTweak ? parentWidth - $span.width() : false;
@@ -214,13 +214,13 @@
                     // resize the text to better fit the available space.
                     // Better "dumb" and fast...
                     if(diff) {
-                        $span.css((wordSpacing ? 'word' : 'letter') + '-spacing', (diff / (wordSpacing ? innerText.split(" ").length - 1 : innerText.length)).toFixed(precision) + "px");
+                        $span.css((wordSpacing ? 'word' : 'letter') + '-spacing', (diff / (wordSpacing ? innerText.split(' ').length - 1 : innerText.length)).toFixed(precision) + 'px');
                     };
                 });
 
                 // Add the class slabtextdone to set a display:block on the child spans
                 // and avoid styling & layout issues associated with inline-block
-                $this.addClass("slabtextdone");
+                $this.addClass('slabtextdone');
             };
 
             // Immediate resize
