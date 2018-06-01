@@ -50,21 +50,21 @@ References:
 	// Compatiable selector engines in order of CSS3 support. Note: '*' is
 	// a placholder for the object key name. (basically, crude compression)
 	var selectorEngines = {
-		"NW"								: "*.Dom.select",
-		"MooTools"							: "$$",
-		"DOMAssistant"						: "*.$", 
-		"Prototype"							: "$$",
-		"YAHOO"								: "*.util.Selector.query",
-		"Sizzle"							: "*", 
-		"jQuery"							: "*",
-		"dojo"								: "*.query"
+		'NW'								: '*.Dom.select',
+		'MooTools'							: '$$',
+		'DOMAssistant'						: '*.$', 
+		'Prototype'							: '$$',
+		'YAHOO'								: '*.util.Selector.query',
+		'Sizzle'							: '*', 
+		'jQuery'							: '*',
+		'dojo'								: '*.query'
 	};
 
 	var selectorMethod;
 	var enabledWatchers 					= [];     // array of :enabled/:disabled elements to poll
 	var ie6PatchID 							= 0;      // used to solve ie6's multiple class bug
 	var patchIE6MultipleClasses				= true;   // if true adds class bloat to ie6
-	var namespace 							= "slvzr";
+	var namespace 							= 'slvzr';
 	
 	// Stylesheet parsing regexp's
 	var RE_COMMENT							= /(\/\*[^*]*\*+([^\/][^*]*\*+)*\/)\s*/g;
@@ -91,9 +91,9 @@ References:
 	var RE_TIDY_TRIM_WHITESPACE				= /^\s*((?:[\S\s]*\S)?)\s*$/;
 	
 	// String constants
-	var EMPTY_STRING						= "";
-	var SPACE_STRING						= " ";
-	var PLACEHOLDER_STRING					= "$1";
+	var EMPTY_STRING						= '';
+	var SPACE_STRING						= ' ';
+	var PLACEHOLDER_STRING					= '$1';
 
 	// =========================== Patching ================================
 
@@ -103,7 +103,7 @@ References:
 	function patchStyleSheet( cssText ) {
 		return cssText.replace(RE_PSEUDO_ELEMENTS, PLACEHOLDER_STRING).
 			replace(RE_SELECTOR_GROUP, function(m, prefix, selectorText) {	
-    			var selectorGroups = selectorText.split(",");
+    			var selectorGroups = selectorText.split(',');
     			for (var c = 0, cs = selectorGroups.length; c < cs; c++) {
     				var selector = normalizeSelectorWhitespace(selectorGroups[c]) + SPACE_STRING;
     				var patches = [];
@@ -120,14 +120,14 @@ References:
     							var patch = (pseudo) ? patchPseudoClass( pseudo ) : patchAttribute( attribute );
     							if (patch) {
     								patches.push(patch);
-    								return "." + patch.className;
+    								return '.' + patch.className;
     							}
     							return match;
     						}
     					}
     				);
     			}
-    			return prefix + selectorGroups.join(",");
+    			return prefix + selectorGroups.join(',');
     		});
 	};
 
@@ -144,7 +144,7 @@ References:
 
 		var applyClass = true;
 		var className = createClassName(pseudo.slice(1));
-		var isNegated = pseudo.substring(0, 5) == ":not(";
+		var isNegated = pseudo.substring(0, 5) == ':not(';
 		var activateEventName;
 		var deactivateEventName;
 
@@ -154,22 +154,22 @@ References:
 		}
 		
 		// bracket contents are irrelevant - remove them
-		var bracketIndex = pseudo.indexOf("(")
+		var bracketIndex = pseudo.indexOf('(')
 		if (bracketIndex > -1) {
 			pseudo = pseudo.substring(0, bracketIndex);
 		}		
 		
 		// check we're still dealing with a pseudo-class
-		if (pseudo.charAt(0) == ":") {
+		if (pseudo.charAt(0) == ':') {
 			switch (pseudo.slice(1)) {
 
-				case "root":
+				case 'root':
 					applyClass = function(e) {
 						return isNegated ? e != root : e == root;
 					}
 					break;
 
-				case "target":
+				case 'target':
 					// :target is only supported in IE8
 					if (ieVersion == 8) {
 						applyClass = function(e) {
@@ -178,7 +178,7 @@ References:
 								var hashID = hash.slice(1);
 								return isNegated ? (hash == EMPTY_STRING || e.id != hashID) : (hash != EMPTY_STRING && e.id == hashID);
 							};
-							addEvent( win, "hashchange", function() {
+							addEvent( win, 'hashchange', function() {
 								toggleElementClass(e, className, handler());
 							})
 							return handler();
@@ -187,11 +187,11 @@ References:
 					}
 					return false;
 				
-				case "checked":
+				case 'checked':
 					applyClass = function(e) { 
 						if (RE_INPUT_CHECKABLE_TYPES.test(e.type)) {
-							addEvent( e, "propertychange", function() {
-								if (event.propertyName == "checked") {
+							addEvent( e, 'propertychange', function() {
+								if (event.propertyName == 'checked') {
 									toggleElementClass( e, className, e.checked !== isNegated );
 								} 							
 							})
@@ -200,14 +200,14 @@ References:
 					}
 					break;
 					
-				case "disabled":
+				case 'disabled':
 					isNegated = !isNegated;
 
-				case "enabled":
+				case 'enabled':
 					applyClass = function(e) { 
 						if (RE_INPUT_ELEMENTS.test(e.tagName)) {
-							addEvent( e, "propertychange", function() {
-								if (event.propertyName == "$disabled") {
+							addEvent( e, 'propertychange', function() {
+								if (event.propertyName == '$disabled') {
 									toggleElementClass( e, className, e.$disabled === isNegated );
 								} 
 							});
@@ -215,18 +215,18 @@ References:
 							e.$disabled = e.disabled;
 							return e.disabled === isNegated;
 						}
-						return pseudo == ":enabled" ? isNegated : !isNegated;
+						return pseudo == ':enabled' ? isNegated : !isNegated;
 					}
 					break;
 					
-				case "focus":
-					activateEventName = "focus";
-					deactivateEventName = "blur";
+				case 'focus':
+					activateEventName = 'focus';
+					deactivateEventName = 'blur';
 								
-				case "hover":
+				case 'hover':
 					if (!activateEventName) {
-						activateEventName = "mouseenter";
-						deactivateEventName = "mouseleave";
+						activateEventName = 'mouseenter';
+						deactivateEventName = 'mouseleave';
 					}
 					applyClass = function(e) {
 						addEvent( e, isNegated ? deactivateEventName : activateEventName, function() {
@@ -265,7 +265,7 @@ References:
 		// If the dom selector equates to an empty string or ends with 
 		// whitespace then we need to append a universal selector (*) to it.
 		if (domSelectorText == EMPTY_STRING || domSelectorText.charAt(domSelectorText.length - 1) == SPACE_STRING) {
-			domSelectorText += "*";
+			domSelectorText += '*';
 		}
 		
 		// Ensure we catch errors from the selector library
@@ -273,7 +273,7 @@ References:
 			elms = selectorMethod( domSelectorText );
 		} catch (ex) {
 			// #DEBUG_START
-			log( "Selector '" + selectorText + "' threw exception '" + ex + "'" );
+			log( 'Selector \'' + selectorText + '\' threw exception \'' + ex + '\'' );
 			// #DEBUG_END
 		}
 
@@ -299,14 +299,14 @@ References:
 	// --[ hasPatch() ]-----------------------------------------------------
 	// checks for the exsistence of a patch on an element
 	function hasPatch( elm, patch ) {
-		return new RegExp("(^|\\s)" + patch.className + "(\\s|$)").test(elm.className);
+		return new RegExp('(^|\\s)' + patch.className + '(\\s|$)').test(elm.className);
 	};
 	
 	
 	// =========================== Utility =================================
 	
 	function createClassName( className ) {
-		return namespace + "-" + ((ieVersion == 6 && patchIE6MultipleClasses) ?
+		return namespace + '-' + ((ieVersion == 6 && patchIE6MultipleClasses) ?
 			ie6PatchID++
 		:
 			className.replace(RE_PATCH_CLASS_NAME_REPLACE, function(a) { return a.charCodeAt(0) }));
@@ -357,7 +357,7 @@ References:
 	// adds / removes a className from a string of classNames. Used to 
 	// manage multiple class changes without forcing a DOM redraw
 	function toggleClass( classList, className, on ) {
-		var re = RegExp("(^|\\s)" + className + "(\\s|$)");
+		var re = RegExp('(^|\\s)' + className + '(\\s|$)');
 		var classExists = re.test(classList);
 		if (on) {
 			return classExists ? classList : classList + SPACE_STRING + className;
@@ -368,7 +368,7 @@ References:
 	
 	// --[ addEvent() ]-----------------------------------------------------
 	function addEvent(elm, eventName, eventHandler) {
-		elm.attachEvent("on" + eventName, eventHandler);
+		elm.attachEvent('on' + eventName, eventHandler);
 	};
 
 	// --[ getXHRObject() ]-------------------------------------------------
@@ -386,7 +386,7 @@ References:
 
 	// --[ loadStyleSheet() ]-----------------------------------------------
 	function loadStyleSheet( url ) {
-		xhr.open("GET", url, false);
+		xhr.open('GET', url, false);
 		xhr.send();
 		return (xhr.status==200) ? xhr.responseText : EMPTY_STRING;	
 	};
@@ -397,7 +397,7 @@ References:
 	function resolveUrl( url, contextUrl ) {
 	
 		function getProtocolAndHost( url ) {
-			return url.substring(0, url.indexOf("/", 8));
+			return url.substring(0, url.indexOf('/', 8));
 		};
 		
 		// absolute path
@@ -406,14 +406,14 @@ References:
 		}
 		
 		// root-relative path
-		if (url.charAt(0)=="/")	{
+		if (url.charAt(0)=='/')	{
 			return getProtocolAndHost(contextUrl) + url;
 		}
 
 		// relative path
 		var contextUrlPath = contextUrl.split(/[?#]/)[0]; // ignore query string in the contextUrl	
-		if (url.charAt(0) != "?" && contextUrlPath.charAt(contextUrlPath.length - 1) != "/") {
-			contextUrlPath = contextUrlPath.substring(0, contextUrlPath.lastIndexOf("/") + 1);
+		if (url.charAt(0) != '?' && contextUrlPath.charAt(contextUrlPath.length - 1) != '/') {
+			contextUrlPath = contextUrlPath.substring(0, contextUrlPath.lastIndexOf('/') + 1);
 		}
 		
 		return contextUrlPath + url;
@@ -431,7 +431,7 @@ References:
 			}).
 			replace(RE_ASSET_URL, function( match, quoteChar, assetUrl ) { 
 				quoteChar = quoteChar || EMPTY_STRING;
-				return " url(" + quoteChar + resolveUrl(assetUrl, url) + quoteChar + ") "; 
+				return ' url(' + quoteChar + resolveUrl(assetUrl, url) + quoteChar + ') '; 
 			});
 		}
 		return EMPTY_STRING;
@@ -441,7 +441,7 @@ References:
 	function init() {
 		// honour the <base> tag
 		var url, stylesheet;
-		var baseTags = doc.getElementsByTagName("BASE");
+		var baseTags = doc.getElementsByTagName('BASE');
 		var baseUrl = (baseTags.length > 0) ? baseTags[0].href : doc.location.href;
 		
 		/* Note: This code prevents IE from freezing / crashing when using 
@@ -506,9 +506,9 @@ References:
 		for (var engine in selectorEngines) {
 			var members, member, context = win;
 			if (win[engine]) {
-				members = selectorEngines[engine].replace("*", engine).split(".");
+				members = selectorEngines[engine].replace('*', engine).split('.');
 				while ((member = members.shift()) && (context = context[member])) {}
-				if (typeof context == "function") {
+				if (typeof context == 'function') {
 					selectorMethod = context;
 					init();
 					return;
@@ -539,23 +539,23 @@ References:
 
 		var done = false, top = true,
 		init = function(e) {
-			if (e.type == "readystatechange" && doc.readyState != "complete") return;
-			(e.type == "load" ? win : doc).detachEvent("on" + e.type, init, false);
+			if (e.type == 'readystatechange' && doc.readyState != 'complete') return;
+			(e.type == 'load' ? win : doc).detachEvent('on' + e.type, init, false);
 			if (!done && (done = true)) fn.call(win, e.type || e);
 		},
 		poll = function() {
-			try { root.doScroll("left"); } catch(e) { setTimeout(poll, 50); return; }
+			try { root.doScroll('left'); } catch(e) { setTimeout(poll, 50); return; }
 			init('poll');
 		};
 
-		if (doc.readyState == "complete") fn.call(win, EMPTY_STRING);
+		if (doc.readyState == 'complete') fn.call(win, EMPTY_STRING);
 		else {
 			if (doc.createEventObject && root.doScroll) {
 				try { top = !win.frameElement; } catch(e) { }
 				if (top) poll();
 			}
-			addEvent(doc,"readystatechange", init);
-			addEvent(win,"load", init);
+			addEvent(doc,'readystatechange', init);
+			addEvent(win,'load', init);
 		}
 	};
 })(this);
