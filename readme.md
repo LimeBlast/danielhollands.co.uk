@@ -13,9 +13,4 @@ middleman console [options]  # Start an interactive console in the context of yo
 
 ### Deployment
 
-The site is hosted on [GitHub Pages](https://pages.github.com/), deployed via the [middleman-gh-pages](https://github.com/edgecase/middleman-gh-pages) gem.
-
-```bash
-rake build    # Compile all files into the build directory
-rake publish  # Build and publish to Github Pages (if you have trouble deploying, delete the `build` directory)
-```
+The site is hosted on [Netlify](https://www.netlify.com/), deployed automatically upon pushing commits to master.

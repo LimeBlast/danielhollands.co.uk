@@ -1,6 +1,7 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
 source 'http://rubygems.org'
+ruby RUBY_VERSION
 
 gem 'middleman', '~>3.3.4'
 
@@ -12,5 +13,3 @@ gem 'compass', '0.12.4'
 gem 'middleman-favicon-maker', '~> 3.7'
 gem 'middleman-smusher', '~> 3.0.0'
 gem 'susy', '1.0.5'
-
-gem 'middleman-gh-pages', '~> 0.3.1'
