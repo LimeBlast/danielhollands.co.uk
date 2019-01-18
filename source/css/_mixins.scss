@@ -11,7 +11,8 @@
   // total number of columns available on mobile breakpoint
     $desktop-span-cols: 3,
   // number of columns the element is meant to span on the desktop breakpoint
-    $desktop-total-cols: $desktop-columns// total number of columns available on desktop breakpoint
+    $desktop-total-cols: $desktop-columns// total number of columns available on
+    desktop breakpoint
 ) {
   // calculate how many items per row
   $mobile-nth-child: $mobile-total-cols / $mobile-span-cols;
