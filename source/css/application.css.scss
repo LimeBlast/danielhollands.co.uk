@@ -43,24 +43,32 @@ a {
   @include transition(all 0.3s ease-out 0s);
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: $title-font-family;
   font-weight: 700;
   @include single-text-shadow;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   text-align: right;
   border-bottom: 1px solid $main-fg-color;
   font-style: italic;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   color: $orange;
   @include single-text-shadow;
 }
@@ -127,14 +135,17 @@ body {
       width: auto;
       height: auto;
       z-index: 9999;
-      content: '';
+      content: "";
       display: block;
       pointer-events: none;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background: url("http://basehold.it/i/" + $qs-base-line-height) repeat top left;
+      background: url("http://basehold.it/i/"+$qs-base-line-height)
+        repeat
+        top
+        left;
     }
 
     &:active:after {
@@ -157,7 +168,13 @@ body {
   @include at-breakpoint($media-layout) {
     $experimental-support-for-svg: true;
     // Doug Neiner Method: http://css-tricks.com/fluid-width-equal-height-columns/
-    @include background-image(linear-gradient(left center, $menu-bg-color columns(4), $content-bg-color columns(4)));
+    @include background-image(
+      linear-gradient(
+        left center,
+        $menu-bg-color columns(4),
+        $content-bg-color columns(4)
+      )
+    );
   }
 }
 
@@ -248,7 +265,7 @@ body {
   .pdf {
     a {
       &:after {
-        content: '';
+        content: "";
         display: inline-block;
         margin-left: 4px;
         @include retina-sprite(navigation-pdf);
@@ -263,8 +280,8 @@ body {
   ul {
     @include no-bullets;
     @include inline-block-list();
-    @include leader(.5);
-    @include trailer(.5);
+    @include leader(0.5);
+    @include trailer(0.5);
     margin-left: em($gutter-width);
     margin-right: em($gutter-width);
     text-align: center;
@@ -277,7 +294,8 @@ body {
   }
 
   // thank you code school
-  $social-icons: twitter, facebook, google-plus, linkedin, stack-overflow, careers-20, github, bitbucket, code-school, lime-blast;
+  $social-icons: twitter, facebook, google-plus, linkedin, stack-overflow,
+    careers-20, github, bitbucket, code-school, lime-blast;
   @each $social-icon in $social-icons {
     .#{$social-icon} {
       @include retina-sprite(social-#{$social-icon});
@@ -301,8 +319,8 @@ body {
 }
 
 .shownavbutton {
-  @include padding-leader(.5);
-  @include padding-trailer(.5);
+  @include padding-leader(0.5);
+  @include padding-trailer(0.5);
   padding-left: em($gutter-width);
   padding-right: em($gutter-width);
 
@@ -312,7 +330,7 @@ body {
   font-weight: 700;
 
   &:after {
-    content: '';
+    content: "";
     float: right;
     display: block;
     @include retina-sprite(shownav);
@@ -385,7 +403,6 @@ body {
 /* About me
    ========================================================================== */
 .about-me {
-
 }
 
 .about-copy {
@@ -401,7 +418,6 @@ body {
 /* Key skills
 ========================================================================== */
 .key-skills {
-
 }
 
 .skills-list {
@@ -414,11 +430,13 @@ body {
   p {
     @include at-breakpoint($media-layout) {
       position: relative;
-      padding-left: em(58px); // is this a magic number? I'm not sure, I don't think so, it's the image size plus half a gutter-width
+      padding-left: em(
+        58px
+      ); // is this a magic number? I'm not sure, I don't think so, it's the image size plus half a gutter-width
     }
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       float: right;
       margin-left: em($gutter-width/2);
@@ -433,7 +451,8 @@ body {
     }
   }
 
-  $skill-icons: coding, cms-frameworks, accessibility-usability, test-driven-development, server-management, version-control;
+  $skill-icons: coding, cms-frameworks, accessibility-usability,
+    test-driven-development, server-management, version-control;
   @each $skill-icon in $skill-icons {
     .#{$skill-icon} {
       p:before {
@@ -446,7 +465,6 @@ body {
 /* Education
 ========================================================================== */
 .education {
-
 }
 
 .education-modules {
@@ -474,7 +492,6 @@ body {
 /* Projects
 ========================================================================== */
 .projects {
-
 }
 
 .projects-birminghamio {
@@ -491,11 +508,10 @@ body {
 /* Employment
 ========================================================================== */
 .employment {
-
 }
 
 .employment-role {
-  @include trailer(.5, $h3-font-size);
+  @include trailer(0.5, $h3-font-size);
 }
 
 .employment-details {
@@ -505,7 +521,7 @@ body {
     margin-right: em($gutter-width/4);
     &:before {
       margin-right: em($gutter-width/4);
-      content: '';
+      content: "";
       display: inline-block;
     }
   }
@@ -529,7 +545,7 @@ body {
   li {
     margin-right: em($gutter-width/4);
     &:before {
-      content: '';
+      content: "";
       display: inline-block;
       @include retina-sprite(employment-tag);
       margin-right: em($gutter-width/4);
@@ -538,7 +554,7 @@ body {
 }
 
 .employment-description {
-  @include leader(.5, $h3-font-size);
+  @include leader(0.5, $h3-font-size);
   @include trailer(2, $h3-font-size);
 }
 

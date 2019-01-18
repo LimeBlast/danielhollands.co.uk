@@ -19,18 +19,18 @@ $media-layout: $desktop-size $desktop-columns lt-ie9;
    ========================================================================== */
 $white: #fff;
 $black: #222;
-$orange: #FFC278;
+$orange: #ffc278;
 
 $qs-feature-color: $orange;
 
 $menu-bg-color: #2c2c2c;
 $menu-link-color: $white;
 
-$content-bg-color: #619EC2;
+$content-bg-color: #619ec2;
 $content-link-color: lighten($orange, 10%);
 $content-link-hover-color: lighten($content-link-color, 20%);
 
-$body-bg-color: #195F88;
+$body-bg-color: #195f88;
 
 $main-fg-color: $white;
 
@@ -38,7 +38,7 @@ $main-fg-color: $white;
    Text shadow
    ========================================================================== */
 
-$default-text-shadow-color: rgba(0, 0, 0, .4);
+$default-text-shadow-color: rgba(0, 0, 0, 0.4);
 $default-text-shadow-h-offset: 1px;
 $default-text-shadow-v-offset: 1px;
 $default-text-shadow-blur: 1px;
@@ -60,10 +60,10 @@ $base-font-family: "PT Sans", sans-serif;
 $title-font-family: "PT Sans", sans-serif;
 $standout-font-family: "Forque", "PT Sans", sans-serif;
 
-$h1-font-size: 2    * $base-font-size;
-$h2-font-size: 1.5  * $base-font-size;
+$h1-font-size: 2 * $base-font-size;
+$h2-font-size: 1.5 * $base-font-size;
 $h3-font-size: 1.17 * $base-font-size;
-$h4-font-size: 1    * $base-font-size;
+$h4-font-size: 1 * $base-font-size;
 $h5-font-size: 0.83 * $base-font-size;
 $h6-font-size: 0.67 * $base-font-size;
 
