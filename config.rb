@@ -39,7 +39,7 @@
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  activate :livereload, host: '0.0.0.0'
   config[:file_watcher_ignore] += [/.idea\//]
 end
 
