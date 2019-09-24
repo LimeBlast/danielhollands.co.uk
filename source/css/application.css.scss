@@ -73,6 +73,13 @@ h3,
   @include single-text-shadow;
 }
 
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
@@ -452,7 +459,7 @@ body {
   }
 
   $skill-icons: coding, cms-frameworks, accessibility-usability,
-    test-driven-development, server-management, version-control;
+    test-driven-development, server-management, version-control, making;
   @each $skill-icon in $skill-icons {
     .#{$skill-icon} {
       p:before {
@@ -492,6 +499,17 @@ body {
 /* Projects
 ========================================================================== */
 .projects {
+}
+
+.projects-makerrip {
+  @include retina-sprite(makerrip);
+  @extend .ir;
+  margin: 0 auto em($gutter-width) auto;
+
+  @include at-breakpoint($media-layout) {
+    float: right;
+    margin: 0 0 0 em($gutter-width/2);
+  }
 }
 
 .projects-birminghamio {
