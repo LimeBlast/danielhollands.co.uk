@@ -3,7 +3,21 @@
 
 ### Technology
 
-This site is powered by the [middleman static site generator](https://middlemanapp.com/).
+This site is powered by the [middleman static site generator](https://middlemanapp.com/), running inside a Docker container.
+
+You can use docker-compose to run the middleman server:
+
+```bash
+docker-compose up
+```
+
+and can build the site using:
+
+```bash
+docker build -t danielhollands . && docker run -v build:/usr/src/app/build danielhollands
+```
+
+Alternatively you can use the following commands from inside the docker container:
 
 ```bash
 middleman server [options]   # Start the preview server

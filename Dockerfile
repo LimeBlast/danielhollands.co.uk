@@ -13,4 +13,4 @@ RUN bundle install
 COPY . $APP_HOME/
 
 EXPOSE 4567
-CMD ["middleman", "server"]
+CMD ["middleman", "build", "--verbose"]
