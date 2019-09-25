@@ -458,8 +458,8 @@ body {
     }
   }
 
-  $skill-icons: coding, cms-frameworks, accessibility-usability,
-    test-driven-development, server-management, version-control, making;
+  $skill-icons: languages-frameworks, professional-standards, making,
+    community-building, project-management, self-development;
   @each $skill-icon in $skill-icons {
     .#{$skill-icon} {
       p:before {
