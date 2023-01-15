@@ -113,16 +113,16 @@ configure :build do
     config.sass_options = { debug_info: false }
   end
 
-  after_build do |builder|
-  src = File.join(config[:source],"netlify_redirects")
-  dst = File.join(config[:build_dir],"_redirects")
-  builder.thor.source_paths << File.dirname(__FILE__)
-  builder.thor.copy_file(src,dst)
-end
-  
   # Use relative URLs
   # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+after_build do |builder|
+  src = File.join(config[:source],"netlify_redirects")
+  dst = File.join(config[:build_dir],"_redirects")
+  builder.thor.source_paths << File.dirname(__FILE__)
+  builder.thor.copy_file(src,dst)
 end
