@@ -119,7 +119,3 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
-
-ready do
-  proxy "_redirects", "netlify_redirects", ignore: true
-end
