@@ -113,6 +113,10 @@ configure :build do
     config.sass_options = { debug_info: false }
   end
 
+  ready do
+    proxy "_redirects", "netlify_redirects", ignore: true
+  end
+  
   # Use relative URLs
   # activate :relative_assets
 
