@@ -120,9 +120,6 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-after_build do |builder|
-  src = File.join(config[:source],"netlify_redirects")
-  dst = File.join(config[:build_dir],"_redirects")
-  builder.thor.source_paths << File.dirname(__FILE__)
-  builder.thor.copy_file(src,dst)
+ready do
+  proxy "_redirects", "netlify_redirects", ignore: true
 end
