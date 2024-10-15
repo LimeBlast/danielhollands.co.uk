@@ -5,10 +5,11 @@
 
 This site is powered by the [middleman static site generator](https://middlemanapp.com/), running inside a Docker container.
 
-You can use docker-compose to run the middleman server:
+You can use `docker compose` to build the image and run the middleman server:
 
 ```bash
-docker-compose up
+docker compose build
+docker compose up
 ```
 
 and can build the site using:
