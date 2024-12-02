@@ -459,7 +459,8 @@ body {
   }
 
   $skill-icons: languages-frameworks, professional-standards, making,
-    community-building, project-management, self-development;
+    community-building, self-development, product-management, project-management,
+    facilitation, workshop-design, leadership, line-management;
   @each $skill-icon in $skill-icons {
     .#{$skill-icon} {
       p:before {
