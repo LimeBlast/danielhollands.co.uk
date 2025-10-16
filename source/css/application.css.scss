@@ -78,6 +78,7 @@ hr {
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 1.5em 0;
 }
 
 /*
@@ -432,9 +433,14 @@ body {
 
   h3 {
     @include leader(0);
+    @include trailer(0.5, $h3-font-size);
   }
 
+
   p {
+    @include leader(0);
+    @include trailer(1);
+
     @include at-breakpoint($media-layout) {
       position: relative;
       padding-left: em(
@@ -447,6 +453,7 @@ body {
       display: block;
       float: right;
       margin-left: em($gutter-width/2);
+      margin-top: 0.4em;
 
       @include at-breakpoint($media-layout) {
         position: absolute;
@@ -459,8 +466,8 @@ body {
   }
 
   $skill-icons: languages-frameworks, professional-standards, making,
-    community-building, self-development, product-management, getting-things-done,
-    facilitation, workshop-design, leadership, line-management, eos;
+    community-building, self-development, product-management, ownership,
+    facilitation, leadership, line-management, eos, project-management;
   @each $skill-icon in $skill-icons {
     .#{$skill-icon} {
       p:before {
@@ -583,10 +590,7 @@ body {
   }
 }
 
-.employment-description {
-  @include leader(0.5, $h3-font-size);
-  @include trailer(2, $h3-font-size);
-}
+
 
 /* Employment
 ========================================================================== */
