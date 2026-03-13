@@ -1,12 +1,12 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 ruby RUBY_VERSION
 
-gem 'middleman', '~>3.3.4'
+gem 'middleman', '3.3.5'
+gem 'haml', '5.1.2'
+gem 'ffi', '< 1.17'
+gem 'thor', '~> 0.20'
 
-# Live-reloading plugin
-gem 'middleman-livereload', '~> 3.4.0'
+gem 'middleman-livereload', '3.4.6'
 
 gem 'compass', '0.12.4'
 
