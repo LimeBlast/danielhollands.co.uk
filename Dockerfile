@@ -1,4 +1,4 @@
-FROM ruby:2.6.10
+FROM ruby:3.3
 
 RUN apt-get update -qq && apt-get install -y \
     nodejs                                   \
@@ -13,4 +13,4 @@ RUN bundle install
 COPY . $APP_HOME/
 
 EXPOSE 4567
-CMD ["middleman", "build", "--verbose"]
+CMD ["bundle", "exec", "middleman", "build", "--verbose"]

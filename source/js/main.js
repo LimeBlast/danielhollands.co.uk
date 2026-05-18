@@ -1,7 +1,3 @@
-//= require vendor/h5bpconsole
-//= require vendor/slabtext-2.3
-//= require vendor/jquery.nav-3.0.0
-//= require vendor/retina
 
 // http://stackoverflow.com/a/8414666/1049688 (only use for after-font effects)
 jQuery(window).bind('load', function() {

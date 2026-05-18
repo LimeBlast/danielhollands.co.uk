@@ -2,7 +2,7 @@ services:
   web:
     build: .
     image: danielhollands
-    command: ['middleman', 'server']
+    command: ['bundle', 'exec', 'middleman', 'server']
     volumes:
       - .:/usr/src/app:cached
     ports:

@@ -5,11 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# profile: http://ogp.me/ns/profile#">
   <meta charset="utf-8">
-  <title><%= data.page.title || "My Name is Daniel - an Integrator's curriculum vitae (CV)" %></title>
+  <title><%= current_page.data.title || "My Name is Daniel - an Integrator's curriculum vitae (CV)" %></title>
   <meta name="description" content="I am probably the intregrator you are looking for."/>
   <meta name="viewport" content="width=device-width"/>
   <link rel="author" href="humans.txt"/>
-  <link rel="canonical" href="https://www.danielhollands.co.uk/<%= data.page.canonical %>"/>
+  <link rel="canonical" href="https://www.danielhollands.co.uk/<%= current_page.data.canonical %>"/>
 
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png"/>
@@ -56,6 +56,10 @@
 <!--[if (gte IE 6)&(lte IE 8)]>
 	<%= javascript_include_tag "vendor/selectivizr-1.0.2" %>
 <![endif]-->
+<%= javascript_include_tag "vendor/h5bpconsole" %>
+<%= javascript_include_tag "vendor/slabtext-2.3" %>
+<%= javascript_include_tag "vendor/jquery.nav-3.0.0" %>
+<%= javascript_include_tag "vendor/retina" %>
 <%= javascript_include_tag "main" %>
 
 </body>

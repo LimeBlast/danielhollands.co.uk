@@ -1,18 +1,10 @@
 /* ==========================================================================
-   Susy grid: http://susy.oddbird.net/
+   Layout
    ========================================================================== */
-// mobile first
-$total-columns: 8;
-$column-width: 40px;
+$desktop-breakpoint: 40em;
+$max-width: 1000px;
+$menu-width-pct: 25%;
 $gutter-width: 24px;
-$grid-padding: 0;
-
-// desktop breakpoint
-$desktop-size: 40em;
-$desktop-columns: 16;
-
-// set the default breakpoint (and include a modernizr compatible fall back for IE8 and under)
-$media-layout: $desktop-size $desktop-columns lt-ie9;
 
 /* ==========================================================================
    Colours
@@ -37,22 +29,14 @@ $main-fg-color: $white;
 /* ==========================================================================
    Text shadow
    ========================================================================== */
-
-$default-text-shadow-color: rgba(0, 0, 0, 0.4);
-$default-text-shadow-h-offset: 1px;
-$default-text-shadow-v-offset: 1px;
-$default-text-shadow-blur: 1px;
-$default-text-shadow-spread: false;
+$default-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 
 /* ==========================================================================
-   Vertical rhythm: http://compass-style.org/reference/compass/typography/vertical_rhythm/
-
-   * image heights should be multiples of the base-line-height
-   * see http://atendesigngroup.com/blog/vertical-rhythm-compass for useful tips
+   Vertical rhythm
    ========================================================================== */
 $qs-base-font-size: 16;
 $base-font-size: $qs-base-font-size * 1px;
-$qs-base-line-height: 24; //Make sure to update .baseline() in main.js if you change this value
+$qs-base-line-height: 24;
 $base-line-height: $qs-base-line-height * 1px;
 $indent-amount: 48px;
 
@@ -66,22 +50,3 @@ $h3-font-size: 1.17 * $base-font-size;
 $h4-font-size: 1 * $base-font-size;
 $h5-font-size: 0.83 * $base-font-size;
 $h6-font-size: 0.67 * $base-font-size;
-
-/* ==========================================================================
-   Retina Sprites: https://github.com/AdamBrodzinski/Retina-Sprites-for-Compass
-   ========================================================================== */
-$sprites: sprite-map("sprites/*.png"); // import 1x sprites
-$sprites2x: sprite-map("sprites@2x/*.png"); // import 2x sprites
-
-/* ==========================================================================
-   Cross-Browser Support: http://compass-style.org/reference/compass/support/
-   ========================================================================== */
-$legacy-support-for-mozilla: false;
-$legacy-support-for-ie6: false;
-$legacy-support-for-ie7: false;
-$legacy-support-for-ie8: true;
-
-/* ==========================================================================
-   Debug - set this to false to remove the grid overlay.
-   ========================================================================== */
-$qs-debug: false;
