@@ -238,11 +238,12 @@ body {
     border: 0;
   }
 
-  $social-icons: twitter, facebook, google-plus, linkedin, stack-overflow,
-    careers-20, github, bitbucket, code-school, lime-blast;
+  $social-icons: twitter, facebook, linkedin, stack-overflow,
+    github, bitbucket, lime-blast;
   @each $social-icon in $social-icons {
     .#{$social-icon} a {
-      background-image: url('/img/sprites/social-#{$social-icon}.png');
+      background-image: url('/img/sprites/social-#{$social-icon}.svg');
+      filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
     }
   }
 }
