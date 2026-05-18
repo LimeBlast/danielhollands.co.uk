@@ -415,6 +415,7 @@ body {
       background-size: contain;
       width: 40px;
       height: 40px;
+      filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
 
       @media (min-width: #{$desktop-breakpoint}) {
         position: absolute;
@@ -427,8 +428,7 @@ body {
   }
 
   $skill-icons: languages-frameworks, professional-standards, making,
-    community-building, self-development, product-management, ownership,
-    facilitation, leadership, line-management, eos, project-management;
+    community-building, self-development, ownership, line-management;
   @each $skill-icon in $skill-icons {
     .#{$skill-icon} {
       p:before {
@@ -436,6 +436,11 @@ body {
       }
     }
   }
+
+  .product-discovery p:before { background-image: url('/img/sprites/skills-product-discovery.svg'); }
+  .leadership p:before        { background-image: url('/img/sprites/skills-leadership.svg'); }
+  .facilitation p:before      { background-image: url('/img/sprites/skills-facilitation.svg'); }
+  .roadmapping p:before       { background-image: url('/img/sprites/skills-roadmapping.svg'); }
 }
 
 /* Education
