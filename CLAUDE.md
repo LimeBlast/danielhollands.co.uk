@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal CV/portfolio website for Daniel Hollands, built with **Middleman 4** (Ruby static site generator) and served via **Netlify** from the `master` branch.
+This is a personal CV/portfolio website for Daniel Hollands, built with **Middleman 4** (Ruby static site generator) and served via **Netlify** from the `main` branch.
 
 ## Development Commands
 
@@ -52,7 +52,7 @@ There are no automated tests or linters configured.
 
 ## Deployment
 
-Pushing to `master` triggers an automatic Netlify deploy. The `build/` directory is gitignored — Netlify runs `middleman build` itself.
+Pushing to `main` triggers an automatic Netlify deploy. The `build/` directory is gitignored — Netlify runs `middleman build` itself.
 
 ## Stack Versions
 
