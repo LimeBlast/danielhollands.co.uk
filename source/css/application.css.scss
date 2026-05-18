@@ -241,7 +241,7 @@ body {
   $social-icons: linkedin, stack-overflow, github, bitbucket;
   @each $social-icon in $social-icons {
     a.#{$social-icon} {
-      background-image: url('/img/sprites/social-#{$social-icon}.svg');
+      background-image: url('/img/icons/social-#{$social-icon}.svg');
       filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
     }
   }
@@ -270,7 +270,7 @@ body {
     display: block;
     width: 20px;
     height: 20px;
-    background-image: url('/img/sprites/shownav.svg');
+    background-image: url('/img/icons/shownav.svg');
     background-repeat: no-repeat;
     background-size: contain;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
@@ -416,20 +416,10 @@ body {
     }
   }
 
-  $skill-icons: languages-frameworks, professional-standards, making,
-    community-building, self-development, ownership, line-management;
-  @each $skill-icon in $skill-icons {
-    .#{$skill-icon} {
-      p:before {
-        background-image: url('/img/sprites/skills-#{$skill-icon}.png');
-      }
-    }
-  }
-
-  .product-discovery p:before { background-image: url('/img/sprites/skills-product-discovery.svg'); }
-  .leadership p:before        { background-image: url('/img/sprites/skills-leadership.svg'); }
-  .facilitation p:before      { background-image: url('/img/sprites/skills-facilitation.svg'); }
-  .roadmapping p:before       { background-image: url('/img/sprites/skills-roadmapping.svg'); }
+  .product-discovery p:before { background-image: url('/img/icons/skills-product-discovery.svg'); }
+  .leadership p:before        { background-image: url('/img/icons/skills-leadership.svg'); }
+  .facilitation p:before      { background-image: url('/img/icons/skills-facilitation.svg'); }
+  .roadmapping p:before       { background-image: url('/img/icons/skills-roadmapping.svg'); }
 }
 
 /* Education
@@ -444,78 +434,6 @@ body {
 
   strong {
     text-shadow: $default-text-shadow;
-  }
-}
-
-.education-win {
-  background-image: url('/img/sprites/worcester-ideas-network.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  text-indent: -9999px;
-  display: block;
-  margin: 0 auto em($gutter-width) auto;
-
-  @media (min-width: #{$desktop-breakpoint}) {
-    float: right;
-    margin: 0 0 0 em($gutter-width / 2);
-  }
-}
-
-/* Projects
-   ========================================================================== */
-.projects {}
-
-.projects-makerrip {
-  background-image: url('/img/sprites/makerrip.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  text-indent: -9999px;
-  display: block;
-  margin: 0 auto em($gutter-width) auto;
-
-  @media (min-width: #{$desktop-breakpoint}) {
-    float: left;
-    margin: 0 em($gutter-width / 2) 0 0;
-  }
-}
-
-.projects-worcestersource {
-  background-image: url('/img/sprites/worcestersource.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  text-indent: -9999px;
-  display: block;
-  margin: 0 auto em($gutter-width) auto;
-
-  @media (min-width: #{$desktop-breakpoint}) {
-    float: right;
-    margin: 0 0 0 em($gutter-width / 2);
-  }
-}
-
-.projects-birminghamio {
-  background-image: url('/img/sprites/birminghamio.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  text-indent: -9999px;
-  display: block;
-  margin: 0 auto em($gutter-width) auto;
-
-  @media (min-width: #{$desktop-breakpoint}) {
-    float: left;
-    margin: 0 em($gutter-width / 2) 0 0;
   }
 }
 
@@ -551,7 +469,7 @@ body {
   &:before {
     width: 12px;
     height: 16px;
-    background-image: url('/img/sprites/employment-location.svg');
+    background-image: url('/img/icons/employment-location.svg');
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
   }
 }
@@ -560,7 +478,7 @@ body {
   &:before {
     width: 16px;
     height: 16px;
-    background-image: url('/img/sprites/employment-dates.svg');
+    background-image: url('/img/icons/employment-dates.svg');
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
   }
 }
@@ -578,7 +496,7 @@ body {
       content: "";
       display: inline-block;
       vertical-align: middle;
-      background-image: url('/img/sprites/employment-tag.svg');
+      background-image: url('/img/icons/employment-tag.svg');
       background-repeat: no-repeat;
       background-size: contain;
       width: 14px;
