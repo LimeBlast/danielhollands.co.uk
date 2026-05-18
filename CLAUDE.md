@@ -56,6 +56,6 @@ Pushing to `main` triggers an automatic Netlify deploy. The `build/` directory i
 
 ## Stack Versions
 
-- Ruby 3.3 (Docker + `.ruby-version`)
+- Ruby 4.0.4 (Docker + `.ruby-version`)
 - Middleman 4.6.x
 - sassc 2.4.x (LibSass, Sass 3.4-compatible syntax)
