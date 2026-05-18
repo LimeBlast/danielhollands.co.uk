@@ -12,18 +12,13 @@ $gutter-width: 24px;
 $white: #fff;
 $black: #222;
 $orange: #ffc278;
-
 $qs-feature-color: $orange;
-
 $menu-bg-color: #2c2c2c;
 $menu-link-color: $white;
-
 $content-bg-color: #619ec2;
 $content-link-color: lighten($orange, 10%);
 $content-link-hover-color: lighten($content-link-color, 20%);
-
 $body-bg-color: #195f88;
-
 $main-fg-color: $white;
 
 /* ==========================================================================
@@ -39,11 +34,9 @@ $base-font-size: $qs-base-font-size * 1px;
 $qs-base-line-height: 24;
 $base-line-height: $qs-base-line-height * 1px;
 $indent-amount: 48px;
-
 $base-font-family: "PT Sans", sans-serif;
 $title-font-family: "PT Sans", sans-serif;
 $standout-font-family: "Forque", "PT Sans", sans-serif;
-
 $h1-font-size: 2 * $base-font-size;
 $h2-font-size: 1.5 * $base-font-size;
 $h3-font-size: 1.17 * $base-font-size;

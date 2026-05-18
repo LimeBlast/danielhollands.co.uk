@@ -30,8 +30,7 @@ html {
   font-family: $base-font-family;
   font-size: 100%;
   line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -217,7 +216,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
+  appearance: button;
   cursor: pointer;
 }
 
@@ -231,13 +230,13 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 input[type="search"] {
-  -webkit-appearance: textfield;
+  appearance: textfield;
   box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
