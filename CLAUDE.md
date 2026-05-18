@@ -46,9 +46,9 @@ There are no automated tests or linters configured.
 - Responsive breakpoint is `@media (min-width: #{$desktop-breakpoint})`
 - Two-column desktop layout: dark sidebar (25%) + blue content area (75%) via CSS gradient on `.wrap`; `.menu` is `position: fixed`; `.main` has `margin-left: 25%`
 
-**JS** is jQuery-based with one-page-nav for sticky navigation. Individual vendor scripts are loaded via `javascript_include_tag` in `layout.erb` (no Sprockets concatenation). Entry point: `source/js/main.js`.
+**JS** is vanilla JavaScript with one-page-nav for sticky navigation. Individual vendor scripts are loaded via `javascript_include_tag` in `layout.erb` (no Sprockets concatenation). Entry point: `source/js/main.js`.
 
-**Images** include retina (`@2x`) variants in `source/img/sprites/`. These are referenced directly via `background-image: url('/img/sprites/xxx.png')` in the CSS (no Compass sprite maps).
+**Images** — icons are SVG files in `source/img/icons/`, referenced via `background-image: url('/img/icons/xxx.svg')` in the CSS. Content images (header photo, certificates) use retina `@2x` PNG variants in `source/img/`.
 
 ## Deployment
 
