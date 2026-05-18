@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'uglifier'
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -16,7 +18,7 @@ set :images_dir, 'img'
 # Build-specific configuration
 configure :build do
   activate :minify_css
-  activate :minify_javascript
+  activate :minify_javascript, compressor: Uglifier.new(harmony: true)
 
   # Enable cache buster
   activate :asset_hash, ignore: %w[open-graph.png windows-tile-icon.png]
