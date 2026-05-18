@@ -30,6 +30,7 @@ $RECYCLE.BIN/
 !.htaccess
 !.erb_lint.yml
 !.stylelintrc.yml
+!.vscode
 *~
 *.lock
 *.DS_Store

@@ -1,0 +1,66 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docker: Build",
+      "type": "shell",
+      "command": "docker compose build",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "docker"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Up",
+      "type": "shell",
+      "command": "docker compose up",
+      "group": "build",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "docker"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint: ERB",
+      "type": "shell",
+      "command": "docker compose run --rm web bundle exec erb_lint --lint-all",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "lint"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint: SCSS",
+      "type": "shell",
+      "command": "npm run lint:css",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "lint"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint: SCSS (fix)",
+      "type": "shell",
+      "command": "npm run lint:css -- --fix",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "lint"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
