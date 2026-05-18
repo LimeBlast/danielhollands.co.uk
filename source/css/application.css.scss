@@ -562,7 +562,8 @@ body {
   &:before {
     width: 12px;
     height: 16px;
-    background-image: url('/img/sprites/employment-location.png');
+    background-image: url('/img/sprites/employment-location.svg');
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
   }
 }
 
@@ -570,7 +571,8 @@ body {
   &:before {
     width: 16px;
     height: 16px;
-    background-image: url('/img/sprites/employment-dates.png');
+    background-image: url('/img/sprites/employment-dates.svg');
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
   }
 }
 
@@ -587,12 +589,13 @@ body {
       content: "";
       display: inline-block;
       vertical-align: middle;
-      background-image: url('/img/sprites/employment-tag.png');
+      background-image: url('/img/sprites/employment-tag.svg');
       background-repeat: no-repeat;
       background-size: contain;
       width: 14px;
       height: 14px;
       margin-right: em($gutter-width / 4);
+      filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
     }
   }
 }
