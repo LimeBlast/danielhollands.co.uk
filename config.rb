@@ -6,7 +6,7 @@
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload, host: '0.0.0.0'
+  activate :livereload, host: '0.0.0.0', js_host: 'localhost'
 end
 
 set :css_dir, 'css'
