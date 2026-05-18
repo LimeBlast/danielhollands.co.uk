@@ -222,7 +222,7 @@ body {
     border: 0;
   }
 
-  $social-icons: linkedin, stack-overflow, github, bitbucket;
+  $social-icons: linkedin, stack-overflow, github;
   @each $social-icon in $social-icons {
     a.#{$social-icon} {
       background-image: url('/img/icons/social-#{$social-icon}.svg');
