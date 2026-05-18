@@ -4,13 +4,16 @@
     \__  | |  |   |  |  _|  |_  |  \__   |  |\  \            Daniel Hollands
        | | |   \_/   |__(      )__\    )_/   |_)  \_          https://danielhollands.co.uk/
 */
+
 /* ==========================================================================
    Initial imports
    ========================================================================== */
 @import "base";
+
 /* Third party
    ========================================================================== */
 @import "vendor/slabtext";
+
 /* My stuff
    ========================================================================== */
 @import "normalize";
@@ -55,12 +58,6 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin: 1.5em 0;
-}
-
-::-moz-selection {
-  color: $white;
-  background: $qs-feature-color;
-  text-shadow: none;
 }
 
 ::selection {
@@ -161,11 +158,11 @@ body {
     margin: 0;
     text-align: center;
 
-    &:before, &:after {
+    &::before, &::after {
       content: " ";
       display: table;
     }
-    &:after { clear: both; }
+    &::after { clear: both; }
   }
 
   .current {
@@ -182,10 +179,12 @@ body {
     font-weight: 700;
     text-decoration: none;
     color: $menu-link-color;
+
     &:hover {
       background: darken($menu-bg-color, 5%);
       color: $menu-link-color;
     }
+
     &:active {
       background: $orange;
     }
@@ -223,6 +222,7 @@ body {
   }
 
   $social-icons: linkedin, stack-overflow, github;
+
   @each $social-icon in $social-icons {
     a.#{$social-icon} {
       background-image: url('/img/icons/social-#{$social-icon}.svg');
@@ -235,9 +235,11 @@ body {
    ========================================================================== */
 .shownav {
   display: none;
+
   &.show {
     display: block;
   }
+
   @media (min-width: #{$desktop-breakpoint}) {
     display: block;
   }
@@ -248,7 +250,7 @@ body {
   cursor: pointer;
   font-weight: 700;
 
-  &:after {
+  &::after {
     content: "";
     float: right;
     display: block;
@@ -293,6 +295,7 @@ body {
 
   .header-title {
     margin-top: 3em;
+
     @media (min-width: #{$desktop-breakpoint}) {
       margin-top: 0;
     }
@@ -316,6 +319,7 @@ body {
 
 .header-image {
   text-align: center;
+
   @media (min-width: #{$desktop-breakpoint}) {
     float: right;
     width: 50%;
@@ -329,8 +333,6 @@ body {
 
 /* About me
    ========================================================================== */
-.about-me {}
-
 .about-copy {
   @media (min-width: #{$desktop-breakpoint}) {
     column-count: 2;
@@ -344,8 +346,6 @@ body {
 
 /* Key skills
    ========================================================================== */
-.key-skills {}
-
 .skills-list {
   list-style: none;
   padding: 0;
@@ -378,7 +378,7 @@ body {
       padding-left: em(58px);
     }
 
-    &:before {
+    &::before {
       content: "";
       display: block;
       float: right;
@@ -400,18 +400,16 @@ body {
     }
   }
 
-  .product-discovery p:before   { background-image: url('/img/icons/skills-product-discovery.svg'); }
-  .leadership p:before          { background-image: url('/img/icons/skills-leadership.svg'); }
-  .facilitation p:before        { background-image: url('/img/icons/skills-facilitation.svg'); }
-  .roadmapping p:before         { background-image: url('/img/icons/skills-roadmapping.svg'); }
-  .technical-fluency p:before     { background-image: url('/img/icons/skills-technical-fluency.svg'); }
-  .stakeholder-management p:before { background-image: url('/img/icons/skills-stakeholder-management.svg'); }
+  .product-discovery p::before   { background-image: url('/img/icons/skills-product-discovery.svg'); }
+  .leadership p::before          { background-image: url('/img/icons/skills-leadership.svg'); }
+  .facilitation p::before        { background-image: url('/img/icons/skills-facilitation.svg'); }
+  .roadmapping p::before         { background-image: url('/img/icons/skills-roadmapping.svg'); }
+  .technical-fluency p::before     { background-image: url('/img/icons/skills-technical-fluency.svg'); }
+  .stakeholder-management p::before { background-image: url('/img/icons/skills-stakeholder-management.svg'); }
 }
 
 /* Education
    ========================================================================== */
-.education {}
-
 .education-modules {
   li {
     margin-top: 1.5em;
@@ -425,8 +423,6 @@ body {
 
 /* Employment
    ========================================================================== */
-.employment {}
-
 .employment-role {
   margin-bottom: 0.5em;
 }
@@ -440,7 +436,7 @@ body {
     display: inline-block;
     margin-right: em($gutter-width / 4);
 
-    &:before {
+    &::before {
       margin-right: em($gutter-width / 4);
       content: "";
       display: inline-block;
@@ -452,7 +448,7 @@ body {
 }
 
 .employment-location {
-  &:before {
+  &::before {
     width: 12px;
     height: 16px;
     background-image: url('/img/icons/employment-location.svg');
@@ -461,7 +457,7 @@ body {
 }
 
 .employment-dates {
-  &:before {
+  &::before {
     width: 16px;
     height: 16px;
     background-image: url('/img/icons/employment-dates.svg');
@@ -478,7 +474,7 @@ body {
     display: inline-block;
     margin-right: em($gutter-width / 4);
 
-    &:before {
+    &::before {
       content: "";
       display: inline-block;
       vertical-align: middle;
@@ -508,7 +504,6 @@ body {
 .certificates {
   .side-by-side {
     padding-top: 20px;
-
     display: flex;
     flex-wrap: wrap;
     gap: 1em;

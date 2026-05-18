@@ -1,7 +1,13 @@
 extends: stylelint-config-standard-scss
+ignoreFiles:
+  - "source/css/_normalize.scss"
 rules:
   # LibSass (Sass 3.4) doesn't support the module system — disable modern-only rules
   scss/no-global-function-names: null
   no-invalid-position-at-import-rule: null
   color-function-notation: null
   alpha-value-notation: null
+  # False positive — flags "/" in font URLs as an unspaced division operator
+  scss/operator-no-unspaced: null
+  # False positive — SCSS nesting means different parent contexts look like descending specificity
+  no-descending-specificity: null
