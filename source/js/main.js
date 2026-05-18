@@ -1,37 +1,32 @@
 
-// http://stackoverflow.com/a/8414666/1049688 (only use for after-font effects)
-jQuery(window).on('load', function() {
-  // slab text
-  jQuery('.header-title').slabText();
-  jQuery('.header-copy').slabText();
+window.addEventListener('load', function() {
+  slabText('.header-title');
+  slabText('.header-copy');
 });
 
-$(document).ready(function() {
-  // one page nav
-  $('#navigation').onePageNav({
+document.addEventListener('DOMContentLoaded', function() {
+  onePageNav('#navigation', {
     scrollOffset: 50,
     begin: function() {
-      //Hack so you can click other menu items after the initial click
-      $('body').append('<div id="device-dummy" style="height: 1px;"></div>');
+      var dummy = document.createElement('div');
+      dummy.id = 'device-dummy';
+      dummy.style.height = '1px';
+      document.body.appendChild(dummy);
     },
     end: function() {
-      $('#device-dummy').remove();
+      var dummy = document.getElementById('device-dummy');
+      if (dummy) dummy.remove();
     },
     filter: ':not(.external)',
   });
 
-  // show navigation
-  $('#shownavbutton').on('click', function() {
-    toggleNav();
-  });
-
-  // hide navigation when a link is clicked on
-  $('#navigation a').on('click', function() {
-    toggleNav();
-  });
-
-  // set-up slide toggle function
   function toggleNav() {
-    $('#shownav').toggleClass('show');
+    document.getElementById('shownav').classList.toggle('show');
   }
+
+  document.getElementById('shownavbutton').addEventListener('click', toggleNav);
+
+  document.querySelectorAll('#navigation a').forEach(function(link) {
+    link.addEventListener('click', toggleNav);
+  });
 });
