@@ -1,5 +1,6 @@
 ---
 EnableDefaultLinters: true
+glob: "source/**/*.erb"
 linters:
   ErbSafety:
     enabled: false
