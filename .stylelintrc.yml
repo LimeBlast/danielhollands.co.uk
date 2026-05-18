@@ -11,3 +11,5 @@ rules:
   scss/operator-no-unspaced: null
   # False positive — SCSS nesting means different parent contexts look like descending specificity
   no-descending-specificity: null
+  # em()/rem() mixins use `+ 0em`/`+ 0rem` to coerce Sass arithmetic to the correct unit type
+  length-zero-no-unit: null

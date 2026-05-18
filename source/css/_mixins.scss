@@ -9,6 +9,7 @@
   @if $target == 0 {
     @return 0;
   }
+
   @return $target / $context + 0em;
 }
 
@@ -18,6 +19,7 @@
   @if $target == 0 {
     @return 0;
   }
+
   @return $target / $base-font-size + 0rem;
 }
 
