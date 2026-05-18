@@ -207,21 +207,6 @@ body {
     }
   }
 
-  .pdf {
-    a {
-      &:after {
-        content: "";
-        display: inline-block;
-        margin-left: 4px;
-        width: 16px;
-        height: 16px;
-        background-image: url('/img/sprites/navigation-pdf.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        vertical-align: middle;
-      }
-    }
-  }
 }
 
 /* Social links
@@ -280,11 +265,15 @@ body {
   font-weight: 700;
 
   &:after {
-    content: "☰";
+    content: "";
     float: right;
     display: block;
-    font-size: 1.2em;
-    margin-top: -3px;
+    width: 20px;
+    height: 20px;
+    background-image: url('/img/sprites/shownav.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
   }
 
   @media (min-width: #{$desktop-breakpoint}) {
