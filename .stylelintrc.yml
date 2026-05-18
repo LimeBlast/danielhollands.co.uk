@@ -1,0 +1,7 @@
+extends: stylelint-config-standard-scss
+rules:
+  # LibSass (Sass 3.4) doesn't support the module system — disable modern-only rules
+  scss/no-global-function-names: null
+  no-invalid-position-at-import-rule: null
+  color-function-notation: null
+  alpha-value-notation: null

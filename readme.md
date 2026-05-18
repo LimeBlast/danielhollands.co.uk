@@ -26,6 +26,27 @@ middleman build [options]    # Builds the static site for deployment
 middleman console [options]  # Start an interactive console in the context of your...
 ```
 
+### Linting
+
+**ERB templates** — run inside Docker:
+
+```bash
+docker compose run --rm web bundle exec erb_lint --lint-all
+```
+
+**SCSS styles** — run locally (requires Node):
+
+```bash
+npm install        # First time only
+npm run lint:css
+```
+
+To auto-fix issues where possible:
+
+```bash
+npm run lint:css -- --fix
+```
+
 ### Deployment
 
-The site is hosted on [Netlify](https://www.netlify.com/), deployed automatically upon pushing commits to master.
+The site is hosted on [Netlify](https://www.netlify.com/), deployed automatically upon pushing commits to `main`.

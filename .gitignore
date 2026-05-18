@@ -13,6 +13,9 @@
 # Ignore build directory
 /build
 
+# Node
+/node_modules
+
 ## Windows: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
 Thumbs.db
 ehthumbs.db
@@ -25,7 +28,8 @@ $RECYCLE.BIN/
 !.ruby-version
 !.gitkeep
 !.htaccess
-!.gitkeep
+!.erb_lint.yml
+!.stylelintrc.yml
 *~
 *.lock
 *.DS_Store

@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "lint:css": "stylelint 'source/css/**/*.scss'"
+  },
+  "devDependencies": {
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^13.0.0"
+  }
+}
