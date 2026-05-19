@@ -21,7 +21,7 @@ configure :build do
   activate :minify_javascript, compressor: Uglifier.new(harmony: true)
 
   # Enable cache buster
-  activate :asset_hash, ignore: %w[open-graph.png windows-tile-icon.png]
+  activate :asset_hash, ignore: %w[open-graph.png social-preview.png windows-tile-icon.png]
 
   # https://github.com/follmann/middleman-favicon-maker
   activate :favicon_maker, icons: {
