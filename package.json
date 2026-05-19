@@ -1,8 +1,11 @@
 {
   "scripts": {
-    "lint:css": "stylelint 'source/css/**/*.scss'"
+    "lint:css": "stylelint 'source/css/**/*.scss'",
+    "generate-pdf": "node generate-pdf.js",
+    "build": "docker compose run --rm web bundle exec middleman build && node generate-pdf.js"
   },
   "devDependencies": {
+    "puppeteer": "^22.0.0",
     "stylelint": "^16.0.0",
     "stylelint-config-standard-scss": "^13.0.0"
   }

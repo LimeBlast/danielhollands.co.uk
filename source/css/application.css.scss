@@ -231,6 +231,28 @@ body {
   }
 }
 
+/* Download CV
+   ========================================================================== */
+.download-cv {
+  padding: 12px em($gutter-width);
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0.4em 1em;
+    background: $orange;
+    color: $black !important;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 3px;
+    box-shadow: $default-text-shadow;
+
+    &:hover {
+      background: lighten($orange, 10%);
+    }
+  }
+}
+
 /* Show Navigation
    ========================================================================== */
 .shownav {
@@ -410,6 +432,16 @@ body {
 
 /* Education
    ========================================================================== */
+.education-header {
+  h3 {
+    margin-bottom: 0.15em;
+  }
+}
+
+.education-qualification {
+  margin-top: 0;
+}
+
 .education-modules {
   li {
     margin-top: 1.5em;
@@ -423,6 +455,30 @@ body {
 
 /* Employment
    ========================================================================== */
+.employment-description {
+  list-style: none;
+  padding-left: 2em;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: '•';
+      position: absolute;
+      left: -1.5em;
+    }
+  }
+}
+
+.employment-header,
+.education-header {
+  @media (min-width: #{$desktop-breakpoint}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
 .employment-role {
   margin-bottom: 0.5em;
 }
@@ -431,6 +487,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: right;
 
   li {
     display: inline-block;
@@ -489,11 +546,47 @@ body {
   }
 }
 
+/* Career highlights
+   ========================================================================== */
+.career-highlights-list {
+  list-style: none;
+  padding-left: 2em;
+
+  li {
+    position: relative;
+
+    & + li {
+      margin-top: 0.5em;
+    }
+
+    &::before {
+      content: '★';
+      position: absolute;
+      left: -1.5em;
+    }
+  }
+}
+
 /* Fun facts
    ========================================================================== */
 .fun-facts {
-  li + li {
-    margin-top: 0.75em;
+  ul {
+    list-style: none;
+    padding-left: 2em;
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      content: '›';
+      position: absolute;
+      left: -1.5em;
+    }
+
+    & + li {
+      margin-top: 0.75em;
+    }
   }
 }
 

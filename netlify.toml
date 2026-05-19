@@ -1,5 +1,5 @@
 [build]
-  command = "bundle exec middleman build"
+  command = "bundle exec middleman build && node generate-pdf.js"
   publish = "build"
 
 [build.environment]

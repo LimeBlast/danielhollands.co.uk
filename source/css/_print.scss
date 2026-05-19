@@ -1,60 +1,187 @@
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
+// Hidden on screen, visible only when printing
+.cv-print-header,
+.cv-print-footer {
+  display: none;
+}
 
 @media print {
-  * {
+  *,
+  *::before,
+  *::after {
     background: transparent !important;
-    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
 
-  a,
-  a:visited {
+  // Collapse two-column layout
+  .wrap {
+    background-image: none !important;
+    max-width: 100%;
+  }
+
+  .main {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  // Hide navigation, sidebar, web header, footer, and sections not needed on a CV
+  .menu,
+  .header,
+  .footer,
+  .certificates,
+  .contact,
+  .hobbies,
+  .fun-facts,
+  .employment-tags {
+    display: none !important;
+  }
+
+  // Remove dividers between employment entries but add spacing instead
+  hr {
+    display: none !important;
+  }
+
+  .employment section {
+    margin-bottom: 0;
+    page-break-inside: avoid;
+  }
+
+  .employment section + section {
+    margin-top: 1.25em;
+  }
+
+  // References line — shown only in print
+  .cv-print-footer {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    margin-top: 2em;
+    border-top: 1px solid #000;
+    padding-top: 0.75em;
+  }
+
+  // Traditional CV header — shown only in print
+  .cv-print-header {
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .cv-print-name {
+    font-size: 2em;
+    margin: 0 0 0.1em;
+    font-style: normal;
+    border: none;
+    text-align: center;
+  }
+
+  .cv-print-title {
+    font-size: 1em;
+    margin: 0 0 0.4em;
+    font-style: italic;
+  }
+
+  .cv-print-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0 1em;
+    font-size: 0.8em;
+  }
+
+  // Suppress expanded hrefs inside the CV header (contact details are already readable as text)
+  .cv-print-header a {
+    text-decoration: none;
+  }
+
+  .cv-print-header a::after {
+    content: "" !important;
+  }
+
+  // Links
+  a {
     text-decoration: underline;
   }
 
-  a[href]::after {
+  a[href]:not([href^="#"])::after {
     content: " (" attr(href) ")";
+    font-size: 0.85em;
   }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
+  // Hide icon-only pseudo-elements that don't render without backgrounds
+  .employment-location::before,
+  .employment-dates::before,
+  .skills-list p::before {
+    display: none !important;
   }
 
-  /*
-   * Don't show links for images, or javascript/internal links
-   */
-
-  .ir a::after,
-  a[href^="javascript:"]::after,
-  a[href^="#"]::after {
-    content: "";
+  // Use plain bullet for career highlights instead of star
+  .career-highlights-list li::before {
+    content: '•';
   }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
+  // Replace SVG tag icon with a circle character
+  .employment-tags li::before {
+    content: '◦';
+    background-image: none !important;
+    width: auto;
+    height: auto;
   }
 
-  thead {
-    display: table-header-group; /* h5bp.com/t */
+  // Remove icon-offset padding from skill descriptions
+  .skills-list p {
+    padding-left: 0 !important;
+    position: static !important;
   }
 
-  tr,
-  img {
-    page-break-inside: avoid;
+  // Social link icons are text-indent: -9999px — suppress the expanded href
+  .social-links a::after {
+    content: "" !important;
   }
 
-  img {
-    max-width: 100% !important;
+  section {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
   }
 
-  @page {
-    margin: 0.5cm;
+  h2,
+  .h2 {
+    border-bottom: 1px solid #000;
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1em;
+    margin-top: 0.75em;
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+  }
+
+  li {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .fun-facts li + li {
+    margin-top: 0.2em;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
   }
 
   p,
@@ -64,8 +191,13 @@
     widows: 3;
   }
 
-  h2,
-  h3 {
-    page-break-after: avoid;
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+    margin: 1cm;
   }
 }

@@ -3,27 +3,37 @@
 
 ### Technology
 
-This site is powered by the [middleman static site generator](https://middlemanapp.com/), running inside a Docker container.
+This site is powered by the [middleman static site generator](https://middlemanapp.com/), running inside a Docker container. Node.js is required on the host for PDF generation and CSS linting.
 
-You can use `docker compose` to build the image and run the middleman server:
+### Development
+
+Build the Docker image (first time, or after Gemfile changes):
 
 ```bash
 docker compose build
+```
+
+Start the dev server at http://localhost:4567 with livereload:
+
+```bash
 docker compose up
 ```
 
-and can build the site using:
+### Building
+
+To build the site and generate the PDF in one command:
 
 ```bash
-docker build -t danielhollands . && docker run -v build:/usr/src/app/build danielhollands
+npm run build
 ```
 
-Alternatively you can use the following commands from inside the docker container:
+This runs `middleman build` inside Docker, then generates `build/daniel-hollands-cv.pdf` on the host using Puppeteer. Run `npm install` first if you haven't already.
+
+To run each step separately:
 
 ```bash
-middleman server [options]   # Start the preview server
-middleman build [options]    # Builds the static site for deployment
-middleman console [options]  # Start an interactive console in the context of your...
+docker compose run --rm web bundle exec middleman build   # Build site
+node generate-pdf.js                                      # Generate PDF
 ```
 
 ### Linting
@@ -49,4 +59,4 @@ npm run lint:css -- --fix
 
 ### Deployment
 
-The site is hosted on [Netlify](https://www.netlify.com/), deployed automatically upon pushing commits to `main`.
+The site is hosted on [Netlify](https://www.netlify.com/), deployed automatically upon pushing commits to `main`. The PDF is generated automatically as part of the Netlify build and is available at `/daniel-hollands-cv.pdf`.
