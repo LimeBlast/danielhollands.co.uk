@@ -1,6 +1,5 @@
-/*! slabtext vanilla JS port - based on jQuery slabtext plugin v2.3 MIT/GPL2 @freqdec */
 (function() {
-  function slabText(selector, options) {
+  function headerText(selector, options) {
     const settings = Object.assign({
       fontRatio: 0.78,
       forceNewCharCount: true,
@@ -15,14 +14,14 @@
       minCharsPerLine: 0
     }, options);
 
-    document.body.classList.add('slabtexted');
+    document.body.classList.add('headertexted');
 
     const els = typeof selector === 'string'
       ? Array.from(document.querySelectorAll(selector))
       : (selector.length !== undefined ? Array.from(selector) : [selector]);
 
     els.forEach(function(el) {
-      const keepSpans = el.querySelectorAll('span.slabtext').length > 0;
+      const keepSpans = el.querySelectorAll('span.headertext').length > 0;
       const words = keepSpans
         ? []
         : el.textContent.trim().replace(/\s{2,}/g, ' ').split(' ');
@@ -59,13 +58,13 @@
         const parentWidth = el.offsetWidth;
         if (parentWidth === 0) return;
 
-        el.classList.remove('slabtextdone', 'slabtextinactive');
+        el.classList.remove('headertextdone', 'headertextinactive');
 
         if (
           (settings.viewportBreakpoint && settings.viewportBreakpoint > viewportWidth) ||
           (settings.headerBreakpoint && settings.headerBreakpoint > parentWidth)
         ) {
-          el.classList.add('slabtextinactive');
+          el.classList.add('headertextinactive');
           return;
         }
 
@@ -119,7 +118,7 @@
               }
 
               finalText = finalText.trim();
-              lineText.push('<span class="slabtext">' + finalText + '</span>');
+              lineText.push('<span class="headertext">' + finalText + '</span>');
             }
 
             el.innerHTML = lineText.join(' ');
@@ -135,7 +134,7 @@
           origFontSize = fs;
         }
 
-        el.querySelectorAll('span.slabtext').forEach(function(span) {
+        el.querySelectorAll('span.headertext').forEach(function(span) {
           const innerText = span.textContent;
           const wordSpacing = innerText.split(' ').length > 1;
 
@@ -161,7 +160,7 @@
           }
         });
 
-        el.classList.add('slabtextdone');
+        el.classList.add('headertextdone');
       }
 
       resizeSlabs();
@@ -178,5 +177,5 @@
     });
   }
 
-  window.slabText = slabText;
+  window.headerText = headerText;
 })();

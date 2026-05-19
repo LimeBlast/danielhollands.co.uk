@@ -1,9 +1,9 @@
-.slabtexted .slabtext {
+.headertexted .headertext {
   display: inline-block;
   white-space: nowrap;
 }
 
-.slabtextinactive .slabtext {
+.headertextinactive .headertext {
   display: inline;
   white-space: normal;
   font-size: 1em !important;
@@ -11,7 +11,7 @@
   word-spacing: inherit !important;
 }
 
-.slabtextdone .slabtext {
+.headertextdone .headertext {
   display: block;
   line-height: 0.9;
 }

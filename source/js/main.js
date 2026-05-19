@@ -1,7 +1,7 @@
 
 window.addEventListener('load', function() {
-  slabText('.header-title');
-  slabText('.header-copy');
+  headerText('.header-title');
+  headerText('.header-copy');
 });
 
 document.addEventListener('DOMContentLoaded', function() {
