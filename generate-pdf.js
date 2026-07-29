@@ -63,6 +63,11 @@ async function generatePDF() {
   await browser.close();
   server.close();
 
+  // ponytail: also drop a copy in source/ so the dev server can serve the
+  // Download CV link. It's gitignored, and middleman build copies it back to
+  // build/ before this script overwrites it with the fresh one.
+  fs.copyFileSync(OUTPUT_PATH, path.join(__dirname, 'source', path.basename(OUTPUT_PATH)));
+
   console.log(`PDF written to ${OUTPUT_PATH}`);
 }
 

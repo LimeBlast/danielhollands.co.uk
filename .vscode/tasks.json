@@ -27,6 +27,18 @@
       "problemMatcher": []
     },
     {
+      "label": "Build: Site + PDF",
+      "type": "shell",
+      "command": "npm run build",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "docker"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Lint: ERB",
       "type": "shell",
       "command": "docker compose run --rm web bundle exec erb_lint --lint-all",

@@ -36,6 +36,23 @@ docker compose run --rm web bundle exec middleman build   # Build site
 node generate-pdf.js                                      # Generate PDF
 ```
 
+### Reviewing the PDF in development
+
+The dev server serves `source/`, but the PDF is generated from `build/`, so
+`npm run build` is what refreshes it. It also drops a copy at
+`source/daniel-hollands-cv.pdf` (gitignored) so the Download CV link works at
+http://localhost:4567/daniel-hollands-cv.pdf.
+
+In VS Code this is the **Build: Site + PDF** task.
+
+The dev server picks up the new PDF without a restart, but it does need one the
+very first time the file is created, such as after a fresh clone.
+
+Note that several sections are hidden in print (see `source/css/_print.scss`),
+so edits to Fun Facts, Certificates, Contact, or Hobbies will not change the
+PDF. The PDF is also not byte-reproducible, since Chrome embeds a creation
+date, so don't compare hashes to check whether a change landed.
+
 ### Linting
 
 **ERB templates** — run inside Docker:
