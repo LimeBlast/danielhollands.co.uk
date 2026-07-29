@@ -10,19 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
 
       - run: npm ci
+
+      # favicon_maker shells out to ImageMagick's convert, which the runner
+      # image does not provide
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
 
       - name: Lint ERB
         run: bundle exec erb_lint --lint-all
@@ -38,7 +43,7 @@ jobs:
       - name: Generate PDF
         run: node generate-pdf.js
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: cv-pdf
           path: build/daniel-hollands-cv.pdf
