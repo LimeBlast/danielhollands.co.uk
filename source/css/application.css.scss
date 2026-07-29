@@ -526,6 +526,23 @@ body {
   }
 }
 
+// Same calendar icon as the employment dates, but education-dates is a lone
+// span rather than an employment-details li, so it can't inherit that base
+.education-dates {
+  &::before {
+    margin-right: em($gutter-width / 4);
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    background-image: url('/img/icons/employment-dates.svg');
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+  }
+}
+
 .employment-tags {
   list-style: none;
   padding: 0;
