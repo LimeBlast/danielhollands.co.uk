@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint ERB
+        run: bundle exec erb_lint --lint-all
+
+      - name: Lint SCSS
+        run: npm run lint:css
+
+      # The real smoke test: catches Sass and Ruby breakage the linters miss
+      - name: Build site
+        run: bundle exec middleman build
+
+      # Catches Puppeteer and Chrome breakage
+      - name: Generate PDF
+        run: node generate-pdf.js
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: build/daniel-hollands-cv.pdf

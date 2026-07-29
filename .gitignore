@@ -34,6 +34,7 @@ $RECYCLE.BIN/
 !.erb_lint.yml
 !.stylelintrc.yml
 !.vscode
+!.github
 *~
 *.lock
 *.DS_Store
