@@ -7,6 +7,8 @@ rules:
   no-invalid-position-at-import-rule: null
   color-function-notation: null
   alpha-value-notation: null
+  # LibSass's rgb() only takes 3 args, so 4-arg alpha colours must stay as rgba()
+  color-function-alias-notation: null
   # False positive — flags "/" in font URLs as an unspaced division operator
   scss/operator-no-unspaced: null
   # False positive — SCSS nesting means different parent contexts look like descending specificity
