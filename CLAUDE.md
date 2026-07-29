@@ -42,7 +42,7 @@ There are no automated tests or linters configured.
 **CSS** uses Sass (via sassc/LibSass). No Compass or Susy — all replaced with plain CSS and flexbox. Entry point: `source/css/application.css.scss`.
 
 - `source/css/_base.scss` — Sass variables (colours, fonts, layout breakpoints: `$desktop-breakpoint: 40em`, `$max-width: 1000px`, `$menu-width-pct: 25%`)
-- `source/css/_mixins.scss` — `em()` and `rem()` utility functions only
+- `source/css/_mixins.scss` — `em()` and `rem()` utility functions, plus the `icon-optical-lift` mixin used by the inline `::before` icons
 - Responsive breakpoint is `@media (min-width: #{$desktop-breakpoint})`
 - Two-column desktop layout: dark sidebar (25%) + blue content area (75%) via CSS gradient on `.wrap`; `.menu` is `position: fixed`; `.main` has `margin-left: 25%`
 

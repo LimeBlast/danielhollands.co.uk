@@ -510,14 +510,18 @@ body {
       vertical-align: middle;
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include icon-optical-lift;
     }
   }
 }
 
 .employment-location {
   &::before {
+    // Square viewBox, so the box has to be square too. At 12x16 the glyph
+    // only filled the top 12px and the empty strip below threw off centring
     width: 12px;
-    height: 16px;
+    height: 12px;
     background-image: url('/img/icons/employment-location.svg');
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
   }
@@ -546,6 +550,8 @@ body {
     height: 16px;
     background-image: url('/img/icons/employment-dates.svg');
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+
+    @include icon-optical-lift;
   }
 }
 
@@ -569,6 +575,8 @@ body {
       height: 14px;
       margin-right: em($gutter-width / 4);
       filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+
+      @include icon-optical-lift;
     }
   }
 }

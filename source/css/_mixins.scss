@@ -27,3 +27,12 @@
   font-size: $target;
   font-size: rem($target);
 }
+
+/* Lift an inline icon onto the optical centre of the text
+   vertical-align: middle centres on the x-height, which sits below the centre
+   of the capitals, so a box-filling icon reads as sitting slightly too low.
+   ========================================================================== */
+@mixin icon-optical-lift {
+  position: relative;
+  top: -0.1em;
+}
