@@ -497,6 +497,12 @@ body {
     display: inline-block;
     margin-right: em($gutter-width / 4);
 
+    // Otherwise the trailing margin holds the dates short of the right edge,
+    // out of line with the education section
+    &:last-child {
+      margin-right: 0;
+    }
+
     &::before {
       margin-right: em($gutter-width / 4);
       content: "";
