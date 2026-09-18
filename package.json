@@ -5,7 +5,7 @@
     "build": "docker compose run --rm web bundle exec middleman build && node generate-pdf.js"
   },
   "devDependencies": {
-    "puppeteer": "^25.4.0",
+    "puppeteer": "^25.11.0",
     "stylelint": "^17.14.1",
     "stylelint-config-standard-scss": "^17.0.0"
   }
