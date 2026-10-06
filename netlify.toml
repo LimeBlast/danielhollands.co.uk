@@ -1,5 +1,5 @@
 [build]
-  command = "bundle exec middleman build && node generate-pdf.js"
+  command = "bundle exec middleman build && npx puppeteer browsers install chrome && node generate-pdf.js"
   publish = "build"
 
 [build.environment]
