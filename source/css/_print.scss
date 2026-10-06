@@ -1,6 +1,5 @@
 // Hidden on screen, visible only when printing
-.cv-print-header,
-.cv-print-footer {
+.cv-print-header {
   display: none;
 }
 
@@ -33,6 +32,7 @@
   .contact,
   .hobbies,
   .fun-facts,
+  .employment-intercity,
   .employment-tags {
     display: none !important;
   }
@@ -49,16 +49,6 @@
 
   .employment section + section {
     margin-top: 1.25em;
-  }
-
-  // References line — shown only in print
-  .cv-print-footer {
-    display: block;
-    text-align: center;
-    font-style: italic;
-    margin-top: 2em;
-    border-top: 1px solid #000;
-    padding-top: 0.75em;
   }
 
   // Traditional CV header — shown only in print
