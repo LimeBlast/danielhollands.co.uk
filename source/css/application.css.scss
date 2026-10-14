@@ -657,8 +657,20 @@ body {
   }
 }
 
+/* Standalone pages (no menu)
+   ========================================================================== */
+.wrap.standalone {
+  background-image: none;
+  background-color: $content-bg-color;
+
+  .main {
+    margin-left: 0;
+  }
+}
+
 /* ==========================================================================
    Final imports
    ========================================================================== */
 @import "helpers";
 @import "print";
+

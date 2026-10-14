@@ -5,6 +5,9 @@ window.addEventListener('load', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  // ponytail: pages without the menu (e.g. privacy) skip nav setup
+  if (!document.getElementById('navigation')) return;
+
   onePageNav('#navigation', {
     scrollOffset: 50,
     begin: function() {
