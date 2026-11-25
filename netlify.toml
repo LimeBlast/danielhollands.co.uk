@@ -3,7 +3,7 @@
   publish = "build"
 
 [build.environment]
-  RUBY_VERSION = "4.0.4"
+  RUBY_VERSION = "4.0.10"
   NODE_VERSION = "22"
 
 [[headers]]
