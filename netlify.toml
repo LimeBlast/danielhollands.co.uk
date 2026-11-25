@@ -16,12 +16,12 @@
 # limeblast.co.uk is an alias on this site; send it to the canonical host
 [[redirects]]
   from = "https://limeblast.co.uk/*"
-  to = "https://www.danielhollands.co.uk/:splat"
+  to = "https://danielhollands.co.uk/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.limeblast.co.uk/*"
-  to = "https://www.danielhollands.co.uk/:splat"
+  to = "https://danielhollands.co.uk/:splat"
   status = 301
   force = true
